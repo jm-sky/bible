@@ -63,7 +63,7 @@ BibleRenderer.render = function(options = {}) {
       $content = $('<div class="content text-justify"></div>'),
       $book = $(`<h2 class="title text-center mt-3"></h2>`),
       $chapters = $(`<div class="chapters"></div>`),
-      $versions = $('<div class="versions border rounded p-1 m-1" style="position: absolute; top: 0; left: 0"></div>'),
+      $versions = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: absolute; top: 0; left: 0"></div>'),
       $version = $('<select class="form-control form-control-sm"></select>');
 
   $wrapper.html('');
