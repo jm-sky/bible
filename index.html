@@ -8,11 +8,17 @@
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body class="p-3">
-  <h1 class="text-center">Biblia</h1>
-  <div id="wrapper"></div>
+  <div id="wrapper" class="mt-1"></div>
 
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="./BibleRenderer.js"></script>
+  <script src="./assets/BibleRenderer.js"></script>
+  <script>
+  $(function() {
+    BibleRenderer.render({
+      url: './assets/books/ST-NT.json'
+    });     
+  });
+  </script>
 </body>
 </html>
