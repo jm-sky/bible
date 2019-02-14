@@ -16,7 +16,12 @@
   <script>
   $(function() {
     BibleRenderer.render({
-      url: './assets/books/ST-NT.json'
+      baseUrl: `./assets/books/`,
+      url: `ST-NT.json`,
+      urls: [
+        `UBG-ST-NT.json`,
+        `EIB-NT.json`
+      ]
     });     
   });
   </script>

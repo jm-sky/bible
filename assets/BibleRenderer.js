@@ -10,19 +10,25 @@ const BibleRenderer = {
 BibleRenderer.read = function(options = {}) {
   console.log('[BibleRenderer] READ');
   return $.ajax({
-    url: `./${options.url}`,
+    url: `${options.baseUrl}${options.url}`,
     dataType: 'json',
     method: 'get',
-    
-  }).then(result => {
-    console.log('[BibleRenderer] READ result:', result);
-    return result;
+  })
+  .then(content => {
+    console.log('[BibleRenderer] READ content:', content);
+    let book = Object.keys(content.books)[0];
+    BibleRenderer.bible = content;
+    $title.text(content.title);
+    $publisher.text(content.publisher);
+    BibleRenderer.drawMenu();
+    BibleRenderer.drawContent(book);
   });
 };
 //---------------------------------------------------------
 BibleRenderer.drawMenu = function() {
   console.log('[BibleRenderer.drawMenu]');
   let $select = $(`<select class="form-control"></select>`);
+  $menu.html('');
   $menu.append('<div class="col-md-1 col-form-label">Wybierz księgę</div><div class="col-md-11 select-wrapper"></div>');
   $menu.find('.select-wrapper').append($select);
   $select.change(function() { BibleRenderer.drawContent($(this).val() ); });
@@ -56,8 +62,11 @@ BibleRenderer.render = function(options = {}) {
       $menu = $('<div class="menu my-1 border p-2 row m-1 rounded shadow-sm"></div>'),
       $content = $('<div class="content text-justify"></div>'),
       $book = $(`<h2 class="title text-center mt-3"></h2>`),
-      $chapters = $(`<div class="chapters"></div>`);
+      $chapters = $(`<div class="chapters"></div>`),
+      $versions = $('<div class="versions border rounded p-1 m-1" style="position: absolute; top: 0; left: 0"></div>'),
+      $version = $('<select class="form-control form-control-sm"></select>');
 
+  $wrapper.html('');
   $wrapper.append($title);
   $wrapper.append($publisher);
   $wrapper.append($menu);
@@ -65,15 +74,17 @@ BibleRenderer.render = function(options = {}) {
   $content.append($book);
   $content.append($chapters);
 
-  BibleRenderer.read(options)
-  .then(content => {
-    BibleRenderer.bible = content;
-    $title.text(content.title);
-    $publisher.text(content.publisher);
-    BibleRenderer.drawMenu();
-    let book = Object.keys(content.books)[0];
-    BibleRenderer.drawContent(book);
-  });
+  if (options.urls) {
+    $wrapper.prepend($versions);
+    $versions.append($version);
+    $version.change(function() {
+      options.url = $(this).val();
+      BibleRenderer.read(options);
+    });
+    options.urls.forEach(url => $version.append(`<option>${url}</option>`));
+  }
+
+  BibleRenderer.read(options);
 };
 
 //---------------------------------------------------------
