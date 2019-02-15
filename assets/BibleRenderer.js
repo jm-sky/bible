@@ -81,7 +81,7 @@ BibleRenderer.addSearchResult = function(book, chapter, verse, string) {
       BibleRenderer.drawContent(book);
       $modal.modal('hide');
       let $linkedVerse = $(`#chapter_${chapter}_verse_${verse.lp}`);
-      $linkedVerse.css({'background-color': '#ffa'}).delay(1000).queue(function(next) {
+      $linkedVerse.css({'background-color': '#ffa'}).delay(2000).queue(function(next) {
         $linkedVerse.css({'background-color': 'unset'});
         next();
       });
