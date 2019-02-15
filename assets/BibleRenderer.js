@@ -27,7 +27,6 @@ BibleRenderer.read = function(options = {}) {
 //---------------------------------------------------------
 BibleRenderer.drawMenu = function() {
   console.log('[BibleRenderer.drawMenu]');
-  let $select = $(`<select class="form-control"></select>`);
   $menu.html('');
   $menu.append('<div class="col-md-1 col-form-label">Wybierz księgę</div><div class="col-md-11 select-wrapper"></div>');
   $menu.find('.select-wrapper').append($select);
@@ -42,9 +41,10 @@ BibleRenderer.drawMenu = function() {
 BibleRenderer.drawContent = function(book) {
   console.log('[BibleRenderer.drawContent]', book);
   let chapters = BibleRenderer.bible.books[book];
-    
-  $chapters.html('');
+  
+  $select.val(book);
   $book.text(book);
+  $chapters.html('');
 
   Object.values(chapters).forEach((verses, chapter) => {
     $chapters.append($(`<h3 id="chapter_${chapter + 1}" class="mt-2">Rozdział ${chapter + 1}</h3>`));
@@ -70,14 +70,15 @@ BibleRenderer.search = function(string) {
       chapter.forEach(v => {
         if (v.text.toLowerCase().includes(string.toLowerCase())) {
           let $item = $(`<div class="px-2 py-1 m-1 border rounded"></div>`),
-              $link = $(`<a href="#chapter_${c}" class="float-right small text-muted">${book} ${c}:${v.lp}</a>`);
+              $link = $(`<a href="#chapter_${c}" class="float-right small text-muted">${book} ${c}:${v.lp}</a>`),
+              pattern = new RegExp(`(${string})`, 'i');
 
           $link.click(function() {
             BibleRenderer.drawContent(book);
             $modal.modal('hide');
           });
 
-          $item.append(`${v.text}`);
+          $item.append(`${v.text.replace(pattern, '<b>$1</b>')}`);
           $item.append(`<div class="clearfix"></div>`);
           $item.append($link);
           $item.append(`<div class="clearfix"></div>`);
@@ -94,22 +95,23 @@ BibleRenderer.search = function(string) {
 BibleRenderer.render = function(options = {}) {
   console.log('[BibleRenderer] RENDER');
   let $wrapper = $('#wrapper')
-      $title = $('<h1 class="text-center">Biblia</h1>'),
+      $title = $('<h1 class="text-center mt-3">Biblia</h1>'),
       $publisher = $('<h4 class="text-center text-muted font-italic"></h4>'),
       $menu = $('<div class="menu my-1 border p-2 row m-1 rounded shadow-sm"></div>'),
+      $select = $(`<select class="form-control"></select>`),
       $content = $('<div class="content text-justify"></div>'),
       $book = $(`<h2 class="title text-center mt-3"></h2>`),
       $chapters = $(`<div class="chapters"></div>`),
-      $versions = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; left: 0"></div>'),
+      $versions = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; left: 0; max-width: 48vw;"></div>'),
       $version = $('<select placeholder="Wersja" class="form-control form-control-sm"></select>'),
-      $topRight = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; right: 0"></div>'),
+      $topRight = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; right: 0; max-width: 48vw;"></div>'),
       $bottomRight = $('<div class="scroller p-1 m-1 shadow-sm border rounded" style="position: fixed; bottom: 0; right: 0"></div>'),
-      $scrollTop = $('<a href="#" class="btn btn-light btn-sm"><i class="fas fa-arrow-up"></i></a>'),
+      $scrollTop = $('<a href="javascript:window.scrollTo(0, 0)" class="btn btn-light btn-sm"><i class="fas fa-arrow-up"></i></a>'),
       $search = $('<input placeholder="Szukaj" class="form-control form-control-sm" type="text" />'),
       $modal = $('<div id="modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)"></div>'),
       $modalDialog = $('<div class="modal-dialog modal-lg"></div>'),
       $modalContent = $('<div class="modal-content p-1"></div>'),
-      $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal">Zamknij</a>'),
+      $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal"><i class="fas fa-times"></i> Zamknij</a>'),
       $results = $('<div class="results"></div>');
 
     $wrapper.html('');
@@ -118,8 +120,8 @@ BibleRenderer.render = function(options = {}) {
     $wrapper.append($menu);
     $wrapper.append($content);
     $wrapper.append($topRight);
-    $wrapper.append($bottomRight);
     $wrapper.append($modal);
+    $wrapper.append($bottomRight);
 
     $modal.append($modalDialog);
     $modalDialog.append($modalContent);
@@ -128,6 +130,8 @@ BibleRenderer.render = function(options = {}) {
 
     $topRight.append($search);
     $bottomRight.append($scrollTop);
+    $bottomRight.css({'z-index': 10000});
+    $scrollTop.click(() =>  $modal.scrollTop(0));
     $content.append($book);
     $content.append($chapters);
       
@@ -138,7 +142,7 @@ BibleRenderer.render = function(options = {}) {
   });
 
   if (options.urls) {
-    $wrapper.prepend($versions);
+    $wrapper.append($versions);
     $versions.append($version);
     $version.change(function() {
       options.url = $(this).val();
