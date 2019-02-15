@@ -9,6 +9,8 @@ const BibleRenderer = {
 //---------------------------------------------------------
 BibleRenderer.read = function(options = {}) {
   console.log('[BibleRenderer] READ');
+  $loader.toggle(true);
+
   return $.ajax({
     url: `${options.baseUrl}${options.url}`,
     dataType: 'json',
@@ -20,12 +22,13 @@ BibleRenderer.read = function(options = {}) {
     BibleRenderer.bible = content;
     $title.text(content.title);
     $publisher.text(content.publisher);
-    BibleRenderer.drawMenu();
+    BibleRenderer.drawMenu(options);
     BibleRenderer.drawContent(book);
+    $loader.toggle(false);
   });
 };
 //---------------------------------------------------------
-BibleRenderer.drawMenu = function() {
+BibleRenderer.drawMenu = function(options) {
   console.log('[BibleRenderer.drawMenu]');
   $menu.html('');
   $menu.append('<div class="col-md-1 col-form-label">Wybierz księgę</div>');
@@ -33,7 +36,11 @@ BibleRenderer.drawMenu = function() {
   $menu.append($showAll);
   $menu.find('.select-wrapper').append($select);
   $select.change(function() { BibleRenderer.drawContent($(this).val() ); });
-
+  $showAll.click(function() {
+    console.log('BibleRenderer showAll');
+    options.readAll = true;
+    BibleRenderer.read(options);
+  });
   Object.keys(BibleRenderer.bible.books).forEach(book => {
     let $book = $(`<option>${book}</option>`);
     $select.append($book);
@@ -125,13 +132,13 @@ BibleRenderer.render = function(options = {}) {
       $select = $(`<select class="form-control"></select>`),
       $content = $('<div class="content text-justify"></div>'),
       $chapters = $(`<div class="chapters"></div>`),
-      $topLeft = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; left: 0; max-width: 48vw;"></div>'),
+      $topLeft = $('<div class="position-fixed versions p-1 m-1 shadow-sm border rounded" style="top: 0; left: 0; max-width: 48vw;"></div>'),
       $version = $('<select placeholder="Wersja" class="form-control form-control-sm"></select>'),
-      $topRight = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; right: 0; max-width: 48vw;"></div>'),
+      $topRight = $('<div class="position-fixed versions p-1 m-1 shadow-sm border rounded" style="top: 0; right: 0; max-width: 48vw;"></div>'),
       $search = $('<input placeholder="Szukaj" class="form-control form-control-sm" type="text" />'),
-      $bottomRight = $('<div class="resizer p-1 m-1 shadow-sm border rounded" style="position: fixed; bottom: 0; right: 0; z-index: 10000"></div>'),
+      $bottomRight = $('<div class="position-fixed resizer p-1 m-1 shadow-sm border rounded" style="bottom: 0; right: 0; z-index: 10000"></div>'),
       $scrollTop = $('<a href="javascript:window.scrollTo(0, 0)" class="btn btn-light btn-sm"><i class="fas fa-arrow-up"></i></a>'),
-      $bottomLeft = $('<div class="scroller p-1 m-1 shadow-sm border rounded" style="position: fixed; bottom: 0; left: 0"></div>'),
+      $bottomLeft = $('<div class="position-fixed scroller p-1 m-1 shadow-sm border rounded" style="bottom: 0; left: 0"></div>'),
       $sizeUp = $('<a href="#" class="btn btn-light btn-sm"><i class="fas fa-plus"></i></a>'),
       $sizeDown = $('<a href="#" class="btn btn-light btn-sm"><i class="fas fa-minus"></i></a>'),
       $modal = $('<div id="modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)"></div>'),
@@ -140,6 +147,7 @@ BibleRenderer.render = function(options = {}) {
       $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal"><i class="fas fa-times"></i> Zamknij</a>'),
       $results = $('<div class="results"></div>'),
       $showAll = $('<a href="#" class="col-md-1 btn btn-light btn-sm"><i class="fas fa-book"></i> Wszystkie</a>'),
+      $loader = $('<div class="loader position-fixed text-center" style="display: none; top: 20px; left: calc(50% - 10px);"><i class="spinner-border"></i></div>'),
       fontSize = 1;
 
     $wrapper.html('');
@@ -151,6 +159,7 @@ BibleRenderer.render = function(options = {}) {
     $wrapper.append($modal);
     $wrapper.append($bottomRight);
     $wrapper.append($bottomLeft);
+    $wrapper.append($loader);
 
     $modal.append($modalDialog);
     $modalDialog.append($modalContent);
@@ -174,15 +183,12 @@ BibleRenderer.render = function(options = {}) {
     fontSize = fontSize - 0.5;
     $chapters.css('font-size', `${fontSize}em`);
   });
+
   $sizeUp.click(function() {
     fontSize = fontSize + 0.5;
     $chapters.css('font-size', `${fontSize}em`);
   });
 
-  $showAll.click(function() {
-    options.readAll = true;
-    BibleRenderer.read(options);
-  });
 
   if (options.urls) {
     $wrapper.append($topLeft);
