@@ -4,7 +4,10 @@
  */
 const BibleReader = {
   bible: {},
-  timeout: null
+  timeout: null,
+  options: {
+    timeout: 300
+  }
 };
 //---------------------------------------------------------
 /**
@@ -29,15 +32,17 @@ BibleReader.readContent = function(book, chapter) {
 /**
  * nextChapter
  */
-BibleReader.nextChapter = function(bookName = null, readAll = false, timeout = 300) {
-  let $next = document.getElementById('next-chapter'),
-      nextDisabled = $next.className.includes('is-disabled'),
+BibleReader.nextChapter = function(bookName = null, readAll = false, timeout = false) {
+  let $nextChapter = document.getElementById('next-chapter'),
+      noNextChapter = $nextChapter.className.includes('is-disabled'),
       $nextBook = document.getElementById('next-book'),
+      noNextBook = $nextBook.className.includes('is-disabled'),
       $book = document.getElementsByName('ksiega'),
       $chapter = document.getElementsByName('rozdzial'),
       book = $book ? $book[0].value : null,
       chapter = $chapter ? $chapter[0].value : null;
 
+  timeout = timeout || BibleReader.options.timeout;
   bookName = bookName || book;
   bookName = readAll ? book : bookName;
 
@@ -47,21 +52,21 @@ BibleReader.nextChapter = function(bookName = null, readAll = false, timeout = 3
     BibleReader.readContent(book, chapter);
   }
 
-  if (readAll === true && nextDisabled && $nextBook) {
+  if (readAll === true && noNextChapter && $nextBook && !noNextBook) {
     console.log('[BibleReader] NEXT BOOK');
     $nextBook.click();
     BibleReader.timeout = setTimeout(() => BibleReader.nextChapter(bookName, readAll, timeout), timeout);
     return;
   }
 
-  if (bookName != book || nextDisabled) {
+  if (bookName != book || noNextChapter) {
     console.log('[BibleReader] FINISHED');
     console.log('[BibleReader] Biblie: ', BibleReader.bible);
     return;
   }
 
   console.log('[BibleReader] NEXT CHAPTER');
-  $next.click();
+  $nextChapter.click();
   BibleReader.timeout = setTimeout(() => BibleReader.nextChapter(bookName, readAll, timeout), timeout);
 
 };
@@ -72,13 +77,6 @@ BibleReader.nextChapter = function(bookName = null, readAll = false, timeout = 3
 BibleReader.stop = function() {
   clearTimeout(BibleReader.timeout);
   BibleReader.timeout = null;
-};
-//---------------------------------------------------------
-/**
- * readTheBook
- */
-BibleReader.readTheBook = function(bookName = null, readAll = false) {
-  BibleReader.nextChapter(bookName, readAll);
 };
 //---------------------------------------------------------
 /**
@@ -93,4 +91,16 @@ BibleReader.downloadBook = function(content, fileName, contentType = 'applicatio
   a.click();
 };
 //---------------------------------------------------------
-BibleReader.readTheBook(null, true);
+/**
+ * readTheBook
+ */
+BibleReader.readTheBook = function(options = {}) {
+  BibleReader.options = Object.assign(BibleReader.options, options);
+  BibleReader.nextChapter(options.bookName, options.readAll);
+};
+//---------------------------------------------------------
+BibleReader.readTheBook({
+  bookName: null,
+  readAll: true,
+  timeout: 350
+});
