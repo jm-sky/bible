@@ -35,6 +35,7 @@ BibleRenderer.drawMenu = function(options) {
   $menu.append('<div class="col-md-10 select-wrapper"></div>');
   $menu.append($showAll);
   $menu.find('.select-wrapper').append($select);
+  $select.html('');
   $select.change(function() { BibleRenderer.drawContent($(this).val() ); });
   $showAll.click(function() {
     console.log('BibleRenderer showAll');
