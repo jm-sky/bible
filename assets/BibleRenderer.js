@@ -51,7 +51,10 @@ BibleRenderer.drawMenu = function(options) {
 BibleRenderer.drawContent = function(bookRange) {
   console.log('[BibleRenderer.drawContent]', bookRange);
   let range = [],
-      $list = $('<div class="m-1 p-1 border rounded shadow-sm text-muted text-center"></div>');
+      $list = $('<div class="m-1 p-1 border rounded shadow-sm text-muted text-center"></div>'),
+      $bookContentTemplate = $('<div class="book-content"></div>'),
+      $chapterContentTemplate = $('<div class="chapter-content"></div>');
+      
   range = bookRange === true ? Object.keys(BibleRenderer.bible.books) : [bookRange];
   
   $chapters.html('');
@@ -59,22 +62,37 @@ BibleRenderer.drawContent = function(bookRange) {
 
   range.forEach((book, index) => {
     let chapters = BibleRenderer.bible.books[book],
-        $book = $(`<h2 id="book_${index}" class="title text-center mt-3">${book}</h2>`);
+        $book = $(`<h2 id="book_${index}" class="title text-center mt-3">${book}</h2>`),
+        $bookContent = $bookContentTemplate.clone();
   
     $select.val(book);
     $chapters.append($book);
+    $chapters.append($bookContent);
+
     if (bookRange === true) {
       $list.append(`${index > 0 ? ' | ' : ''}<a href="#book_${index}" class="m-1 d-inline-block">${book}</a>`);
     }
 
     Object.values(chapters).forEach((verses, chapter) => {
+      let $chapterContent = $chapterContentTemplate.clone();
+
       if (bookRange !== true) {
         $list.append(`${chapter > 0 ? ' | ' : ''}<a href="#chapter_${chapter + 1}" class="m-1 d-inline-block">${chapter + 1}</a>`);
       }
-      $chapters.append($(`<h3 id="chapter_${chapter + 1}" class="mt-2">Rozdział ${chapter + 1}</h3>`));
+
+      $chapterContent.append($(`<h3 id="chapter_${chapter + 1}" class="mt-2">Rozdział ${chapter + 1}</h3>`));
       verses.forEach(verse => {
-        $chapters.append(`<span id="chapter_${chapter + 1}_verse_${verse.lp}"><small class="MsoSubtleReference text-muted">(${verse.lp})</small>&nbsp;${verse.text}</span> `);
+        let $verseContent = $(`<span id="chapter_${chapter + 1}_verse_${verse.lp}"></span>`);
+        $verseContent.data('paragraph', {
+          book: book,
+          chapter: chapter + 1,
+          verse: verse.lp
+        });
+        $verseContent.append(`<small class="MsoSubtleReference text-muted">(${verse.lp})</small>&nbsp;${verse.text} `);
+        $chapterContent.append($verseContent);
       });
+
+      $bookContent.append($chapterContent);
     });
   });
 
@@ -202,6 +220,33 @@ BibleRenderer.render = function(options = {}) {
   }
 
   BibleRenderer.read(options);
-};
 
+  $(document).on('copy', function(e) {
+    var sel = window.getSelection(),
+        starting = $(sel.anchorNode.parentElement).data('paragraph'),
+        ending = $(sel.focusNode.parentElement).data('paragraph'),
+        $copyFooter = $(`<small class="text-muted"></small>`),
+        $copyHolder = $('<div>', { style: { position: 'absolute', left: '-99999px' } }),
+        info = `${starting.book} ${starting.chapter}:${starting.verse}`;
+    
+    if (starting != ending && starting.book == ending.book) {
+      info = `${info} - ${ending.chapter}:${ending.verse}`;
+    }
+    
+    if (starting != ending && starting.book != ending.book) {
+      info = `${info} - ${ending.book} ${ending.chapter}:${ending.verse}`;
+    }
+
+    $copyFooter.html(`(${info})`);
+    $copyHolder.html(`${sel}`);
+    $copyHolder.append(`<br />`);
+    $copyHolder.append($copyFooter);
+
+    $('body').append($copyHolder);
+    sel.selectAllChildren( $copyHolder[0] );
+    window.setTimeout(function() {
+      $copyHolder.remove();
+    }, 0);
+  });
+};
 //---------------------------------------------------------
