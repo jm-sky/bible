@@ -106,12 +106,12 @@ BibleRenderer.render = function(options = {}) {
       $version = $('<select placeholder="Wersja" class="form-control form-control-sm"></select>'),
       $topRight = $('<div class="versions p-1 m-1 shadow-sm border rounded" style="position: fixed; top: 0; right: 0; max-width: 48vw;"></div>'),
       $bottomRight = $('<div class="scroller p-1 m-1 shadow-sm border rounded" style="position: fixed; bottom: 0; right: 0"></div>'),
-      $scrollTop = $('<a href="javascript:window.scrollTo(0, 0)" class="btn btn-light btn-sm"><i class="fas fa-arrow-up"></i></a>'),
+      $scrollTop = $('<a href="javascript:window.scrollTo(0, 0)" class="btn btn-light btn-sm"><i class="fa fa-arrow-up"></i></a>'),
       $search = $('<input placeholder="Szukaj" class="form-control form-control-sm" type="text" />'),
       $modal = $('<div id="modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)"></div>'),
       $modalDialog = $('<div class="modal-dialog modal-lg"></div>'),
       $modalContent = $('<div class="modal-content p-1"></div>'),
-      $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal"><i class="fas fa-times"></i> Zamknij</a>'),
+      $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal"><i class="fa fa-times"></i> Zamknij</a>'),
       $results = $('<div class="results"></div>');
 
     $wrapper.html('');
