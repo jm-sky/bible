@@ -3,12 +3,29 @@
  * BibleRenderer
  */
 const BibleRenderer = {
-  bible: {}
+  bible: {},
+  defaults: {
+    baseUrl: `./assets/books/`,
+    urls: [
+      `UBG-NT.json`,
+      `UBG-ST-NT.json`,
+      `EIB-NT.json`,
+      `BW-NT.json`,
+      `BW-ST-NT.json`,
+      `RSV-NT.json`,
+    ],
+    highContrast: false
+  }
 };
-
 //---------------------------------------------------------
-BibleRenderer.read = function(options = {}) {
-  console.log('[BibleRenderer] READ');
+BibleRenderer.setHighContrast = function (highContrast) {
+  $('body').toggleClass('high-contrast', highContrast);
+  $contrastToggle.toggleClass('btn-light', !highContrast);
+  $contrastToggle.toggleClass('btn-primary', highContrast);
+};
+//---------------------------------------------------------
+BibleRenderer.read = function (options = {}) {
+  window.DEBUG ? console.log('[BibleRenderer] READ', options) : false;
   $loader.toggle(true);
 
   return $.ajax({
@@ -16,29 +33,29 @@ BibleRenderer.read = function(options = {}) {
     dataType: 'json',
     method: 'get',
   })
-  .then(content => {
-    console.log('[BibleRenderer] READ content:', content);
-    let book = options.readAll || Object.keys(content.books)[0];
-    BibleRenderer.bible = content;
-    $title.text(content.title);
-    $publisher.text(content.publisher);
-    BibleRenderer.drawMenu(options);
-    BibleRenderer.drawContent(book);
-    $loader.toggle(false);
-  });
+    .then(content => {
+      window.DEBUG ? console.log('[BibleRenderer] READ content:', content) : false;
+      let book = options.readAll || Object.keys(content.books)[0];
+      BibleRenderer.bible = content;
+      $title.text(content.title);
+      $publisher.text(content.publisher);
+      BibleRenderer.drawMenu(options);
+      BibleRenderer.drawContent(book);
+      $loader.toggle(false);
+    });
 };
 //---------------------------------------------------------
-BibleRenderer.drawMenu = function(options) {
-  console.log('[BibleRenderer.drawMenu]');
+BibleRenderer.drawMenu = function (options) {
+  window.DEBUG ? console.log('[BibleRenderer.drawMenu]') : false;
   $menu.html('');
   $menu.append('<div class="col-md-2 col-form-label">Wybierz księgę</div>');
   $menu.append('<div class="col-md-9 select-wrapper"></div>');
   $menu.append($showAll);
   $menu.find('.select-wrapper').append($select);
   $select.html('');
-  $select.change(function() { BibleRenderer.drawContent($(this).val() ); });
-  $showAll.click(function() {
-    console.log('BibleRenderer showAll');
+  $select.change(function () { BibleRenderer.drawContent($(this).val()); });
+  $showAll.click(function () {
+    window.DEBUG ? console.log('BibleRenderer showAll') : false;
     options.readAll = true;
     BibleRenderer.read(options);
   });
@@ -48,23 +65,23 @@ BibleRenderer.drawMenu = function(options) {
   });
 };
 //---------------------------------------------------------
-BibleRenderer.drawContent = function(bookRange) {
-  console.log('[BibleRenderer.drawContent]', bookRange);
+BibleRenderer.drawContent = function (bookRange) {
+  window.DEBUG ? console.log('[BibleRenderer.drawContent]', bookRange) : false;
   let range = [],
-      $list = $('<div class="m-1 p-1 border rounded shadow-sm text-muted text-center"></div>'),
-      $bookContentTemplate = $('<div class="book-content"></div>'),
-      $chapterContentTemplate = $('<div class="chapter-content"></div>');
-      
+    $list = $('<div class="m-1 p-1 border rounded shadow-sm text-muted text-center"></div>'),
+    $bookContentTemplate = $('<div class="book-content"></div>'),
+    $chapterContentTemplate = $('<div class="chapter-content"></div>');
+
   range = bookRange === true ? Object.keys(BibleRenderer.bible.books) : [bookRange];
-  
+
   $chapters.html('');
   $chapters.append($list);
 
   range.forEach((book, index) => {
     let chapters = BibleRenderer.bible.books[book],
-        $book = $(`<h2 id="book_${index}" class="title text-center mt-3">${book}</h2>`),
-        $bookContent = $bookContentTemplate.clone();
-  
+      $book = $(`<h2 id="book_${index}" class="title text-center mt-3">${book}</h2>`),
+      $bookContent = $bookContentTemplate.clone();
+
     $select.val(book);
     $chapters.append($book);
     $chapters.append($bookContent);
@@ -98,31 +115,31 @@ BibleRenderer.drawContent = function(bookRange) {
 
 };
 //---------------------------------------------------------
-BibleRenderer.addSearchResult = function(book, chapter, verse, string) {
+BibleRenderer.addSearchResult = function (book, chapter, verse, string) {
   let $item = $(`<div class="px-2 py-1 m-1 border rounded"></div>`),
-      $link = $(`<a href="#chapter_${chapter}" class="float-right small text-muted">${book} ${chapter}:${verse.lp}</a>`),
-      pattern = new RegExp(`(${string})`, 'i');
+    $link = $(`<a href="#chapter_${chapter}" class="float-right small text-muted">${book} ${chapter}:${verse.lp}</a>`),
+    pattern = new RegExp(`(${string})`, 'i');
 
-    $link.click(function() {
-      BibleRenderer.drawContent(book);
-      $modal.modal('hide');
-      let $linkedVerse = $(`#chapter_${chapter}_verse_${verse.lp}`);
-      $linkedVerse.css({'background-color': '#ffa'}).delay(2000).queue(function(next) {
-        $linkedVerse.css({'background-color': 'unset'});
-        next();
-      });
+  $link.click(function () {
+    BibleRenderer.drawContent(book);
+    $modal.modal('hide');
+    let $linkedVerse = $(`#chapter_${chapter}_verse_${verse.lp}`);
+    $linkedVerse.css({ 'background-color': '#ffa' }).delay(2000).queue(function (next) {
+      $linkedVerse.css({ 'background-color': 'unset' });
+      next();
     });
+  });
 
-    $item.append(`${verse.text.replace(pattern, '<b>$1</b>')}`);
-    $item.append(`<div class="clearfix"></div>`);
-    $item.append($link);
-    $item.append(`<div class="clearfix"></div>`);
-    $results.append($item);
-    $modal.modal('show');
+  $item.append(`${verse.text.replace(pattern, '<b>$1</b>')}`);
+  $item.append(`<div class="clearfix"></div>`);
+  $item.append($link);
+  $item.append(`<div class="clearfix"></div>`);
+  $results.append($item);
+  $modal.modal('show');
 };
 //---------------------------------------------------------
-BibleRenderer.search = function(string) {
-  console.log('[BibleRenderer] search', string);
+BibleRenderer.search = function (string) {
+  window.DEBUG ? console.log('[BibleRenderer] search', string) : false;
   if (string.length < 3) {
     return;
   }
@@ -142,68 +159,100 @@ BibleRenderer.search = function(string) {
 
 };
 //---------------------------------------------------------
-BibleRenderer.render = function(options = {}) {
-  console.log('[BibleRenderer] RENDER');
-  let $wrapper = $('#wrapper')
-      $title = $('<h1 class="text-center mt-3">Biblia</h1>'),
-      $publisher = $('<h4 class="text-center text-muted font-italic"></h4>'),
-      $menu = $('<div class="menu my-1 border p-2 row m-1 rounded shadow-sm"></div>'),
-      $select = $(`<select class="form-control"></select>`),
-      $content = $('<div class="content text-justify"></div>'),
-      $chapters = $(`<div class="chapters"></div>`),
-      $topLeft = $('<div class="position-fixed versions p-1 m-1 shadow-sm border rounded" style="top: 0; left: 0; max-width: 48vw;"></div>'),
-      $version = $('<select placeholder="Wersja" class="form-control form-control-sm"></select>'),
-      $topRight = $('<div class="position-fixed versions p-1 m-1 shadow-sm border rounded" style="top: 0; right: 0; max-width: 48vw;"></div>'),
-      $search = $('<input placeholder="Szukaj" class="form-control form-control-sm" type="text" />'),
-      $bottomRight = $('<div class="position-fixed resizer p-1 m-1 shadow-sm border rounded" style="bottom: 0; right: 0; z-index: 10000"></div>'),
-      $scrollTop = $('<a href="javascript:window.scrollTo(0, 0)" class="btn btn-light btn-sm"><i class="fa fa-arrow-up"></i></a>'),
-      $bottomLeft = $('<div class="position-fixed scroller p-1 m-1 shadow-sm border rounded" style="bottom: 0; left: 0"></div>'),
-      $sizeUp = $('<a href="#" class="btn btn-light btn-sm"><i class="fa fa-plus"></i></a>'),
-      $sizeDown = $('<a href="#" class="btn btn-light btn-sm"><i class="fa fa-minus"></i></a>'),
-      $modal = $('<div id="modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)"></div>'),
-      $modalDialog = $('<div class="modal-dialog modal-lg"></div>'),
-      $modalContent = $('<div class="modal-content p-1"></div>'),
-      $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal"><i class="fa fa-times"></i> Zamknij</a>'),
-      $results = $('<div class="results"></div>'),
-      $showAll = $('<a href="#" class="col-md-1 btn btn-light btn-sm"><i class="fa fa-book"></i> Wszystkie</a>'),
-      $loader = $('<div class="loader position-fixed text-center" style="display: none; top: 20px; left: calc(50% - 10px);"><i class="spinner-border"></i></div>'),
-      fontSize = 1;
+BibleRenderer.render = function (options = {}) {
+  options.DEBUG ? window.DEBUG = true : false;
+  window.DEBUG ? console.log('[BibleRenderer] RENDER') : false;
+  options = Object.assign({}, BibleRenderer.defaults, options);
 
-    $wrapper.html('');
-    $wrapper.append($title);
-    $wrapper.append($publisher);
-    $wrapper.append($menu);
-    $wrapper.append($content);
-    $wrapper.append($topRight);
-    $wrapper.append($modal);
-    $wrapper.append($bottomRight);
-    $wrapper.append($bottomLeft);
-    $wrapper.append($loader);
+  let usersVersion = localStorage.getItem('Bible.version'),
+    usersHighContrast = localStorage.getItem('Bible.highContrast');
 
-    $modal.append($modalDialog);
-    $modalDialog.append($modalContent);
-    $modalContent.append($modalClose);
-    $modalContent.append($results);
+  options.highContrast = [true, false].includes(usersHighContrast) ? usersHighContrast : false;
 
-    $topRight.append($search);
-    $bottomRight.append($scrollTop);
-    $scrollTop.click(() =>  $modal.scrollTop(0));
-    $bottomLeft.append($sizeUp);
-    $bottomLeft.append($sizeDown);
-    $content.append($chapters);
-      
-  $search.keyup(function(e) {
+  if (usersVersion && options.urls.includes(usersVersion)) {
+    window.DEBUG ? console.log('[BibleRenderer] RENDER :: usersVersion', usersVersion) : false;
+    options.url = usersVersion;
+  } else if (usersVersion && options.urls.includes(usersVersion) == false) {
+    options.url = options.urls[0];
+    localStorage.removeItem('Bible.version');
+    window.DEBUG ? console.log('[BibleRenderer] RENDER :: options.url', options.url) : false;
+  } else if (options.url && options.urls.includes(options.url) == false) {
+    options.url = options.urls[0];
+  }
+
+  $highContrastStyle = $(`<style>.high-contrast, .high-contrast * { background: #000; color: #fff; font-weight: bold; }</style>`);
+  $('body').append($highContrastStyle);
+
+  $wrapper = $('#wrapper'),
+  $title = $('<h1 class="text-center mt-3">Biblia</h1>');
+  $publisher = $('<h4 class="text-center text-muted font-italic"></h4>');
+  $menu = $('<div class="menu my-1 border p-2 row m-1 rounded shadow-sm"></div>');
+  $select = $(`<select class="form-control"></select>`);
+  $content = $('<div class="content text-justify"></div>');
+  $chapters = $(`<div class="chapters"></div>`);
+  $topLeft = $('<div class="position-fixed versions p-1 m-1 shadow-sm border rounded" style="top: 0; left: 0; max-width: 48vw;"></div>');
+  $version = $('<select placeholder="Wersja" class="form-control form-control-sm"></select>');
+  $topRight = $('<div class="position-fixed search p-1 m-1 shadow-sm border rounded" style="top: 0; right: 0; max-width: 48vw;"></div>');
+  $search = $('<input placeholder="Szukaj" class="form-control form-control-sm" type="text" />');
+  $bottomRight = $('<div class="position-fixed resizer p-1 m-1 shadow-sm border rounded" style="bottom: 0; right: 0; z-index: 10000"></div>');
+  $contrastToggle = $('<a href="#" class="btn btn-light btn-sm mr-1"><i class="fa fa-adjust"></i></a>');
+  $scrollTop = $('<a href="javascript:window.scrollTo(0, 0)" class="btn btn-light btn-sm"><i class="fa fa-arrow-up"></i></a>');
+  $bottomLeft = $('<div class="position-fixed scroller p-1 m-1 shadow-sm border rounded" style="bottom: 0; left: 0"></div>');
+  $sizeUp = $('<a href="#" class="btn btn-light btn-sm"><i class="fa fa-plus"></i></a>');
+  $sizeDown = $('<a href="#" class="btn btn-light btn-sm ml-1"><i class="fa fa-minus"></i></a>');
+  $modal = $('<div id="modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)"></div>');
+  $modalDialog = $('<div class="modal-dialog modal-lg"></div>');
+  $modalContent = $('<div class="modal-content p-1"></div>');
+  $modalClose = $('<a href="#" class="btn btn-primary text-light m-1" data-dismiss="modal"><i class="fa fa-times"></i> Zamknij</a>');
+  $results = $('<div class="results"></div>');
+  $showAll = $('<a href="#" class="col-md-1 btn btn-light btn-sm"><i class="fa fa-book"></i> Wszystkie</a>');
+  $loader = $('<div class="loader position-fixed text-center" style="display: none; top: 20px; left: calc(50% - 10px);"><i class="spinner-border"></i></div>');
+  fontSize = 1;
+
+  $wrapper.html('');
+  $wrapper.append($title);
+  $wrapper.append($publisher);
+  $wrapper.append($menu);
+  $wrapper.append($content);
+  $wrapper.append($topRight);
+  $wrapper.append($modal);
+  $wrapper.append($bottomRight);
+  $wrapper.append($bottomLeft);
+  $wrapper.append($loader);
+
+  $modal.append($modalDialog);
+  $modalDialog.append($modalContent);
+  $modalContent.append($modalClose);
+  $modalContent.append($results);
+
+  $topRight.append($search);
+  $bottomRight.append($contrastToggle);
+  $bottomRight.append($scrollTop);
+  $scrollTop.click(() => $modal.scrollTop(0));
+  $bottomLeft.append($sizeUp);
+  $bottomLeft.append($sizeDown);
+  $content.append($chapters);
+
+  BibleRenderer.setHighContrast(options.highContrast);
+
+  $contrastToggle.click(() => {
+    options.highContrast = !options.highContrast;
+    localStorage.setItem('Bible.highContrast', options.highContrast);
+    BibleRenderer.setHighContrast(options.highContrast);
+  });
+
+  $search.keyup(function (e) {
     if (e.which == 13) {
       BibleRenderer.search($search.val());
     }
   });
 
-  $sizeDown.click(function() {
+  $sizeDown.click(function () {
     fontSize = fontSize - 0.5;
     $chapters.css('font-size', `${fontSize}em`);
   });
 
-  $sizeUp.click(function() {
+  $sizeUp.click(function () {
     fontSize = fontSize + 0.5;
     $chapters.css('font-size', `${fontSize}em`);
   });
@@ -212,27 +261,29 @@ BibleRenderer.render = function(options = {}) {
   if (options.urls) {
     $wrapper.append($topLeft);
     $topLeft.append($version);
-    $version.change(function() {
-      options.url = $(this).val();
+    $version.change(function () {
+      let version = $(this).val();
+      options.url = version;
       BibleRenderer.read(options);
+      localStorage.setItem('Bible.version', version)
     });
-    options.urls.forEach(url => $version.append(`<option>${url}</option>`));
+    options.urls.forEach(url => $version.append(`<option ${url == options.url ? 'selected' : ''}>${url}</option>`));
   }
 
   BibleRenderer.read(options);
 
-  $(document).on('copy', function(e) {
+  $(document).on('copy', function (e) {
     var sel = window.getSelection(),
-        starting = $(sel.anchorNode.parentElement).data('paragraph'),
-        ending = $(sel.focusNode.parentElement).data('paragraph'),
-        $copyFooter = $(`<small class="text-muted"></small>`),
-        $copyHolder = $('<div>', { style: { position: 'absolute', left: '-99999px' } }),
-        info = `${starting.book} ${starting.chapter}:${starting.verse}`;
-    
+      starting = $(sel.anchorNode.parentElement).data('paragraph'),
+      ending = $(sel.focusNode.parentElement).data('paragraph'),
+      $copyFooter = $(`<small class="text-muted"></small>`),
+      $copyHolder = $('<div>', { style: { position: 'absolute', left: '-99999px' } }),
+      info = `${starting.book} ${starting.chapter}:${starting.verse}`;
+
     if (starting != ending && starting.book == ending.book) {
       info = `${info} - ${ending.chapter}:${ending.verse}`;
     }
-    
+
     if (starting != ending && starting.book != ending.book) {
       info = `${info} - ${ending.book} ${ending.chapter}:${ending.verse}`;
     }
@@ -243,8 +294,8 @@ BibleRenderer.render = function(options = {}) {
     $copyHolder.append($copyFooter);
 
     $('body').append($copyHolder);
-    sel.selectAllChildren( $copyHolder[0] );
-    window.setTimeout(function() {
+    sel.selectAllChildren($copyHolder[0]);
+    window.setTimeout(function () {
       $copyHolder.remove();
     }, 0);
   });
