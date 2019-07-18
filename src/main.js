@@ -42,9 +42,6 @@ new Vue({
         highlightColor: "#ffa",
         highlightTime: 2000
       }
-      // options.highContrast = !options.highContrast;
-      // localStorage.setItem('Bible.highContrast', options.highContrast);
-      // Bible.setHighContrast(options.highContrast);
     }
   },
   //===============================
@@ -129,6 +126,32 @@ new Vue({
       window.DEBUG ? console.log('[Bible][addSearchResult]', this.searchResults) : false;
     },
     //==========
+    copy() {
+      let sel = window.getSelection(),
+          starting = $(sel.anchorNode.parentElement).data('paragraph') || {},
+          ending = $(sel.focusNode.parentElement).data('paragraph') || {},
+          $copyFooter = $(`<small class="text-muted"></small>`),
+          $copyHolder = $('<div>', { style: { position: 'absolute', left: '-99999px' } }),
+          info = `${starting.book} ${starting.chapter}:${starting.verse}`;
+  
+      if (starting != ending && starting.book == ending.book) {
+        info = `${info} - ${ending.chapter}:${ending.verse}`;
+      }
+  
+      if (starting != ending && starting.book != ending.book) {
+        info = `${info} - ${ending.book} ${ending.chapter}:${ending.verse}`;
+      }
+  
+      $copyFooter.html(`(${info})`);
+      $copyHolder.html(`${sel}`);
+      $copyHolder.append(`<br />`);
+      $copyHolder.append($copyFooter);
+  
+      $('body').append($copyHolder);
+      sel.selectAllChildren($copyHolder[0]);
+      window.setTimeout(() => $copyHolder.remove(), 0);
+    },
+    //==========
   },
   //===============================
   beforeMount() {
@@ -149,33 +172,7 @@ new Vue({
   mounted() {
     window.DEBUG ? console.log('[Bible mSky mounted]', this) : false;
 
-    $(document).on('copy', () => {
-      var sel = window.getSelection(),
-        starting = $(sel.anchorNode.parentElement).data('paragraph'),
-        ending = $(sel.focusNode.parentElement).data('paragraph'),
-        $copyFooter = $(`<small class="text-muted"></small>`),
-        $copyHolder = $('<div>', { style: { position: 'absolute', left: '-99999px' } }),
-        info = `${starting.book} ${starting.chapter}:${starting.verse}`;
-  
-      if (starting != ending && starting.book == ending.book) {
-        info = `${info} - ${ending.chapter}:${ending.verse}`;
-      }
-  
-      if (starting != ending && starting.book != ending.book) {
-        info = `${info} - ${ending.book} ${ending.chapter}:${ending.verse}`;
-      }
-  
-      $copyFooter.html(`(${info})`);
-      $copyHolder.html(`${sel}`);
-      $copyHolder.append(`<br />`);
-      $copyHolder.append($copyFooter);
-  
-      $('body').append($copyHolder);
-      sel.selectAllChildren($copyHolder[0]);
-      window.setTimeout(function () {
-        $copyHolder.remove();
-      }, 0);
-    });
+    $(document).on('copy', this.copy);
   }
   //===============================
 }).$mount('#app')

@@ -8,7 +8,8 @@
                 <h3 :id="`chapter_${chapter_no}`" class="mt-2">Rozdział {{ chapter_no }}</h3>
 
                 <span v-for="verse in chapter" :key="`book-${number}-chapter-${chapter_no}-verse-${verse.lp}`"
-                        :id="`chapter_${chapter_no}_verse_${verse.lp}`">
+                        :id="`chapter_${chapter_no}_verse_${verse.lp}`"
+                        :data-paragraph="getParagraphData(title, chapter_no, verse)">
                     <small class="MsoSubtleReference text-muted">({{ verse.lp }})</small>
                     {{ verse.text }} 
                 </span>
@@ -24,6 +25,11 @@ export default {
         book: Object,
         title: String,
         number: Number
+    },
+    methods: {
+        getParagraphData(number, chapter_no, verse) {
+            return JSON.stringify({ book: number, chapter: chapter_no, verse: verse.lp })
+        }
     }
 }
 </script>
