@@ -5,8 +5,7 @@ import './registerServiceWorker'
 import _get from 'lodash/_baseGet'
 import * as $ from 'jquery'
 import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'font-awesome/css/font-awesome.min.css'
+import './sass/app.scss'
 
 Vue.config.productionTip = false
 

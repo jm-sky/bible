@@ -1,6 +1,6 @@
 <template>
-    <div class="content text-justify">
-        <div class="chapters" :style="fontSize">
+    <div class="content text-justify pb-4">
+        <div class="chapters pb-2" :style="fontSize">
             <div class="m-1 p-1 border rounded shadow-sm text-muted text-center">
                 <span v-for="(chapter, index) in $root.chapters" :key="index">
                     <a :href="`#chapter_${chapter}`"
