@@ -1,0 +1,93 @@
+<IfModule mod_expires.c>
+  # Add correct content-type for fonts
+  AddType application/vnd.ms-fontobject .eot
+  AddType application/x-font-ttf .ttf
+  AddType application/x-font-opentype .otf
+  AddType application/x-font-woff .woff
+  AddType application/x-font-woff2 .woff2
+  AddType image/svg+xml .
+  # Compress compressible fonts
+  AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+  # Turn on the module.
+  ExpiresActive on
+  # Set the default expiry times.
+  ExpiresByType text/css "access plus 4 months"
+  ExpiresByType text/javascript "access plus 4 months"
+  ExpiresByType image/jpg "access plus 6 months"
+  ExpiresByType image/gif "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/ico "access plus 6 months"
+  ExpiresByType image/x-icon "access plus 6 months"
+  # Add a far future Expires header for fonts
+  ExpiresByType application/vnd.ms-fontobject "access plus 6 months"
+  ExpiresByType application/x-font-ttf "access plus 6 months"
+  ExpiresByType application/x-font-opentype "access plus 6 months"
+  ExpiresByType application/x-font-woff "access plus 6 months"
+  ExpiresByType application/x-font-woff2 "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  <Files "*\.js">
+    ExpiresDefault "access plus 6 months"
+  </Files>
+  <Files "*\.css">
+    ExpiresDefault "access plus 6 months"
+  </Files>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  # Force compression for mangled `Accept-Encoding` request headers
+  <IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    </IfModule>
+  </IfModule>
+
+  # Compress all output labeled with one of the following media types.
+  <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                    "application/javascript" \
+                                    "application/json" \
+                                    "application/ld+json" \
+                                    "application/manifest+json" \
+                                    "application/rdf+xml" \
+                                    "application/rss+xml" \
+                                    "application/schema+json" \
+                                    "application/vnd.geo+json" \
+                                    "application/vnd.ms-fontobject" \
+                                    "application/wasm" \
+                                    "application/x-font-ttf" \
+                                    "application/x-javascript" \
+                                    "application/x-web-app-manifest+json" \
+                                    "application/xhtml+xml" \
+                                    "application/xml" \
+                                    "font/collection" \
+                                    "font/eot" \
+                                    "font/opentype" \
+                                    "font/otf" \
+                                    "font/ttf" \
+                                    "image/bmp" \
+                                    "image/svg+xml" \
+                                    "image/vnd.microsoft.icon" \
+                                    "image/x-icon" \
+                                    "text/cache-manifest" \
+                                    "text/calendar" \
+                                    "text/css" \
+                                    "text/html" \
+                                    "text/javascript" \
+                                    "text/plain" \
+                                    "text/markdown" \
+                                    "text/vcard" \
+                                    "text/vnd.rim.location.xloc" \
+                                    "text/vtt" \
+                                    "text/x-component" \
+                                    "text/x-cross-domain-policy" \
+                                    "text/xml"
+  </IfModule>
+
+  # Map the following filename extensions to the specified
+  <IfModule mod_mime.c>
+    AddEncoding gzip              svgz
+  </IfModule>
+
+</IfModule>
