@@ -89,13 +89,14 @@ new Vue({
         method: 'get',
       })
       .then(content => {
+        this.loading = false;
         window.DEBUG ? console.log('[Bible] READ content:', content) : false;
         this.book = Object.keys(content.books)[0];
         this.bible = content;
         this.title = content.title;
         this.publisher = content.publisher;
-        this.loading = false;
-      });
+      })
+      .fail(() => this.loading = false);
     },
     //==========
     search() {
@@ -132,8 +133,6 @@ new Vue({
   },
   //===============================
   beforeMount() {
-    window.DEBUG = true;
-
     let highContrast = localStorage.getItem('Bible.highContrast');
     if ([true, false].includes(highContrast)) {
       this.highContrast = highContrast;
