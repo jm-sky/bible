@@ -1,20 +1,44 @@
 {
-  "name": "biblia.madeyski.org",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "name": "bible-msky",
+  "version": "0.0.1",
+  "description": "Bible App",
+  "productName": "Biblia mSky",
+  "cordovaId": "org.madeyski.bible-msky.app",
+  "author": "jan.madeyski@gmail.com",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:pwa": "quasar build -m pwa",
+    "build:electron": "quasar build -m electron",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0"
   },
-  "keywords": [
-    "Bible"
-  ],
-  "author": "Jan Madeyski",
-  "license": "ISC",
   "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
-    "eslint": "^5.14.0"
-  }
+    "popper.js": "^1.15.0",
+    "quasar": "^1.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
 }
