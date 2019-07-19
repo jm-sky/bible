@@ -11,7 +11,7 @@
             :key="index"
             class="px-2 py-1 m-1 border rounded"
           >
-            {{ item.verse.text }}
+            <span v-html="item.verse.text"></span>
             <div class="clearfix"></div>
             <a
               @click="seek(item)"

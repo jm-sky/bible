@@ -116,11 +116,16 @@ new Vue({
       
     },
     //==========
-    addSearchResult(book, c, v) {
+    addSearchResult(book, chapter, verse) {
+      let pattern = new RegExp(`(${this.searchPhrase})`, 'i');
+
+      verse.text = verse.text.replace(pattern, '<b>$1</b>')
+
       this.searchResults.push({
         book: book,
-        chapter: c,
-        verse: v
+        chapter: chapter,
+        verse: verse,
+        needle: this.searchPhrase+''
       });
       $('#modal').modal('show');
       window.DEBUG ? console.log('[Bible][addSearchResult]', this.searchResults) : false;
