@@ -10,6 +10,16 @@ import './sass/app.scss'
 Vue.config.productionTip = false
 Vue.config.devtools = true
 
+const parse_json = function(string) {
+  let json = null;
+  try {
+    json = JSON.parse(string)
+  } catch(e) {
+    json = null
+  }
+  return json;
+}
+
 new Vue({
   //===============================
   render: h => h(App),
@@ -166,17 +176,17 @@ new Vue({
   },
   //===============================
   beforeMount() {
-    let highContrast = JSON.parse(localStorage.getItem('Bible.highContrast'));
+    let highContrast = parse_json(localStorage.getItem('Bible.highContrast'));
     if ([true, false].includes(highContrast)) {
       this.config.highContrast = highContrast;
     }
     
-    let fontSize = JSON.parse(localStorage.getItem('Bible.fontSize'));
+    let fontSize = parse_json(localStorage.getItem('Bible.fontSize'));
     if (isNaN(fontSize) === false) {
       this.config.fontSize = fontSize;
     }
 
-    let userVersion = JSON.parse(localStorage.getItem('Bible.version'));
+    let userVersion = parse_json(localStorage.getItem('Bible.version'));
     if (this.versions.includes(userVersion)) {
       this.version = userVersion;
     } else {
