@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="p-3">
-    <h1 class="text-center mt-3">{{ $root.title }}</h1>
+    <h1 class="text-center mt-4">{{ $root.title }}</h1>
     <h4 class="text-center text-muted font-italic">{{ $root.publisher }}</h4>
 
     <b-menu></b-menu>
