@@ -14,10 +14,12 @@ export default {
   //===============================
   methods: {
     sizeDown() {
-      this.$root.config.fontSize -= 0.5;
+      // console.log('[sizeDown]', this.$root.config.fontSize)
+      this.$root.config.fontSize = (this.$root.config.fontSize || 1) - 0.5;
     },
     sizeUp() {
-      this.$root.config.fontSize += 0.5;
+      // console.log('[sizeUp]', this.$root.config.fontSize)
+      this.$root.config.fontSize = (this.$root.config.fontSize || 1) + 0.5;
     },
   }
   //===============================

@@ -8,6 +8,7 @@ import 'bootstrap'
 import './sass/app.scss'
 
 Vue.config.productionTip = false
+Vue.config.devtools = true
 
 new Vue({
   //===============================
@@ -49,11 +50,16 @@ new Vue({
     //==========
     'config.highContrast'() {
       document.body.classList.toggle('high-contrast', this.config.highContrast);
+      localStorage.setItem('Bible.highContrast', JSON.stringify(this.config.highContrast));
+    },
+    //==========
+    'config.fontSize'() {
+      localStorage.setItem('Bible.fontSize', JSON.stringify(this.config.fontSize));
     },
     //==========
     version() {
       window.DEBUG ? console.log('[Bible][watch][version]:', this.version) : false;
-      localStorage.setItem('Bible.version', this.version);
+      localStorage.setItem('Bible.version', JSON.stringify(this.version));
       this.read();
     },
     //==========
@@ -160,12 +166,17 @@ new Vue({
   },
   //===============================
   beforeMount() {
-    let highContrast = localStorage.getItem('Bible.highContrast');
+    let highContrast = JSON.parse(localStorage.getItem('Bible.highContrast'));
     if ([true, false].includes(highContrast)) {
-      this.highContrast = highContrast;
+      this.config.highContrast = highContrast;
     }
     
-    let userVersion = localStorage.getItem('Bible.version');
+    let fontSize = JSON.parse(localStorage.getItem('Bible.fontSize'));
+    if (isNaN(fontSize) === false) {
+      this.config.fontSize = fontSize;
+    }
+
+    let userVersion = JSON.parse(localStorage.getItem('Bible.version'));
     if (this.versions.includes(userVersion)) {
       this.version = userVersion;
     } else {
