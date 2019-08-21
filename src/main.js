@@ -58,6 +58,12 @@ new Vue({
   //===============================
   watch: {
     //==========
+    loading() {
+      if (this.loading === false && window.location.hash) {
+        this.goToHash();
+      }
+    },
+    //==========
     'config.highContrast'() {
       document.body.classList.toggle('high-contrast', this.config.highContrast);
       localStorage.setItem('Bible.highContrast', JSON.stringify(this.config.highContrast));
@@ -134,15 +140,17 @@ new Vue({
     //==========
     addSearchResult(book, chapter, verse) {
       let pattern = new RegExp(`(${this.searchPhrase})`, 'i');
+      let verseClone = Object.assign({}, verse);
 
-      verse.text = verse.text.replace(pattern, '<b>$1</b>')
+      verseClone.text = verseClone.text.replace(pattern, '<b>$1</b>')
 
       this.searchResults.push({
         book: book,
         chapter: chapter,
-        verse: verse,
+        verse: verseClone,
         needle: this.searchPhrase+''
       });
+
       $('#modal').modal('show');
       window.DEBUG ? console.log('[Bible][addSearchResult]', this.searchResults) : false;
     },
@@ -171,6 +179,13 @@ new Vue({
       $('body').append($copyHolder);
       sel.selectAllChildren($copyHolder[0]);
       window.setTimeout(() => $copyHolder.remove(), 0);
+    },
+    //==========
+    goToHash() {
+      Vue.nextTick(() => {
+        let paragraph = document.querySelector(window.location.hash)
+        paragraph ? paragraph.scrollIntoView() : false;
+      });
     },
     //==========
   },
