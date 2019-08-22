@@ -36,12 +36,12 @@ new Vue({
       books: []
     },
     versions: [
-      `UBG-NT.json`,
-      `UBG-ST-NT.json`,
-      `EIB-NT.json`,
-      `BW-NT.json`,
-      `BW-ST-NT.json`,
-      `RSV-NT.json`,
+      `UBG-NT`,
+      `UBG-ST-NT`,
+      `EIB-NT`,
+      `BW-NT`,
+      `BW-ST-NT`,
+      `RSV-NT`,
     ],
     showAll: false,
     searchPhrase: null,
@@ -145,7 +145,7 @@ new Vue({
       this.showAll = showAll;
 
       return $.ajax({
-        url: `${this.config.baseUrl}/${this.config.shelf}/${this.version}`,
+        url: `${this.config.baseUrl}/${this.config.shelf}/${this.version}.json`,
         dataType: 'json',
         method: 'get',
       })
@@ -250,6 +250,7 @@ new Vue({
     }
 
     let userVersion = parse_json(localStorage.getItem('Bible.version'));
+    userVersion = (userVersion || '').replace('.json', '');
     if (this.versions.includes(userVersion)) {
       this.version = userVersion;
     } else {
