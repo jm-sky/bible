@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VTooltip from 'v-tooltip'
 import './registerServiceWorker'
 
 import _get from 'lodash/_baseGet'
@@ -7,6 +8,7 @@ import * as $ from 'jquery'
 import 'bootstrap'
 import './sass/app.scss'
 
+Vue.use(VTooltip)
 Vue.config.productionTip = false
 Vue.config.devtools = true
 
@@ -48,11 +50,15 @@ new Vue({
       baseUrl: `${window.location.origin}`,
       shelf: 'books',
       fontSize: 1,
+      fontTypeSerif: false,
       highContrast: false,
       search: {
         highlightColor: "#ffa",
         highlightTime: 2000
-      }
+      },
+      showSearch: false,
+      showLaw: false,
+      showOptions: false,
     }
   },
   //===============================
@@ -71,6 +77,34 @@ new Vue({
     //==========
     'config.fontSize'() {
       localStorage.setItem('Bible.fontSize', JSON.stringify(this.config.fontSize));
+    },
+    //==========
+    'config.fontTypeSerif'() {
+      localStorage.setItem('Bible.fontTypeSerif', JSON.stringify(this.config.fontTypeSerif));
+    },
+    //==========
+    'config.showSearch'() {
+      if (this.config.showSearch) {
+        this.config.showLaw = false;
+        this.config.showOptions = false;
+      }
+      $(this.$refs.searchModal.$el).modal(this.config.showSearch ? 'show' : 'hide');
+    },
+    //==========
+    'config.showLaw'() {
+      if (this.config.showLaw) {
+        this.config.showSearch = false;
+        this.config.showOptions = false;
+      }
+      $(this.$refs.lawModal.$el).modal(this.config.showLaw ? 'show' : 'hide');
+    },
+    //==========
+    'config.showOptions'() {
+      if (this.config.showOptions) {
+        this.config.showSearch = false;
+        this.config.showLaw = false;
+      }
+      $(this.$refs.optionsModal.$el).modal(this.config.showOptions ? 'show' : 'hide');
     },
     //==========
     version() {
@@ -94,6 +128,15 @@ new Vue({
   },
   //===============================
   methods: {
+    //==========
+    fontSizeDown() {
+      // console.log('[sizeDown]', this.config.fontSize)
+      this.config.fontSize = (this.config.fontSize || 1) - 0.5;
+    },
+    fontSizeUp() {
+      // console.log('[sizeUp]', this.config.fontSize)
+      this.config.fontSize = (this.config.fontSize || 1) + 0.5;
+    },
     //==========
     read(showAll = false) {
       window.DEBUG ? console.log('[Bible][read] showAll:', showAll, ' | version: ', this.version) : false;
@@ -151,7 +194,7 @@ new Vue({
         needle: this.searchPhrase+''
       });
 
-      $('#modal').modal('show');
+      this.config.showSearch = true;
       window.DEBUG ? console.log('[Bible][addSearchResult]', this.searchResults) : false;
     },
     //==========
@@ -199,6 +242,11 @@ new Vue({
     let fontSize = parse_json(localStorage.getItem('Bible.fontSize'));
     if (isNaN(fontSize) === false) {
       this.config.fontSize = fontSize;
+    }
+
+    let fontTypeSerif = parse_json(localStorage.getItem('Bible.fontTypeSerif'));
+    if (fontTypeSerif === false || fontTypeSerif === true) {
+      this.config.fontTypeSerif = fontTypeSerif;
     }
 
     let userVersion = parse_json(localStorage.getItem('Bible.version'));

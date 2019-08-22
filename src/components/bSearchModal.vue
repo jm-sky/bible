@@ -1,5 +1,5 @@
 <template>
-  <div id="modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)">
+  <div id="search-modal" class="modal fade" style="background-color: rgba(0,0,0,0.2)">
     <div class="modal-dialog modal-lg">
       <div class="modal-content p-1">
         <a href="javascript:;" class="btn btn-primary text-light m-1" data-dismiss="modal">
@@ -35,7 +35,7 @@ export default {
     seek(item) {
       window.DEBUG ? console.log("[seek] item:", item) : false;
       this.$root.book = item.book;
-      $("#modal").modal("hide");
+      this.$root.config.showSearch = false;
 
       this.$nextTick(() => {
         let $linkedVerse = $(`#chapter_${item.chapter}_verse_${item.verse.lp}`);

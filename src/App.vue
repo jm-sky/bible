@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="p-3">
+  <div id="app" class="p-3" :class="{ 'font-serif': $root.config.fontTypeSerif }">
     <h1 class="text-center mt-4">{{ $root.title }}</h1>
     <h4 class="text-center text-muted font-italic">{{ $root.publisher }}</h4>
 
@@ -15,7 +15,9 @@
     <b-resizer></b-resizer>
     <b-scroller></b-scroller>
 
-    <b-modal ref="modal"></b-modal>
+    <b-search-modal ref="modalModal"></b-search-modal>
+    <b-law-modal ref="lawModal"></b-law-modal>
+    <b-options-modal ref="optionsModal"></b-options-modal>
   </div>
 </template>
 
@@ -23,7 +25,9 @@
 import bContent from './components/bContent'
 import bLoader from './components/bLoader'
 import bMenu from './components/bMenu'
-import bModal from './components/bModal'
+import bSearchModal from './components/bSearchModal'
+import bLawModal from './components/bLawModal'
+import bOptionsModal from './components/bOptionsModal'
 import bResizer from './components/bResizer'
 import bScroller from './components/bScroller'
 import bSearch from './components/bSearch'
@@ -34,18 +38,20 @@ export default {
   name: 'app',
   //====================
   components: {
-    bContent, bLoader, bMenu, bModal, bResizer, bScroller, bSearch, bVersions
+    bContent, bLoader, bMenu, bSearchModal, bLawModal, bOptionsModal, bResizer, bScroller, bSearch, bVersions
   },
   //====================
   mounted() {
-    this.$root.$refs.modal = this.$refs.modal;
+    this.$root.$refs.modalModal = this.$refs.modalModal;
+    this.$root.$refs.lawModal = this.$refs.lawModal;
+    this.$root.$refs.optionsModal = this.$refs.optionsModal;
   }
   //====================
 }
 </script>
 
 <style lang="scss">
-.high-contrast, .high-contrast * {
+.high-contrast, .high-contrast:not(i) * {
   background: #000;
   color: #fff;
   font-weight: bold;
