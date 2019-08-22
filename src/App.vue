@@ -15,13 +15,15 @@
     <b-resizer></b-resizer>
     <b-scroller></b-scroller>
 
-    <b-search-modal ref="modalModal"></b-search-modal>
+    <b-search-modal ref="searchModal"></b-search-modal>
     <b-law-modal ref="lawModal"></b-law-modal>
     <b-options-modal ref="optionsModal"></b-options-modal>
   </div>
 </template>
 
 <script>
+import * as $ from 'jquery'
+
 import bContent from './components/bContent'
 import bLoader from './components/bLoader'
 import bMenu from './components/bMenu'
@@ -42,9 +44,13 @@ export default {
   },
   //====================
   mounted() {
-    this.$root.$refs.modalModal = this.$refs.modalModal;
+    this.$root.$refs.searchModal = this.$refs.searchModal;
     this.$root.$refs.lawModal = this.$refs.lawModal;
     this.$root.$refs.optionsModal = this.$refs.optionsModal;
+
+    $(this.$refs.searchModal.$el).on('hidden.bs.modal', () => this.$root.config.showSearch = false);
+    $(this.$refs.lawModal.$el).on('hidden.bs.modal', () => this.$root.config.showLaw = false);
+    $(this.$refs.optionsModal.$el).on('hidden.bs.modal', () => this.$root.config.showOptions = false);
   }
   //====================
 }
