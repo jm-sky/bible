@@ -59,6 +59,22 @@
               </div>
             </div>
             <!-- form-group row -->
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Kopiowana treść</label>
+              <div class="col-sm-9">
+                <div class="pt-2 form-check form-check-inline d-flex justify-content-around">
+                    <div class="d-inline-block">
+                      <input v-model="$root.config.copyFormating" :value="false" type="radio" id="copyFormating-FALSE" class="form-check-input">
+                      <label class="form-check-label" for="copyFormating-FALSE">Nie formatuj</label>
+                    </div>                  
+                    <div class="d-inline-block">
+                      <input v-model="$root.config.copyFormating" :value="true" type="radio" id="copyFormating-TRUE" class="form-check-input">
+                      <label class="form-check-label" for="copyFormating-TRUE">Formatuj</label>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- form-group row -->
           </form>
 
         </div>

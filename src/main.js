@@ -52,6 +52,7 @@ new Vue({
       fontSize: 1,
       fontTypeSerif: false,
       highContrast: false,
+      copyFormating: true,
       search: {
         highlightColor: "#ffa",
         highlightTime: 2000
@@ -199,21 +200,29 @@ new Vue({
     },
     //==========
     copy() {
+      if (this.config.copyFormating === false) {
+        return
+      }
+
       let sel = window.getSelection(),
           starting = $(sel.anchorNode.parentElement).data('paragraph') || {},
           ending = $(sel.focusNode.parentElement).data('paragraph') || {},
           $copyFooter = $(`<small class="text-muted"></small>`),
           $copyHolder = $('<div>', { style: { position: 'absolute', left: '-99999px' } }),
-          info = `${starting.book} ${starting.chapter}:${starting.verse}`;
+          info;
   
-      if (starting != ending && starting.book == ending.book) {
-        info = `${info} - ${ending.chapter}:${ending.verse}`;
+      if (starting && starting.book && starting.chapter) {
+        info = `${starting.book} ${starting.chapter}:${starting.verse}`
+      }
+
+      if (starting != ending && starting.book == ending.book && ending.chapter) {
+        info = (info ? `${info} - ` : ``) + `${ending.chapter}:${ending.verse}`;
       }
   
-      if (starting != ending && starting.book != ending.book) {
-        info = `${info} - ${ending.book} ${ending.chapter}:${ending.verse}`;
+      if (starting != ending && starting.book != ending.book && ending.book) {
+        info = (info ? `${info} - ` : ``) + `${ending.book} ${ending.chapter}:${ending.verse}`;
       }
-  
+
       $copyFooter.html(`(${info})`);
       $copyHolder.html(`${sel}`);
       $copyHolder.append(`<br />`);
