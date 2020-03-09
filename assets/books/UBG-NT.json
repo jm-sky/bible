@@ -4361,6 +4361,10 @@
         {
           "lp": "19",
           "text": "Idźcie więc i nauczajcie wszystkie narody, chrzcząc je w imię Ojca i Syna, i Ducha Świętego;"
+        },
+        {
+          "lp": "21",
+          "text": "Ucząc je przestrzegać wszystkiego, co wam przykazałem. A oto ja jestem z wami przez wszystkie dni aż do końca świata. Amen."
         }
       ]
     },
@@ -11757,6 +11761,10 @@
         {
           "lp": "52",
           "text": "A oni oddali mu pokłon i wrócili do Jerozolimy z wielką radością."
+        },
+        {
+          "lp": "53",
+          "text": "I byli zawsze w świątyni, chwaląc i błogosławiąc Boga. Amen."
         }
       ]
     },
@@ -14720,140 +14728,6 @@
       "17": [
         {
           "lp": "1",
-          "text": "To wam powiedziałem, abyście się nie gorszyli."
-        },
-        {
-          "lp": "2",
-          "text": "Będą was wyłączać z synagog; owszem, nadchodzi godzina, że każdy, kto was zabije, będzie sądził, że pełni służbę dla Boga."
-        },
-        {
-          "lp": "3",
-          "text": "A uczynią wam tak, bo nie poznali Ojca ani mnie."
-        },
-        {
-          "lp": "4",
-          "text": "Ale powiedziałem wam to, abyście, gdy nadejdzie ta godzina, przypomnieli sobie, że ja wam to powiedziałem. A nie mówiłem wam tego na początku, bo byłem z wami."
-        },
-        {
-          "lp": "5",
-          "text": "Lecz teraz idę do tego, który mnie posłał, a żaden z was nie pyta mnie: Dokąd idziesz?"
-        },
-        {
-          "lp": "6",
-          "text": "Ale ponieważ wam to powiedziałem, smutek napełnił wasze serce."
-        },
-        {
-          "lp": "7",
-          "text": "Lecz ja mówię wam prawdę: Pożyteczniej jest dla was, abym odszedł. Jeśli bowiem nie odejdę, Pocieszyciel do was nie przyjdzie, a jeśli odejdę, poślę go do was."
-        },
-        {
-          "lp": "8",
-          "text": "A gdy on przyjdzie, będzie przekonywał świat o grzechu, o sprawiedliwości i o sądzie."
-        },
-        {
-          "lp": "9",
-          "text": "O grzechu, mówię, bo nie uwierzyli we mnie."
-        },
-        {
-          "lp": "10",
-          "text": "O sprawiedliwości, bo idę do mego Ojca i już więcej mnie nie zobaczycie."
-        },
-        {
-          "lp": "11",
-          "text": "A o sądzie, bo władca tego świata już jest osądzony."
-        },
-        {
-          "lp": "12",
-          "text": "Mam wam jeszcze wiele do powiedzenia, ale teraz nie możecie tego znieść."
-        },
-        {
-          "lp": "13",
-          "text": "Lecz gdy przyjdzie on, Duch prawdy, wprowadzi was we wszelką prawdę. Nie będzie bowiem mówił sam od siebie, ale będzie mówił to, co usłyszy, i oznajmi wam przyszłe rzeczy."
-        },
-        {
-          "lp": "14",
-          "text": "On mnie uwielbi, bo weźmie z mojego i wam oznajmi."
-        },
-        {
-          "lp": "15",
-          "text": "Wszystko, co ma Ojciec, jest moje. Dlatego powiedziałem, że weźmie z mojego i wam oznajmi."
-        },
-        {
-          "lp": "16",
-          "text": "Jeszcze krótki czas, a nie zobaczycie mnie, i znowu krótki czas, a zobaczycie mnie, bo ja idę do Ojca."
-        },
-        {
-          "lp": "17",
-          "text": "Wtedy niektórzy z jego uczniów mówili między sobą: Cóż znaczy to, co nam mówi: Jeszcze krótki czas, a nie zobaczycie mnie, i znowu krótki czas, a zobaczycie mnie? oraz: Ja idę do Ojca?"
-        },
-        {
-          "lp": "18",
-          "text": "Dlatego mówili: Cóż znaczy to, co mówi: Krótki czas? Nie rozumiemy, co mówi."
-        },
-        {
-          "lp": "19",
-          "text": "Wówczas Jezus poznał, że chcieli go pytać i powiedział do nich: Pytacie się między sobą o to, co powiedziałem: Jeszcze krótki czas, a nie zobaczycie mnie, i znowu krótki czas, a zobaczycie mnie?"
-        },
-        {
-          "lp": "20",
-          "text": "Zaprawdę, zaprawdę powiadam wam: Wy będziecie płakać i zawodzić, a świat będzie się radował. Będziecie smutni, ale wasz smutek zamieni się w radość."
-        },
-        {
-          "lp": "21",
-          "text": "Kobieta, gdy rodzi, smuci się, bo nadeszła jej godzina. Gdy jednak urodzi dziecko, już nie pamięta cierpienia z powodu radości, że człowiek przyszedł na świat."
-        },
-        {
-          "lp": "22",
-          "text": "I wy teraz się smucicie, ale znowu was zobaczę i wasze serce będzie się radowało, a nikt nie odbierze wam waszej radości."
-        },
-        {
-          "lp": "23",
-          "text": "A tego dnia nie będziecie mnie o nic pytać. Zaprawdę, zaprawdę powiadam wam: O cokolwiek poprosicie Ojca w moje imię, da wam."
-        },
-        {
-          "lp": "24",
-          "text": "Dotąd o nic nie prosiliście w moje imię. Proście, a otrzymacie, aby wasza radość była pełna."
-        },
-        {
-          "lp": "25",
-          "text": "Mówiłem wam o tym w przypowieściach. Ale nadchodzi godzina, gdy już więcej nie będę mówił wam w przypowieściach, ale otwarcie oznajmię wam o moim Ojcu."
-        },
-        {
-          "lp": "26",
-          "text": "W tym dniu będziecie prosić w moje imię. Nie mówię wam, że ja będę prosił Ojca za wami."
-        },
-        {
-          "lp": "27",
-          "text": "Sam bowiem Ojciec was miłuje, bo wy mnie umiłowaliście i uwierzyliście, że ja wyszedłem od Boga."
-        },
-        {
-          "lp": "28",
-          "text": "Wyszedłem od Ojca i przyszedłem na świat. Znowu opuszczam świat i idę do Ojca."
-        },
-        {
-          "lp": "29",
-          "text": "Jego uczniowie mu powiedzieli: Oto teraz mówisz otwarcie i nie opowiadasz żadnej przypowieści."
-        },
-        {
-          "lp": "30",
-          "text": "Teraz wiemy, że wszystko wiesz i nie potrzebujesz, aby cię ktoś pytał. Dlatego wierzymy, że wyszedłeś od Boga."
-        },
-        {
-          "lp": "31",
-          "text": "Jezus im odpowiedział: Teraz wierzycie?"
-        },
-        {
-          "lp": "32",
-          "text": "Oto nadchodzi godzina, a nawet już nadeszła, że rozproszycie się każdy w swoją stronę, a mnie zostawicie samego. Ale nie jestem sam, bo Ojciec jest ze mną."
-        },
-        {
-          "lp": "33",
-          "text": "To wam powiedziałem, abyście mieli pokój we mnie. Na świecie będziecie mieć ucisk, ale ufajcie, ja zwyciężyłem świat."
-        }
-      ],
-      "18": [
-        {
-          "lp": "1",
           "text": "To powiedziawszy, Jezus podniósł swoje oczy ku niebu i rzekł: Ojcze, nadeszła godzina. Uwielbij swego Syna, aby też twój Syn uwielbił ciebie;"
         },
         {
@@ -14957,657 +14831,343 @@
           "text": "Objawiłem im twoje imię i jeszcze objawię, aby miłość, którą mnie umiłowałeś, była w nich i ja w nich."
         }
       ],
+      "18": [
+        {
+          "lp": "1",
+          "text": "To powiedziawszy, Jezus wyszedł ze swoimi uczniami za potok Cedron, gdzie był ogród, do którego wszedł on i jego uczniowie."
+        },
+        {
+          "lp": "2",
+          "text": "A Judasz, który go zdradził, znał to miejsce, bo Jezus często się tam zbierał ze swoimi uczniami."
+        },
+        {
+          "lp": "3",
+          "text": "Judasz więc, wziąwszy oddział żołnierzy i strażników od naczelnych kapłanów i faryzeuszy, przyszedł tam z latarniami, pochodniami i bronią."
+        },
+        {
+          "lp": "4",
+          "text": "Wtedy Jezus, wiedząc o wszystkim, co miało na niego przyjść, wyszedł im naprzeciw i zapytał: Kogo szukacie?"
+        },
+        {
+          "lp": "5",
+          "text": "Odpowiedzieli mu: Jezusa z Nazaretu. Jezus powiedział do nich: Ja jestem. A stał z nimi i Judasz, który go zdradził."
+        },
+        {
+          "lp": "6",
+          "text": "Gdy tylko im powiedział: Ja jestem, cofnęli się i padli na ziemię."
+        },
+        {
+          "lp": "7",
+          "text": "Wtedy ich znowu spytał: Kogo szukacie? A oni odpowiedzieli: Jezusa z Nazaretu."
+        },
+        {
+          "lp": "8",
+          "text": "Jezus odpowiedział: Powiedziałem wam, że ja jestem. Jeśli więc mnie szukacie, pozwólcie tym odejść."
+        },
+        {
+          "lp": "9",
+          "text": "Stało się tak, aby się wypełniły słowa, które powiedział: Nie straciłem żadnego z tych, których mi dałeś."
+        },
+        {
+          "lp": "10",
+          "text": "Wówczas Szymon Piotr, mając miecz, dobył go, uderzył sługę najwyższego kapłana i odciął mu prawe ucho. A temu słudze było na imię Malchos."
+        },
+        {
+          "lp": "11",
+          "text": "I powiedział Jezus do Piotra: Włóż swój miecz do pochwy. Czy nie mam pić kielicha, który mi dał Ojciec?"
+        },
+        {
+          "lp": "12",
+          "text": "Wtedy oddział żołnierzy i dowódca oraz strażnicy żydowscy schwytali Jezusa, związali go;"
+        },
+        {
+          "lp": "13",
+          "text": "I zaprowadzili go najpierw do Annasza, bo był teściem Kajfasza, który tego roku był najwyższym kapłanem."
+        },
+        {
+          "lp": "14",
+          "text": "To Kajfasz był tym, który doradził Żydom, że pożyteczniej jest, aby jeden człowiek umarł za lud."
+        },
+        {
+          "lp": "15",
+          "text": "A szedł za Jezusem Szymon Piotr i inny uczeń. Ten uczeń zaś był znany najwyższemu kapłanowi i wszedł z Jezusem na dziedziniec najwyższego kapłana."
+        },
+        {
+          "lp": "16",
+          "text": "Ale Piotr stał na zewnątrz u drzwi. Wtedy wyszedł ten drugi uczeń, który był znany najwyższemu kapłanowi, pomówił z odźwierną i wprowadził Piotra."
+        },
+        {
+          "lp": "17",
+          "text": "Wówczas dziewczyna odźwierna zapytała Piotra: Czy i ty nie jesteś jednym z uczniów tego człowieka? On odpowiedział: Nie jestem."
+        },
+        {
+          "lp": "18",
+          "text": "A ponieważ było zimno, strażnicy i słudzy, rozpaliwszy ogień, stali i grzali się. Stał też z nimi Piotr i grzał się."
+        },
+        {
+          "lp": "19",
+          "text": "Tymczasem najwyższy kapłan pytał Jezusa o jego uczniów i o jego naukę."
+        },
+        {
+          "lp": "20",
+          "text": "Jezus mu odpowiedział: Ja jawnie mówiłem światu. Zawsze nauczałem w synagodze i w świątyni, gdzie zewsząd schodzą się Żydzi, a potajemnie nic nie mówiłem."
+        },
+        {
+          "lp": "21",
+          "text": "Dlaczego mnie pytasz? Zapytaj tych, którzy słyszeli to, co im mówiłem. Oto oni wiedzą, co mówiłem."
+        },
+        {
+          "lp": "22",
+          "text": "A gdy on to powiedział, jeden ze sług, który tam stał, wymierzył policzek Jezusowi, mówiąc: Tak odpowiadasz najwyższemu kapłanowi?"
+        },
+        {
+          "lp": "23",
+          "text": "Jezus mu odpowiedział: Jeśli źle powiedziałem, daj świadectwo o złu, a jeśli dobrze, dlaczego mnie bijesz?"
+        },
+        {
+          "lp": "24",
+          "text": "Bo Annasz odesłał go związanego do Kajfasza, najwyższego kapłana."
+        },
+        {
+          "lp": "25",
+          "text": "A Szymon Piotr stał i grzał się. I zapytali go: Czy i ty nie jesteś jednym z jego uczniów? A on się wyparł, mówiąc: Nie jestem."
+        },
+        {
+          "lp": "26",
+          "text": "Zapytał go jeden ze sług najwyższego kapłana, krewny tego, któremu Piotr odciął ucho: Czyż nie ciebie widziałem z nim w ogrodzie?"
+        },
+        {
+          "lp": "27",
+          "text": "Wtedy Piotr znowu się wyparł. I zaraz zapiał kogut."
+        },
+        {
+          "lp": "28",
+          "text": "Od Kajfasza więc zaprowadzili Jezusa do ratusza; a było rano. Sami jednak nie weszli do ratusza, aby się nie skalać, lecz żeby mogli spożyć Paschę."
+        },
+        {
+          "lp": "29",
+          "text": "Wówczas Piłat wyszedł do nich i zapytał: Jaką skargę wnosicie przeciwko temu człowiekowi?"
+        },
+        {
+          "lp": "30",
+          "text": "Odpowiedzieli mu: Gdyby on nie był złoczyńcą, nie wydalibyśmy go tobie."
+        },
+        {
+          "lp": "31",
+          "text": "I powiedział Piłat: Wy go weźcie i osądźcie według waszego prawa. Żydzi mu odpowiedzieli: Nam nie wolno nikogo zabijać."
+        },
+        {
+          "lp": "32",
+          "text": "Stało się tak, aby się wypełniły słowa, które powiedział Jezus, dając znać, jaką śmiercią miał umrzeć."
+        },
+        {
+          "lp": "33",
+          "text": "Wtedy Piłat znowu wszedł do ratusza, wezwał Jezusa i zapytał go: Czy ty jesteś królem Żydów?"
+        },
+        {
+          "lp": "34",
+          "text": "Jezus mu odpowiedział: Czy mówisz to sam od siebie, czy inni powiedzieli ci o mnie?"
+        },
+        {
+          "lp": "35",
+          "text": "Piłat odpowiedział: Czy ja jestem Żydem? Twój naród i naczelni kapłani wydali mi ciebie. Cóż więc uczyniłeś?"
+        },
+        {
+          "lp": "36",
+          "text": "Jezus odpowiedział: Moje królestwo nie jest z tego świata. Gdyby moje królestwo było z tego świata, to moi słudzy walczyliby, abym nie został wydany Żydom. Teraz jednak moje królestwo nie jest stąd."
+        },
+        {
+          "lp": "37",
+          "text": "Wtedy Piłat zapytał go: A więc jesteś królem? Jezus mu odpowiedział: Ty mówisz, że jestem królem. Ja po to się narodziłem i po to przyszedłem na świat, aby dać świadectwo prawdzie. Każdy, kto jest z prawdy, słucha mego głosu."
+        },
+        {
+          "lp": "38",
+          "text": "Piłat powiedział do niego: Cóż to jest prawda? A to powiedziawszy, wyszedł znowu do Żydów i powiedział do nich: Ja nie znajduję w nim żadnej winy."
+        },
+        {
+          "lp": "39",
+          "text": "A u was jest zwyczaj, że na Paschę wypuszczam wam jednego więźnia. Chcecie więc, abym wam wypuścił króla Żydów?"
+        },
+        {
+          "lp": "40",
+          "text": "Wówczas wszyscy znowu zawołali: Nie tego, ale Barabasza! A Barabasz był bandytą"
+        }
+      ],
       "19": [
         {
           "lp": "1",
-          "text": "To powiedziawszy, Jezus wyszedł ze swoimi uczniami za potok Cedron, gdzie był ogród, do którego wszedł on i jego uczniowie."
+          "text": "Wtedy Piłat wziął Jezusa i ubiczował go."
         },
         {
           "lp": "2",
-          "text": "A Judasz, który go zdradził, znał to miejsce, bo Jezus często się tam zbierał ze swoimi uczniami."
+          "text": "A żołnierze upletli koronę z cierni, włożyli mu ją na głowę i ubrali go w purpurowy płaszcz."
         },
         {
           "lp": "3",
-          "text": "Judasz więc, wziąwszy oddział żołnierzy i strażników od naczelnych kapłanów i faryzeuszy, przyszedł tam z latarniami, pochodniami i bronią."
+          "text": "I mówili: Witaj, królu Żydów! I policzkowali go."
         },
         {
           "lp": "4",
-          "text": "Wtedy Jezus, wiedząc o wszystkim, co miało na niego przyjść, wyszedł im naprzeciw i zapytał: Kogo szukacie?"
+          "text": "Piłat znowu wyszedł na zewnątrz i powiedział do nich: Oto wyprowadzam go do was na zewnątrz, abyście wiedzieli, że nie znajduję w nim żadnej winy."
         },
         {
           "lp": "5",
-          "text": "Odpowiedzieli mu: Jezusa z Nazaretu. Jezus powiedział do nich: Ja jestem. A stał z nimi i Judasz, który go zdradził."
+          "text": "Wtedy Jezus wyszedł na zewnątrz w cierniowej koronie i w purpurowym płaszczu. I powiedział do nich Piłat: Oto człowiek!"
         },
         {
           "lp": "6",
-          "text": "Gdy tylko im powiedział: Ja jestem, cofnęli się i padli na ziemię."
+          "text": "A gdy naczelni kapłani i ich słudzy zobaczyli go, zawołali: Ukrzyżuj, ukrzyżuj go! Piłat powiedział do nich: Wy go weźcie i ukrzyżujcie, bo ja nie znajduję w nim żadnej winy."
         },
         {
           "lp": "7",
-          "text": "Wtedy ich znowu spytał: Kogo szukacie? A oni odpowiedzieli: Jezusa z Nazaretu."
+          "text": "Żydzi mu odpowiedzieli: My mamy prawo i według naszego prawa powinien umrzeć, bo czynił siebie Synem Bożym."
         },
         {
           "lp": "8",
-          "text": "Jezus odpowiedział: Powiedziałem wam, że ja jestem. Jeśli więc mnie szukacie, pozwólcie tym odejść."
+          "text": "A gdy Piłat usłyszał te słowa, jeszcze bardziej się zląkł."
         },
         {
           "lp": "9",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział: Nie straciłem żadnego z tych, których mi dałeś."
+          "text": "I wszedł znowu do ratusza, i zapytał Jezusa: Skąd ty jesteś? Lecz Jezus nie dał mu odpowiedzi."
         },
         {
           "lp": "10",
-          "text": "Wówczas Szymon Piotr, mając miecz, dobył go, uderzył sługę najwyższego kapłana i odciął mu prawe ucho. A temu słudze było na imię Malchos."
+          "text": "Wtedy Piłat powiedział do niego: Nie chcesz ze mną rozmawiać? Nie wiesz, że mam władzę ukrzyżować cię i mam władzę cię wypuścić?"
         },
         {
           "lp": "11",
-          "text": "I powiedział Jezus do Piotra: Włóż swój miecz do pochwy. Czy nie mam pić kielicha, który mi dał Ojciec?"
+          "text": "Jezus odpowiedział: Nie miałbyś żadnej władzy nade mną, gdyby ci jej nie dano z góry. Dlatego ten, który mnie tobie wydał, ma większy grzech."
         },
         {
           "lp": "12",
-          "text": "Wtedy oddział żołnierzy i dowódca oraz strażnicy żydowscy schwytali Jezusa, związali go;"
+          "text": "Odtąd Piłat starał się go wypuścić. Żydzi jednak wołali: Jeśli go wypuścisz, nie jesteś przyjacielem cesarza. Każdy, kto się czyni królem, sprzeciwia się cesarzowi."
         },
         {
           "lp": "13",
-          "text": "I zaprowadzili go najpierw do Annasza, bo był teściem Kajfasza, który tego roku był najwyższym kapłanem."
+          "text": "Gdy więc Piłat usłyszał te słowa, wyprowadził Jezusa na zewnątrz i usiadł na krześle sędziowskim, na miejscu zwanym Litostrotos, a po hebrajsku Gabbata."
         },
         {
           "lp": "14",
-          "text": "To Kajfasz był tym, który doradził Żydom, że pożyteczniej jest, aby jeden człowiek umarł za lud."
+          "text": "A był to dzień przygotowania Paschy, około godziny szóstej. I powiedział Piłat do Żydów: Oto wasz król!"
         },
         {
           "lp": "15",
-          "text": "A szedł za Jezusem Szymon Piotr i inny uczeń. Ten uczeń zaś był znany najwyższemu kapłanowi i wszedł z Jezusem na dziedziniec najwyższego kapłana."
+          "text": "Lecz oni zawołali: Strać, strać! Ukrzyżuj go! Piłat ich zapytał: Waszego króla mam ukrzyżować? Naczelni kapłani odpowiedzieli: Nie mamy króla poza cesarzem."
         },
         {
           "lp": "16",
-          "text": "Ale Piotr stał na zewnątrz u drzwi. Wtedy wyszedł ten drugi uczeń, który był znany najwyższemu kapłanowi, pomówił z odźwierną i wprowadził Piotra."
+          "text": "Wtedy im go wydał, żeby go ukrzyżowano. Wzięli więc Jezusa i wyprowadzili go."
         },
         {
           "lp": "17",
-          "text": "Wówczas dziewczyna odźwierna zapytała Piotra: Czy i ty nie jesteś jednym z uczniów tego człowieka? On odpowiedział: Nie jestem."
+          "text": "A on, niosąc swój krzyż, wyszedł na miejsce zwane Miejscem Czaszki, a po hebrajsku Golgotą;"
         },
         {
           "lp": "18",
-          "text": "A ponieważ było zimno, strażnicy i słudzy, rozpaliwszy ogień, stali i grzali się. Stał też z nimi Piotr i grzał się."
+          "text": "Gdzie go ukrzyżowali, a z nim dwóch innych z obu stron, pośrodku zaś Jezusa."
         },
         {
           "lp": "19",
-          "text": "Tymczasem najwyższy kapłan pytał Jezusa o jego uczniów i o jego naukę."
+          "text": "Sporządził też Piłat napis i umieścił na krzyżu. A było napisane: Jezus z Nazaretu, król Żydów."
         },
         {
           "lp": "20",
-          "text": "Jezus mu odpowiedział: Ja jawnie mówiłem światu. Zawsze nauczałem w synagodze i w świątyni, gdzie zewsząd schodzą się Żydzi, a potajemnie nic nie mówiłem."
+          "text": "Napis ten czytało wielu Żydów, bo miejsce, gdzie ukrzyżowano Jezusa, było blisko miasta. A było to napisane po hebrajsku, po grecku i po łacinie."
         },
         {
           "lp": "21",
-          "text": "Dlaczego mnie pytasz? Zapytaj tych, którzy słyszeli to, co im mówiłem. Oto oni wiedzą, co mówiłem."
+          "text": "Wtedy naczelni kapłani żydowscy powiedzieli do Piłata: Nie pisz: Król Żydów, ale że on mówił: Jestem królem Żydów."
         },
         {
           "lp": "22",
-          "text": "A gdy on to powiedział, jeden ze sług, który tam stał, wymierzył policzek Jezusowi, mówiąc: Tak odpowiadasz najwyższemu kapłanowi?"
+          "text": "Piłat odpowiedział: Co napisałem, to napisałem."
         },
         {
           "lp": "23",
-          "text": "Jezus mu odpowiedział: Jeśli źle powiedziałem, daj świadectwo o złu, a jeśli dobrze, dlaczego mnie bijesz?"
+          "text": "A gdy żołnierze ukrzyżowali Jezusa, wzięli jego szaty i podzielili na cztery części, każdemu żołnierzowi część. Wzięli też tunikę, a tunika ta nie była szyta, ale od góry cała tkana."
         },
         {
           "lp": "24",
-          "text": "Bo Annasz odesłał go związanego do Kajfasza, najwyższego kapłana."
+          "text": "Mówili więc między sobą: Nie rozcinajmy jej, ale rzućmy losy o to, do kogo ma należeć; aby się wypełniło Pismo, które mówi: Podzielili między siebie moje szaty, a o moje ubranie rzucali losy. To właśnie zrobili żołnierze."
         },
         {
           "lp": "25",
-          "text": "A Szymon Piotr stał i grzał się. I zapytali go: Czy i ty nie jesteś jednym z jego uczniów? A on się wyparł, mówiąc: Nie jestem."
+          "text": "A przy krzyżu Jezusa stały jego matka i siostra jego matki, Maria, żona Kleofasa, i Maria Magdalena."
         },
         {
           "lp": "26",
-          "text": "Zapytał go jeden ze sług najwyższego kapłana, krewny tego, któremu Piotr odciął ucho: Czyż nie ciebie widziałem z nim w ogrodzie?"
+          "text": "Gdy więc Jezus zobaczył matkę i ucznia, którego miłował, stojącego obok, powiedział do swojej matki: Kobieto, oto twój syn."
         },
         {
           "lp": "27",
-          "text": "Wtedy Piotr znowu się wyparł. I zaraz zapiał kogut."
+          "text": "Potem powiedział do ucznia: Oto twoja matka. I od tej godziny uczeń ten wziął ją do siebie."
         },
         {
           "lp": "28",
-          "text": "Od Kajfasza więc zaprowadzili Jezusa do ratusza; a było rano. Sami jednak nie weszli do ratusza, aby się nie skalać, lecz żeby mogli spożyć Paschę."
+          "text": "Potem Jezus, widząc, że już wszystko się wykonało, aby się wypełniło Pismo, powiedział: Pragnę."
         },
         {
           "lp": "29",
-          "text": "Wówczas Piłat wyszedł do nich i zapytał: Jaką skargę wnosicie przeciwko temu człowiekowi?"
+          "text": "A stało tam naczynie pełne octu. Nasączono więc gąbkę octem, nałożono ją na hizop i podano mu do ust."
         },
         {
           "lp": "30",
-          "text": "Odpowiedzieli mu: Gdyby on nie był złoczyńcą, nie wydalibyśmy go tobie."
+          "text": "A gdy Jezus skosztował octu, powiedział: Wykonało się. I schyliwszy głowę, oddał ducha."
         },
         {
           "lp": "31",
-          "text": "I powiedział Piłat: Wy go weźcie i osądźcie według waszego prawa. Żydzi mu odpowiedzieli: Nam nie wolno nikogo zabijać."
+          "text": "Wtedy Żydzi, aby ciała nie zostały na krzyżu na szabat, ponieważ był dzień przygotowania"
+        },
+        {
+          "lp": "bo",
+          "text": "en dzień szabatu był wielkim dniem), prosili Piłata, aby połamano im golenie i zdjęto ich."
         },
         {
           "lp": "32",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział Jezus, dając znać, jaką śmiercią miał umrzeć."
+          "text": "Przyszli więc żołnierze i połamali golenie pierwszemu i drugiemu, który z nim był ukrzyżowany."
         },
         {
           "lp": "33",
-          "text": "Wtedy Piłat znowu wszedł do ratusza, wezwał Jezusa i zapytał go: Czy ty jesteś królem Żydów?"
+          "text": "Ale gdy przyszli do Jezusa i zobaczyli, że już umarł, nie łamali mu goleni;"
         },
         {
           "lp": "34",
-          "text": "Jezus mu odpowiedział: Czy mówisz to sam od siebie, czy inni powiedzieli ci o mnie?"
+          "text": "Lecz jeden z żołnierzy przebił włócznią jego bok i natychmiast wypłynęła krew i woda."
         },
         {
           "lp": "35",
-          "text": "Piłat odpowiedział: Czy ja jestem Żydem? Twój naród i naczelni kapłani wydali mi ciebie. Cóż więc uczyniłeś?"
+          "text": "A ten, który to widział, świadczył o tym, a jego świadectwo jest prawdziwe i on wie, że mówi prawdę, abyście wy wierzyli."
         },
         {
           "lp": "36",
-          "text": "Jezus odpowiedział: Moje królestwo nie jest z tego świata. Gdyby moje królestwo było z tego świata, to moi słudzy walczyliby, abym nie został wydany Żydom. Teraz jednak moje królestwo nie jest stąd."
+          "text": "Stało się to bowiem, aby się wypełniło Pismo: Żadna jego kość nie będzie złamana."
         },
         {
           "lp": "37",
-          "text": "Wtedy Piłat zapytał go: A więc jesteś królem? Jezus mu odpowiedział: Ty mówisz, że jestem królem. Ja po to się narodziłem i po to przyszedłem na świat, aby dać świadectwo prawdzie. Każdy, kto jest z prawdy, słucha mego głosu."
+          "text": "I znowu w innym miejscu Pismo mówi: Ujrzą tego, którego przebili."
         },
         {
           "lp": "38",
-          "text": "Piłat powiedział do niego: Cóż to jest prawda? A to powiedziawszy, wyszedł znowu do Żydów i powiedział do nich: Ja nie znajduję w nim żadnej winy."
+          "text": "A potem Józef z Arymatei, który z obawy przed Żydami był potajemnie uczniem Jezusa, prosił Piłata, aby mógł zdjąć ciało Jezusa. A Piłat zezwolił. Poszedł więc i zdjął ciało Jezusa."
         },
         {
           "lp": "39",
-          "text": "A u was jest zwyczaj, że na Paschę wypuszczam wam jednego więźnia. Chcecie więc, abym wam wypuścił króla Żydów?"
+          "text": "Przyszedł też Nikodem, który przedtem przyszedł w nocy do Jezusa, niosąc około stu funtów mieszaniny mirry i aloesu."
         },
         {
           "lp": "40",
-          "text": "Wówczas wszyscy znowu zawołali: Nie tego, ale Barabasza! A Barabasz był bandytą."
+          "text": "Wzięli więc ciało Jezusa i owinęli je w płótna z tymi wonnościami, zgodnie z żydowskim zwyczajem grzebania zmarłych."
+        },
+        {
+          "lp": "41",
+          "text": "A na miejscu, gdzie był ukrzyżowany, był ogród, a w ogrodzie nowy grobowiec, w którym jeszcze nikt nie był złożony."
+        },
+        {
+          "lp": "42",
+          "text": "Tam więc położyli Jezusa z powodu żydowskiego dnia przygotowania, bo grób był blisko. "
         }
       ],
       "20": [
-        {
-          "lp": "1",
-          "text": "To powiedziawszy, Jezus wyszedł ze swoimi uczniami za potok Cedron, gdzie był ogród, do którego wszedł on i jego uczniowie."
-        },
-        {
-          "lp": "2",
-          "text": "A Judasz, który go zdradził, znał to miejsce, bo Jezus często się tam zbierał ze swoimi uczniami."
-        },
-        {
-          "lp": "3",
-          "text": "Judasz więc, wziąwszy oddział żołnierzy i strażników od naczelnych kapłanów i faryzeuszy, przyszedł tam z latarniami, pochodniami i bronią."
-        },
-        {
-          "lp": "4",
-          "text": "Wtedy Jezus, wiedząc o wszystkim, co miało na niego przyjść, wyszedł im naprzeciw i zapytał: Kogo szukacie?"
-        },
-        {
-          "lp": "5",
-          "text": "Odpowiedzieli mu: Jezusa z Nazaretu. Jezus powiedział do nich: Ja jestem. A stał z nimi i Judasz, który go zdradził."
-        },
-        {
-          "lp": "6",
-          "text": "Gdy tylko im powiedział: Ja jestem, cofnęli się i padli na ziemię."
-        },
-        {
-          "lp": "7",
-          "text": "Wtedy ich znowu spytał: Kogo szukacie? A oni odpowiedzieli: Jezusa z Nazaretu."
-        },
-        {
-          "lp": "8",
-          "text": "Jezus odpowiedział: Powiedziałem wam, że ja jestem. Jeśli więc mnie szukacie, pozwólcie tym odejść."
-        },
-        {
-          "lp": "9",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział: Nie straciłem żadnego z tych, których mi dałeś."
-        },
-        {
-          "lp": "10",
-          "text": "Wówczas Szymon Piotr, mając miecz, dobył go, uderzył sługę najwyższego kapłana i odciął mu prawe ucho. A temu słudze było na imię Malchos."
-        },
-        {
-          "lp": "11",
-          "text": "I powiedział Jezus do Piotra: Włóż swój miecz do pochwy. Czy nie mam pić kielicha, który mi dał Ojciec?"
-        },
-        {
-          "lp": "12",
-          "text": "Wtedy oddział żołnierzy i dowódca oraz strażnicy żydowscy schwytali Jezusa, związali go;"
-        },
-        {
-          "lp": "13",
-          "text": "I zaprowadzili go najpierw do Annasza, bo był teściem Kajfasza, który tego roku był najwyższym kapłanem."
-        },
-        {
-          "lp": "14",
-          "text": "To Kajfasz był tym, który doradził Żydom, że pożyteczniej jest, aby jeden człowiek umarł za lud."
-        },
-        {
-          "lp": "15",
-          "text": "A szedł za Jezusem Szymon Piotr i inny uczeń. Ten uczeń zaś był znany najwyższemu kapłanowi i wszedł z Jezusem na dziedziniec najwyższego kapłana."
-        },
-        {
-          "lp": "16",
-          "text": "Ale Piotr stał na zewnątrz u drzwi. Wtedy wyszedł ten drugi uczeń, który był znany najwyższemu kapłanowi, pomówił z odźwierną i wprowadził Piotra."
-        },
-        {
-          "lp": "17",
-          "text": "Wówczas dziewczyna odźwierna zapytała Piotra: Czy i ty nie jesteś jednym z uczniów tego człowieka? On odpowiedział: Nie jestem."
-        },
-        {
-          "lp": "18",
-          "text": "A ponieważ było zimno, strażnicy i słudzy, rozpaliwszy ogień, stali i grzali się. Stał też z nimi Piotr i grzał się."
-        },
-        {
-          "lp": "19",
-          "text": "Tymczasem najwyższy kapłan pytał Jezusa o jego uczniów i o jego naukę."
-        },
-        {
-          "lp": "20",
-          "text": "Jezus mu odpowiedział: Ja jawnie mówiłem światu. Zawsze nauczałem w synagodze i w świątyni, gdzie zewsząd schodzą się Żydzi, a potajemnie nic nie mówiłem."
-        },
-        {
-          "lp": "21",
-          "text": "Dlaczego mnie pytasz? Zapytaj tych, którzy słyszeli to, co im mówiłem. Oto oni wiedzą, co mówiłem."
-        },
-        {
-          "lp": "22",
-          "text": "A gdy on to powiedział, jeden ze sług, który tam stał, wymierzył policzek Jezusowi, mówiąc: Tak odpowiadasz najwyższemu kapłanowi?"
-        },
-        {
-          "lp": "23",
-          "text": "Jezus mu odpowiedział: Jeśli źle powiedziałem, daj świadectwo o złu, a jeśli dobrze, dlaczego mnie bijesz?"
-        },
-        {
-          "lp": "24",
-          "text": "Bo Annasz odesłał go związanego do Kajfasza, najwyższego kapłana."
-        },
-        {
-          "lp": "25",
-          "text": "A Szymon Piotr stał i grzał się. I zapytali go: Czy i ty nie jesteś jednym z jego uczniów? A on się wyparł, mówiąc: Nie jestem."
-        },
-        {
-          "lp": "26",
-          "text": "Zapytał go jeden ze sług najwyższego kapłana, krewny tego, któremu Piotr odciął ucho: Czyż nie ciebie widziałem z nim w ogrodzie?"
-        },
-        {
-          "lp": "27",
-          "text": "Wtedy Piotr znowu się wyparł. I zaraz zapiał kogut."
-        },
-        {
-          "lp": "28",
-          "text": "Od Kajfasza więc zaprowadzili Jezusa do ratusza; a było rano. Sami jednak nie weszli do ratusza, aby się nie skalać, lecz żeby mogli spożyć Paschę."
-        },
-        {
-          "lp": "29",
-          "text": "Wówczas Piłat wyszedł do nich i zapytał: Jaką skargę wnosicie przeciwko temu człowiekowi?"
-        },
-        {
-          "lp": "30",
-          "text": "Odpowiedzieli mu: Gdyby on nie był złoczyńcą, nie wydalibyśmy go tobie."
-        },
-        {
-          "lp": "31",
-          "text": "I powiedział Piłat: Wy go weźcie i osądźcie według waszego prawa. Żydzi mu odpowiedzieli: Nam nie wolno nikogo zabijać."
-        },
-        {
-          "lp": "32",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział Jezus, dając znać, jaką śmiercią miał umrzeć."
-        },
-        {
-          "lp": "33",
-          "text": "Wtedy Piłat znowu wszedł do ratusza, wezwał Jezusa i zapytał go: Czy ty jesteś królem Żydów?"
-        },
-        {
-          "lp": "34",
-          "text": "Jezus mu odpowiedział: Czy mówisz to sam od siebie, czy inni powiedzieli ci o mnie?"
-        },
-        {
-          "lp": "35",
-          "text": "Piłat odpowiedział: Czy ja jestem Żydem? Twój naród i naczelni kapłani wydali mi ciebie. Cóż więc uczyniłeś?"
-        },
-        {
-          "lp": "36",
-          "text": "Jezus odpowiedział: Moje królestwo nie jest z tego świata. Gdyby moje królestwo było z tego świata, to moi słudzy walczyliby, abym nie został wydany Żydom. Teraz jednak moje królestwo nie jest stąd."
-        },
-        {
-          "lp": "37",
-          "text": "Wtedy Piłat zapytał go: A więc jesteś królem? Jezus mu odpowiedział: Ty mówisz, że jestem królem. Ja po to się narodziłem i po to przyszedłem na świat, aby dać świadectwo prawdzie. Każdy, kto jest z prawdy, słucha mego głosu."
-        },
-        {
-          "lp": "38",
-          "text": "Piłat powiedział do niego: Cóż to jest prawda? A to powiedziawszy, wyszedł znowu do Żydów i powiedział do nich: Ja nie znajduję w nim żadnej winy."
-        },
-        {
-          "lp": "39",
-          "text": "A u was jest zwyczaj, że na Paschę wypuszczam wam jednego więźnia. Chcecie więc, abym wam wypuścił króla Żydów?"
-        },
-        {
-          "lp": "40",
-          "text": "Wówczas wszyscy znowu zawołali: Nie tego, ale Barabasza! A Barabasz był bandytą."
-        }
-      ],
-      "21": [
-        {
-          "lp": "1",
-          "text": "To powiedziawszy, Jezus wyszedł ze swoimi uczniami za potok Cedron, gdzie był ogród, do którego wszedł on i jego uczniowie."
-        },
-        {
-          "lp": "2",
-          "text": "A Judasz, który go zdradził, znał to miejsce, bo Jezus często się tam zbierał ze swoimi uczniami."
-        },
-        {
-          "lp": "3",
-          "text": "Judasz więc, wziąwszy oddział żołnierzy i strażników od naczelnych kapłanów i faryzeuszy, przyszedł tam z latarniami, pochodniami i bronią."
-        },
-        {
-          "lp": "4",
-          "text": "Wtedy Jezus, wiedząc o wszystkim, co miało na niego przyjść, wyszedł im naprzeciw i zapytał: Kogo szukacie?"
-        },
-        {
-          "lp": "5",
-          "text": "Odpowiedzieli mu: Jezusa z Nazaretu. Jezus powiedział do nich: Ja jestem. A stał z nimi i Judasz, który go zdradził."
-        },
-        {
-          "lp": "6",
-          "text": "Gdy tylko im powiedział: Ja jestem, cofnęli się i padli na ziemię."
-        },
-        {
-          "lp": "7",
-          "text": "Wtedy ich znowu spytał: Kogo szukacie? A oni odpowiedzieli: Jezusa z Nazaretu."
-        },
-        {
-          "lp": "8",
-          "text": "Jezus odpowiedział: Powiedziałem wam, że ja jestem. Jeśli więc mnie szukacie, pozwólcie tym odejść."
-        },
-        {
-          "lp": "9",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział: Nie straciłem żadnego z tych, których mi dałeś."
-        },
-        {
-          "lp": "10",
-          "text": "Wówczas Szymon Piotr, mając miecz, dobył go, uderzył sługę najwyższego kapłana i odciął mu prawe ucho. A temu słudze było na imię Malchos."
-        },
-        {
-          "lp": "11",
-          "text": "I powiedział Jezus do Piotra: Włóż swój miecz do pochwy. Czy nie mam pić kielicha, który mi dał Ojciec?"
-        },
-        {
-          "lp": "12",
-          "text": "Wtedy oddział żołnierzy i dowódca oraz strażnicy żydowscy schwytali Jezusa, związali go;"
-        },
-        {
-          "lp": "13",
-          "text": "I zaprowadzili go najpierw do Annasza, bo był teściem Kajfasza, który tego roku był najwyższym kapłanem."
-        },
-        {
-          "lp": "14",
-          "text": "To Kajfasz był tym, który doradził Żydom, że pożyteczniej jest, aby jeden człowiek umarł za lud."
-        },
-        {
-          "lp": "15",
-          "text": "A szedł za Jezusem Szymon Piotr i inny uczeń. Ten uczeń zaś był znany najwyższemu kapłanowi i wszedł z Jezusem na dziedziniec najwyższego kapłana."
-        },
-        {
-          "lp": "16",
-          "text": "Ale Piotr stał na zewnątrz u drzwi. Wtedy wyszedł ten drugi uczeń, który był znany najwyższemu kapłanowi, pomówił z odźwierną i wprowadził Piotra."
-        },
-        {
-          "lp": "17",
-          "text": "Wówczas dziewczyna odźwierna zapytała Piotra: Czy i ty nie jesteś jednym z uczniów tego człowieka? On odpowiedział: Nie jestem."
-        },
-        {
-          "lp": "18",
-          "text": "A ponieważ było zimno, strażnicy i słudzy, rozpaliwszy ogień, stali i grzali się. Stał też z nimi Piotr i grzał się."
-        },
-        {
-          "lp": "19",
-          "text": "Tymczasem najwyższy kapłan pytał Jezusa o jego uczniów i o jego naukę."
-        },
-        {
-          "lp": "20",
-          "text": "Jezus mu odpowiedział: Ja jawnie mówiłem światu. Zawsze nauczałem w synagodze i w świątyni, gdzie zewsząd schodzą się Żydzi, a potajemnie nic nie mówiłem."
-        },
-        {
-          "lp": "21",
-          "text": "Dlaczego mnie pytasz? Zapytaj tych, którzy słyszeli to, co im mówiłem. Oto oni wiedzą, co mówiłem."
-        },
-        {
-          "lp": "22",
-          "text": "A gdy on to powiedział, jeden ze sług, który tam stał, wymierzył policzek Jezusowi, mówiąc: Tak odpowiadasz najwyższemu kapłanowi?"
-        },
-        {
-          "lp": "23",
-          "text": "Jezus mu odpowiedział: Jeśli źle powiedziałem, daj świadectwo o złu, a jeśli dobrze, dlaczego mnie bijesz?"
-        },
-        {
-          "lp": "24",
-          "text": "Bo Annasz odesłał go związanego do Kajfasza, najwyższego kapłana."
-        },
-        {
-          "lp": "25",
-          "text": "A Szymon Piotr stał i grzał się. I zapytali go: Czy i ty nie jesteś jednym z jego uczniów? A on się wyparł, mówiąc: Nie jestem."
-        },
-        {
-          "lp": "26",
-          "text": "Zapytał go jeden ze sług najwyższego kapłana, krewny tego, któremu Piotr odciął ucho: Czyż nie ciebie widziałem z nim w ogrodzie?"
-        },
-        {
-          "lp": "27",
-          "text": "Wtedy Piotr znowu się wyparł. I zaraz zapiał kogut."
-        },
-        {
-          "lp": "28",
-          "text": "Od Kajfasza więc zaprowadzili Jezusa do ratusza; a było rano. Sami jednak nie weszli do ratusza, aby się nie skalać, lecz żeby mogli spożyć Paschę."
-        },
-        {
-          "lp": "29",
-          "text": "Wówczas Piłat wyszedł do nich i zapytał: Jaką skargę wnosicie przeciwko temu człowiekowi?"
-        },
-        {
-          "lp": "30",
-          "text": "Odpowiedzieli mu: Gdyby on nie był złoczyńcą, nie wydalibyśmy go tobie."
-        },
-        {
-          "lp": "31",
-          "text": "I powiedział Piłat: Wy go weźcie i osądźcie według waszego prawa. Żydzi mu odpowiedzieli: Nam nie wolno nikogo zabijać."
-        },
-        {
-          "lp": "32",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział Jezus, dając znać, jaką śmiercią miał umrzeć."
-        },
-        {
-          "lp": "33",
-          "text": "Wtedy Piłat znowu wszedł do ratusza, wezwał Jezusa i zapytał go: Czy ty jesteś królem Żydów?"
-        },
-        {
-          "lp": "34",
-          "text": "Jezus mu odpowiedział: Czy mówisz to sam od siebie, czy inni powiedzieli ci o mnie?"
-        },
-        {
-          "lp": "35",
-          "text": "Piłat odpowiedział: Czy ja jestem Żydem? Twój naród i naczelni kapłani wydali mi ciebie. Cóż więc uczyniłeś?"
-        },
-        {
-          "lp": "36",
-          "text": "Jezus odpowiedział: Moje królestwo nie jest z tego świata. Gdyby moje królestwo było z tego świata, to moi słudzy walczyliby, abym nie został wydany Żydom. Teraz jednak moje królestwo nie jest stąd."
-        },
-        {
-          "lp": "37",
-          "text": "Wtedy Piłat zapytał go: A więc jesteś królem? Jezus mu odpowiedział: Ty mówisz, że jestem królem. Ja po to się narodziłem i po to przyszedłem na świat, aby dać świadectwo prawdzie. Każdy, kto jest z prawdy, słucha mego głosu."
-        },
-        {
-          "lp": "38",
-          "text": "Piłat powiedział do niego: Cóż to jest prawda? A to powiedziawszy, wyszedł znowu do Żydów i powiedział do nich: Ja nie znajduję w nim żadnej winy."
-        },
-        {
-          "lp": "39",
-          "text": "A u was jest zwyczaj, że na Paschę wypuszczam wam jednego więźnia. Chcecie więc, abym wam wypuścił króla Żydów?"
-        },
-        {
-          "lp": "40",
-          "text": "Wówczas wszyscy znowu zawołali: Nie tego, ale Barabasza! A Barabasz był bandytą."
-        }
-      ]
-    },
-    "Dzieje Apostolskie": {
-      "1": [
-        {
-          "lp": "1",
-          "text": "To powiedziawszy, Jezus wyszedł ze swoimi uczniami za potok Cedron, gdzie był ogród, do którego wszedł on i jego uczniowie."
-        },
-        {
-          "lp": "2",
-          "text": "A Judasz, który go zdradził, znał to miejsce, bo Jezus często się tam zbierał ze swoimi uczniami."
-        },
-        {
-          "lp": "3",
-          "text": "Judasz więc, wziąwszy oddział żołnierzy i strażników od naczelnych kapłanów i faryzeuszy, przyszedł tam z latarniami, pochodniami i bronią."
-        },
-        {
-          "lp": "4",
-          "text": "Wtedy Jezus, wiedząc o wszystkim, co miało na niego przyjść, wyszedł im naprzeciw i zapytał: Kogo szukacie?"
-        },
-        {
-          "lp": "5",
-          "text": "Odpowiedzieli mu: Jezusa z Nazaretu. Jezus powiedział do nich: Ja jestem. A stał z nimi i Judasz, który go zdradził."
-        },
-        {
-          "lp": "6",
-          "text": "Gdy tylko im powiedział: Ja jestem, cofnęli się i padli na ziemię."
-        },
-        {
-          "lp": "7",
-          "text": "Wtedy ich znowu spytał: Kogo szukacie? A oni odpowiedzieli: Jezusa z Nazaretu."
-        },
-        {
-          "lp": "8",
-          "text": "Jezus odpowiedział: Powiedziałem wam, że ja jestem. Jeśli więc mnie szukacie, pozwólcie tym odejść."
-        },
-        {
-          "lp": "9",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział: Nie straciłem żadnego z tych, których mi dałeś."
-        },
-        {
-          "lp": "10",
-          "text": "Wówczas Szymon Piotr, mając miecz, dobył go, uderzył sługę najwyższego kapłana i odciął mu prawe ucho. A temu słudze było na imię Malchos."
-        },
-        {
-          "lp": "11",
-          "text": "I powiedział Jezus do Piotra: Włóż swój miecz do pochwy. Czy nie mam pić kielicha, który mi dał Ojciec?"
-        },
-        {
-          "lp": "12",
-          "text": "Wtedy oddział żołnierzy i dowódca oraz strażnicy żydowscy schwytali Jezusa, związali go;"
-        },
-        {
-          "lp": "13",
-          "text": "I zaprowadzili go najpierw do Annasza, bo był teściem Kajfasza, który tego roku był najwyższym kapłanem."
-        },
-        {
-          "lp": "14",
-          "text": "To Kajfasz był tym, który doradził Żydom, że pożyteczniej jest, aby jeden człowiek umarł za lud."
-        },
-        {
-          "lp": "15",
-          "text": "A szedł za Jezusem Szymon Piotr i inny uczeń. Ten uczeń zaś był znany najwyższemu kapłanowi i wszedł z Jezusem na dziedziniec najwyższego kapłana."
-        },
-        {
-          "lp": "16",
-          "text": "Ale Piotr stał na zewnątrz u drzwi. Wtedy wyszedł ten drugi uczeń, który był znany najwyższemu kapłanowi, pomówił z odźwierną i wprowadził Piotra."
-        },
-        {
-          "lp": "17",
-          "text": "Wówczas dziewczyna odźwierna zapytała Piotra: Czy i ty nie jesteś jednym z uczniów tego człowieka? On odpowiedział: Nie jestem."
-        },
-        {
-          "lp": "18",
-          "text": "A ponieważ było zimno, strażnicy i słudzy, rozpaliwszy ogień, stali i grzali się. Stał też z nimi Piotr i grzał się."
-        },
-        {
-          "lp": "19",
-          "text": "Tymczasem najwyższy kapłan pytał Jezusa o jego uczniów i o jego naukę."
-        },
-        {
-          "lp": "20",
-          "text": "Jezus mu odpowiedział: Ja jawnie mówiłem światu. Zawsze nauczałem w synagodze i w świątyni, gdzie zewsząd schodzą się Żydzi, a potajemnie nic nie mówiłem."
-        },
-        {
-          "lp": "21",
-          "text": "Dlaczego mnie pytasz? Zapytaj tych, którzy słyszeli to, co im mówiłem. Oto oni wiedzą, co mówiłem."
-        },
-        {
-          "lp": "22",
-          "text": "A gdy on to powiedział, jeden ze sług, który tam stał, wymierzył policzek Jezusowi, mówiąc: Tak odpowiadasz najwyższemu kapłanowi?"
-        },
-        {
-          "lp": "23",
-          "text": "Jezus mu odpowiedział: Jeśli źle powiedziałem, daj świadectwo o złu, a jeśli dobrze, dlaczego mnie bijesz?"
-        },
-        {
-          "lp": "24",
-          "text": "Bo Annasz odesłał go związanego do Kajfasza, najwyższego kapłana."
-        },
-        {
-          "lp": "25",
-          "text": "A Szymon Piotr stał i grzał się. I zapytali go: Czy i ty nie jesteś jednym z jego uczniów? A on się wyparł, mówiąc: Nie jestem."
-        },
-        {
-          "lp": "26",
-          "text": "Zapytał go jeden ze sług najwyższego kapłana, krewny tego, któremu Piotr odciął ucho: Czyż nie ciebie widziałem z nim w ogrodzie?"
-        },
-        {
-          "lp": "27",
-          "text": "Wtedy Piotr znowu się wyparł. I zaraz zapiał kogut."
-        },
-        {
-          "lp": "28",
-          "text": "Od Kajfasza więc zaprowadzili Jezusa do ratusza; a było rano. Sami jednak nie weszli do ratusza, aby się nie skalać, lecz żeby mogli spożyć Paschę."
-        },
-        {
-          "lp": "29",
-          "text": "Wówczas Piłat wyszedł do nich i zapytał: Jaką skargę wnosicie przeciwko temu człowiekowi?"
-        },
-        {
-          "lp": "30",
-          "text": "Odpowiedzieli mu: Gdyby on nie był złoczyńcą, nie wydalibyśmy go tobie."
-        },
-        {
-          "lp": "31",
-          "text": "I powiedział Piłat: Wy go weźcie i osądźcie według waszego prawa. Żydzi mu odpowiedzieli: Nam nie wolno nikogo zabijać."
-        },
-        {
-          "lp": "32",
-          "text": "Stało się tak, aby się wypełniły słowa, które powiedział Jezus, dając znać, jaką śmiercią miał umrzeć."
-        },
-        {
-          "lp": "33",
-          "text": "Wtedy Piłat znowu wszedł do ratusza, wezwał Jezusa i zapytał go: Czy ty jesteś królem Żydów?"
-        },
-        {
-          "lp": "34",
-          "text": "Jezus mu odpowiedział: Czy mówisz to sam od siebie, czy inni powiedzieli ci o mnie?"
-        },
-        {
-          "lp": "35",
-          "text": "Piłat odpowiedział: Czy ja jestem Żydem? Twój naród i naczelni kapłani wydali mi ciebie. Cóż więc uczyniłeś?"
-        },
-        {
-          "lp": "36",
-          "text": "Jezus odpowiedział: Moje królestwo nie jest z tego świata. Gdyby moje królestwo było z tego świata, to moi słudzy walczyliby, abym nie został wydany Żydom. Teraz jednak moje królestwo nie jest stąd."
-        },
-        {
-          "lp": "37",
-          "text": "Wtedy Piłat zapytał go: A więc jesteś królem? Jezus mu odpowiedział: Ty mówisz, że jestem królem. Ja po to się narodziłem i po to przyszedłem na świat, aby dać świadectwo prawdzie. Każdy, kto jest z prawdy, słucha mego głosu."
-        },
-        {
-          "lp": "38",
-          "text": "Piłat powiedział do niego: Cóż to jest prawda? A to powiedziawszy, wyszedł znowu do Żydów i powiedział do nich: Ja nie znajduję w nim żadnej winy."
-        },
-        {
-          "lp": "39",
-          "text": "A u was jest zwyczaj, że na Paschę wypuszczam wam jednego więźnia. Chcecie więc, abym wam wypuścił króla Żydów?"
-        },
-        {
-          "lp": "40",
-          "text": "Wówczas wszyscy znowu zawołali: Nie tego, ale Barabasza! A Barabasz był bandytą."
-        }
-      ],
-      "2": [
         {
           "lp": "1",
           "text": "A pierwszego dnia po szabacie, rano, gdy jeszcze było ciemno, Maria Magdalena przyszła do grobu i zobaczyła kamień odwalony od grobowca."
@@ -15731,6 +15291,406 @@
         {
           "lp": "31",
           "text": "Lecz te są napisane, abyście wierzyli, że Jezus jest Chrystusem, Synem Bożym, i abyście wierząc, mieli życie w jego imieniu."
+        }
+      ],
+      "21": [
+        {
+          "lp": "1",
+          "text": "Potem Jezus znowu ukazał się uczniom nad Morzem Tyberiadzkim. A ukazał się tak:"
+        },
+        {
+          "lp": "2",
+          "text": "Byli razem Szymon Piotr, Tomasz, zwany Didymos, Natanael, który był z Kany Galilejskiej, synowie Zebedeusza i dwaj inni z jego uczniów."
+        },
+        {
+          "lp": "3",
+          "text": "Szymon Piotr powiedział do nich: Pójdę łowić ryby. Odpowiedzieli mu: Pójdziemy i my z tobą. Poszli więc i zaraz wsiedli do łodzi, ale tej nocy nic nie złowili."
+        },
+        {
+          "lp": "4",
+          "text": "A gdy już nastał ranek, Jezus stanął na brzegu. Uczniowie jednak nie wiedzieli, że to Jezus."
+        },
+        {
+          "lp": "5",
+          "text": "Wtedy Jezus zapytał ich: Dzieci, czy macie co jeść? Odpowiedzieli mu: Nie mamy."
+        },
+        {
+          "lp": "6",
+          "text": "A on powiedział do nich: Zarzućcie sieć po prawej stronie łodzi, a znajdziecie. Zarzucili więc i nie mogli jej wyciągnąć z powodu mnóstwa ryb."
+        },
+        {
+          "lp": "7",
+          "text": "Wówczas ten uczeń, którego Jezus miłował, powiedział do Piotra: To Pan. A Szymon Piotr, usłyszawszy, że to Pan, przepasał się koszulą (bo był nagi) i rzucił się w morze."
+        },
+        {
+          "lp": "8",
+          "text": "Pozostali uczniowie przypłynęli łodzią (bo byli niedaleko od brzegu, około dwustu łokci), ciągnąc sieć z rybami."
+        },
+        {
+          "lp": "9",
+          "text": "A gdy wyszli na brzeg, zobaczyli żarzące się węgle i leżącą na nich rybę oraz chleb."
+        },
+        {
+          "lp": "10",
+          "text": "Jezus do nich powiedział: Przynieście z tych ryb, które teraz złowiliście."
+        },
+        {
+          "lp": "11",
+          "text": "Poszedł więc Szymon Piotr i wyciągnął na ziemię sieć pełną wielkich ryb, których było sto pięćdziesiąt trzy, a choć było ich tak wiele, sieć się nie rozdarła."
+        },
+        {
+          "lp": "12",
+          "text": "Jezus im powiedział: Chodźcie, jedzcie. I żaden z uczniów nie śmiał go pytać: Kim jesteś? Wiedzieli bowiem, że to Pan."
+        },
+        {
+          "lp": "13",
+          "text": "Wtedy Jezus podszedł, wziął chleb i podał im, podobnie i rybę."
+        },
+        {
+          "lp": "14",
+          "text": "To już trzeci raz, jak Jezus ukazał się swoim uczniom po zmartwychwstaniu."
+        },
+        {
+          "lp": "15",
+          "text": "A gdy zjedli, Jezus zapytał Szymona Piotra: Szymonie, synu Jonasza, miłujesz mnie bardziej niż ci? Odpowiedział mu: Tak, Panie, ty wiesz, że cię miłuję. Powiedział do niego: Paś moje baranki."
+        },
+        {
+          "lp": "16",
+          "text": "Zapytał go znowu, po raz drugi: Szymonie, synu Jonasza, miłujesz mnie? Odpowiedział mu: Tak, Panie, ty wiesz, że cię miłuję. Powiedział mu: Paś moje owce."
+        },
+        {
+          "lp": "17",
+          "text": "Zapytał go po raz trzeci: Szymonie, synu Jonasza, miłujesz mnie? I zasmucił się Piotr, że go zapytał po raz trzeci: Miłujesz mnie? I odpowiedział mu: Panie, ty wszystko wiesz, ty wiesz, że cię miłuję. Jezus powiedział do niego: Paś moje owce."
+        },
+        {
+          "lp": "18",
+          "text": "Zaprawdę, zaprawdę powiadam ci: Gdy byłeś młodszy, opasywałeś się i chodziłeś, gdzie chciałeś. Gdy jednak się zestarzejesz, wyciągniesz swoje ręce, a inny cię opasze i poprowadzi, dokąd nie chcesz."
+        },
+        {
+          "lp": "19",
+          "text": "Powiedział to, dając znać, jaką śmiercią miał uwielbić Boga. A to powiedziawszy, rzekł mu: Pójdź za mną."
+        },
+        {
+          "lp": "20",
+          "text": "A Piotr, odwróciwszy się, zobaczył ucznia, którego Jezus miłował, idącego za nim, który też przy wieczerzy położył się na jego piersi i zapytał: Panie, kto jest tym, który cię wyda?"
+        },
+        {
+          "lp": "21",
+          "text": "Gdy więc Piotr go zobaczył, zapytał Jezusa: Panie, a co z nim?"
+        },
+        {
+          "lp": "22",
+          "text": "Jezus mu odpowiedział: Jeśli chcę, żeby on został, aż przyjdę, co tobie do tego? Ty pójdź za mną."
+        },
+        {
+          "lp": "23",
+          "text": "I rozeszła się wśród braci wieść, że ten uczeń nie umrze. Jezus jednak nie powiedział mu, że nie umrze, ale: Jeśli chcę, aby został, aż przyjdę, co tobie do tego?"
+        },
+        {
+          "lp": "24",
+          "text": "To jest ten uczeń, który świadczy o tym i to napisał, a wiemy, że jego świadectwo jest prawdziwe"
+        },
+        {
+          "lp": "25",
+          "text": "Jest też jeszcze wiele innych rzeczy, których dokonał Jezus, które gdyby miały być wszystkie z osobna spisane, sądzę, że i cały świat nie mógłby pomieścić ksiąg, które byłby napisane. Amen"
+        }
+      ]
+    },
+    "Dzieje Apostolskie": {
+      "1": [
+        {
+          "lp": "1",
+          "text": "Pierwszą księgę napisałem, Teofilu, o wszystkim, co Jezus zaczął czynić i czego nauczać;"
+        },
+        {
+          "lp": "2",
+          "text": "Aż do dnia, w którym został wzięty w górę po tym, jak przez Ducha Świętego udzielił poleceń apostołom, których wybrał."
+        },
+        {
+          "lp": "3",
+          "text": "Im też po swojej męce objawił się jako żywy w wielu niewątpliwych dowodach, przez czterdzieści dni ukazując się im i mówiąc o królestwie Bożym."
+        },
+        {
+          "lp": "4",
+          "text": "A gdy byli zebrani razem, nakazał im: Nie odchodźcie z Jerozolimy, ale oczekujcie obietnicy Ojca, o której słyszeliście ode mnie."
+        },
+        {
+          "lp": "5",
+          "text": "Jan bowiem chrzcił wodą, ale wy po niewielu dniach będziecie ochrzczeni Duchem Świętym."
+        },
+        {
+          "lp": "6",
+          "text": "Tak więc zebrani pytali go: Panie, czy w tym czasie przywrócisz królestwo Izraelowi?"
+        },
+        {
+          "lp": "7",
+          "text": "Lecz on im odpowiedział: Nie do was należy znać czasy i pory, które Ojciec ustanowił swoją władzą."
+        },
+        {
+          "lp": "8",
+          "text": "Ale przyjmiecie moc Ducha Świętego, który zstąpi na was, i będziecie mi świadkami w Jerozolimie, w całej Judei, w Samarii i aż po krańce ziemi."
+        },
+        {
+          "lp": "9",
+          "text": "Kiedy to powiedział, a oni patrzyli, został uniesiony w górę i obłok zabrał go sprzed ich oczu."
+        },
+        {
+          "lp": "10",
+          "text": "A gdy się wpatrywali w niebo, jak wstępował, oto stanęli przy nich dwaj mężowie w białych szatach;"
+        },
+        {
+          "lp": "11",
+          "text": "I powiedzieli: Mężowie z Galilei, dlaczego stoicie, wpatrując się w niebo? Ten Jezus, który został od was wzięty w górę do nieba, przyjdzie tak samo, jak go widzieliście wstępującego do nieba."
+        },
+        {
+          "lp": "12",
+          "text": "Wtedy wrócili do Jerozolimy z góry zwanej Oliwną, która leży blisko Jerozolimy, w odległości drogi szabatowej."
+        },
+        {
+          "lp": "13",
+          "text": "A gdy przyszli, weszli do sali na górze, gdzie przebywali Piotr i Jakub, Jan i Andrzej, Filip i Tomasz, Bartłomiej i Mateusz, Jakub, syn Alfeusza, i Szymon Zelota oraz Juda, brat Jakuba."
+        },
+        {
+          "lp": "14",
+          "text": "Ci wszyscy trwali jednomyślnie w modlitwie i prośbach razem z kobietami, z Marią, matką Jezusa, i jego braćmi."
+        },
+        {
+          "lp": "15",
+          "text": "W tych dniach Piotr stanął pośród uczniów (a było zgromadzonych około stu dwudziestu osób) i powiedział:"
+        },
+        {
+          "lp": "16",
+          "text": "Mężowie bracia, musiało się wypełnić słowo Pisma, w którym Duch Święty zapowiedział przez usta Dawida o Judaszu, który był przewodnikiem tych, którzy schwytali Jezusa."
+        },
+        {
+          "lp": "17",
+          "text": "Zaliczał się on bowiem do nas i miał udział w tym posługiwaniu."
+        },
+        {
+          "lp": "18",
+          "text": "On nabył pole za zapłatę za nieprawość i spadłszy głową w dół, pękł na pół i wypłynęły wszystkie jego wnętrzności."
+        },
+        {
+          "lp": "19",
+          "text": "Rozniosło się to wśród wszystkich mieszkańców Jerozolimy, tak że nazwano to pole w ich języku Hakeldamach, to znaczy: Pole Krwi."
+        },
+        {
+          "lp": "20",
+          "text": "Jest bowiem napisane w Księdze Psalmów: Niech jego dom będzie pusty, niech nikt w nim nie mieszka; oraz: Jego biskupstwo niech przejmie inny."
+        },
+        {
+          "lp": "21",
+          "text": "Trzeba więc, aby jeden z tych mężczyzn, którzy z nami byli przez cały czas, kiedy Pan Jezus przebywał wśród nas;"
+        },
+        {
+          "lp": "22",
+          "text": "Począwszy od chrztu Jana aż do dnia, w którym został wzięty od nas w górę, stał się wraz z nami świadkiem jego zmartwychwstania."
+        },
+        {
+          "lp": "23",
+          "text": "I wybrali dwóch: Józefa, zwanego Barsabą, z przydomkiem Justus, i Macieja."
+        },
+        {
+          "lp": "24",
+          "text": "I tak się modlili: Ty, Panie, który znasz serca wszystkich, wskaż z tych dwóch jednego, którego wybrałeś;"
+        },
+        {
+          "lp": "25",
+          "text": "Aby zajął miejsce w tym posługiwaniu i apostolstwie, któremu sprzeniewierzył się Judasz, aby odejść na swoje miejsce."
+        },
+        {
+          "lp": "26",
+          "text": "I dali im losy, a los padł na Macieja. I został przyłączony do jedenastu apostołów."
+        }
+      ],
+      "2" :[
+        {
+          "lp": "1",
+          "text": "A gdy nadszedł dzień Pięćdziesiątnicy, wszyscy byli jednomyślnie na tym samym miejscu."
+        },
+        {
+          "lp": "2",
+          "text": "Nagle powstał odgłos z nieba, jakby uderzenie gwałtownego wiatru, i wypełnił cały dom, w którym siedzieli."
+        },
+        {
+          "lp": "3",
+          "text": "Ukazały się im rozdzielone języki jakby z ognia, które spoczęły na każdym z nich."
+        },
+        {
+          "lp": "4",
+          "text": "I wszyscy zostali napełnieni Duchem Świętym, i zaczęli mówić innymi językami, tak jak im Duch pozwalał mówić."
+        },
+        {
+          "lp": "5",
+          "text": "A przebywali w Jerozolimie Żydzi, mężczyźni pobożni, ze wszystkich narodów pod niebem."
+        },
+        {
+          "lp": "6",
+          "text": "A kiedy powstał ten szum, zeszło się mnóstwo ludzi i zdumieli się, bo każdy z nich słyszał ich mówiących w jego własnym języku."
+        },
+        {
+          "lp": "7",
+          "text": "I pytali się nawzajem zdziwieni i pełni zdumienia: Czy ci wszyscy, którzy mówią, nie są Galilejczykami?"
+        },
+        {
+          "lp": "8",
+          "text": "Jak to jest, że każdy z nas słyszy swój własny język ojczysty?"
+        },
+        {
+          "lp": "9",
+          "text": "Partowie, Medowie, Elamici i ci, którzy mieszkają w Mezopotamii, Judei, Kapadocji, w Poncie i Azji;"
+        },
+        {
+          "lp": "10",
+          "text": "We Frygii, w Pamfilii, Egipcie i w częściach Libii, które leżą obok Cyreny, a także przybysze z Rzymu, zarówno Żydzi, jak i prozelici;"
+        },
+        {
+          "lp": "11",
+          "text": "Kreteńczycy i Arabowie - słyszymy ich głoszących w naszych językach wielkie dzieła Boże."
+        },
+        {
+          "lp": "12",
+          "text": "I zdumiewali się wszyscy, i dziwili, mówiąc jeden do drugiego: Co to ma znaczyć?"
+        },
+        {
+          "lp": "13",
+          "text": "Lecz inni naśmiewali się i mówili: Upili się młodym winem."
+        },
+        {
+          "lp": "14",
+          "text": "Wtedy stanął Piotr z jedenastoma, podniósł swój głos i przemówił do nich: Mężowie z Judei i wszyscy, którzy mieszkacie w Jerozolimie, przyjmijcie do wiadomości i posłuchajcie uważnie moich słów."
+        },
+        {
+          "lp": "15",
+          "text": "Oni bowiem nie są pijani, jak sądzicie, bo jest dopiero trzecia godzina dnia."
+        },
+        {
+          "lp": "16",
+          "text": "Ale to jest to, co zostało przepowiedziane przez proroka Joela:"
+        },
+        {
+          "lp": "17",
+          "text": "I stanie się w ostatecznych dniach - mówi Bóg - że wyleję z mego Ducha na wszelkie ciało i będą prorokować wasi synowie i córki, wasi młodzieńcy będą mieć widzenia, a starcy będą śnić sny."
+        },
+        {
+          "lp": "18",
+          "text": "Nawet na moje sługi i służebnice wyleję w tych dniach z mego Ducha i będą prorokować."
+        },
+        {
+          "lp": "19",
+          "text": "I ukażę cuda na niebie w górze i znaki na ziemi na dole, krew, ogień i kłęby dymu."
+        },
+        {
+          "lp": "20",
+          "text": "Słońce zamieni się w ciemność, a księżyc w krew, zanim nadejdzie ten dzień Pański, wielki i okazały."
+        },
+        {
+          "lp": "21",
+          "text": "I stanie się, że każdy, kto wezwie imienia Pana, będzie zbawiony."
+        },
+        {
+          "lp": "22",
+          "text": "Mężowie izraelscy, słuchajcie tych słów: Jezusa z Nazaretu, męża potwierdzonego przez Boga wśród was mocami, cudami i znakami, których Bóg dokonał przez niego wśród was, o czym sami wiecie;"
+        },
+        {
+          "lp": "23",
+          "text": "Wydanego zgodnie z powziętym postanowieniem Boga oraz tym, co przedtem wiedział, wzięliście i rękami bezbożników ukrzyżowaliście i zabiliście."
+        },
+        {
+          "lp": "24",
+          "text": "Jego to Bóg wskrzesił, uwolniwszy od boleści śmierci, bo było niemożliwe, aby ta mogła go zatrzymać."
+        },
+        {
+          "lp": "25",
+          "text": "Dawid bowiem mówi o nim: Patrzyłem na Pana zawsze przed moim obliczem, bo jest po mojej prawicy, żebym się nie zachwiał."
+        },
+        {
+          "lp": "26",
+          "text": "Dlatego rozweseliło się moje serce i rozradował się mój język, a także moje ciało będzie spoczywać w nadziei."
+        },
+        {
+          "lp": "27",
+          "text": "Nie zostawisz bowiem mojej duszy w piekle i nie dasz swojemu Świętemu doznać zniszczenia."
+        },
+        {
+          "lp": "28",
+          "text": "Dałeś mi poznać drogi życia, a twoje oblicze napełni mnie radością."
+        },
+        {
+          "lp": "29",
+          "text": "Mężowie bracia, mogę swobodnie mówić do was o patriarsze Dawidzie, że umarł i został pogrzebany, a jego grobowiec znajduje się u nas aż do dziś."
+        },
+        {
+          "lp": "30",
+          "text": "Będąc więc prorokiem i wiedząc, że Bóg zaręczył mu przysięgą, iż z owocu jego bioder, według ciała, wzbudzi Chrystusa i posadzi na jego tronie;"
+        },
+        {
+          "lp": "31",
+          "text": "Przepowiadał to i mówił o zmartwychwstaniu Chrystusa, że jego dusza nie pozostanie w piekle, a jego ciało nie dozna zniszczenia."
+        },
+        {
+          "lp": "32",
+          "text": "Tego to Jezusa wskrzesił Bóg, czego my wszyscy jesteśmy świadkami."
+        },
+        {
+          "lp": "33",
+          "text": "Będąc więc wywyższony prawicą Boga, otrzymał od Ojca obietnicę Ducha Świętego i wylał to, co wy teraz widzicie i słyszycie."
+        },
+        {
+          "lp": "34",
+          "text": "Dawid bowiem nie wstąpił do nieba, a jednak sam mówi: Powiedział Pan memu Panu: Siądź po mojej prawicy;"
+        },
+        {
+          "lp": "35",
+          "text": "Aż położę twoich nieprzyjaciół jako podnóżek pod twoje stopy."
+        },
+        {
+          "lp": "36",
+          "text": "Niech więc cały dom Izraela wie z pewnością, że tego Jezusa, którego wy ukrzyżowaliście, Bóg uczynił i Panem, i Chrystusem."
+        },
+        {
+          "lp": "37",
+          "text": "A słysząc to, przerazili się do głębi serca i zapytali Piotra i pozostałych apostołów: Co mamy robić, mężowie bracia?"
+        },
+        {
+          "lp": "38",
+          "text": "Wtedy Piotr powiedział do nich: Pokutujcie i niech każdy z was ochrzci się w imię Jezusa Chrystusa na przebaczenie grzechów, a otrzymacie dar Ducha Świętego."
+        },
+        {
+          "lp": "39",
+          "text": "Obietnica ta bowiem dotyczy was, waszych dzieci i wszystkich, którzy są daleko, każdego, kogo powoła Pan, nasz Bóg."
+        },
+        {
+          "lp": "40",
+          "text": "W wielu też innych słowach dawał świadectwo i napominał ich: Ratujcie się od tego przewrotnego pokolenia."
+        },
+        {
+          "lp": "41",
+          "text": "Ci więc, którzy chętnie przyjęli jego słowa, zostali ochrzczeni. I przyłączyło się tego dnia około trzech tysięcy dusz."
+        },
+        {
+          "lp": "42",
+          "text": "Trwali oni w nauce apostołów, w społeczności, w łamaniu chleba i w modlitwach."
+        },
+        {
+          "lp": "43",
+          "text": "I strach ogarnął każdą duszę, gdyż wiele znaków i cudów działo się przez apostołów."
+        },
+        {
+          "lp": "44",
+          "text": "A wszyscy, którzy uwierzyli, byli razem i wszystko mieli wspólne."
+        },
+        {
+          "lp": "45",
+          "text": "Sprzedawali posiadłości i dobra i rozdzielali je wszystkim według potrzeb."
+        },
+        {
+          "lp": "46",
+          "text": "Każdego dnia trwali zgodnie w świątyni, a łamiąc chleb po domach, przyjmowali pokarm z radością i w prostocie serca;"
+        },
+        {
+          "lp": "47",
+          "text": "Chwaląc Boga i ciesząc się przychylnością wszystkich ludzi. A Pan dodawał kościołowi każdego dnia tych, którzy mieli być zbawieni. "
         }
       ],
       "3": [
@@ -19583,6 +19543,10 @@
         {
           "lp": "30",
           "text": "Przez całe dwa lata Paweł mieszkał w wynajętym mieszkaniu i przyjmował wszystkich, którzy przychodzili do niego;"
+        },
+        {
+          "lp": "31",
+          "text": "Głosząc królestwo Boże i nauczając tego, co dotyczy Pana Jezusa Chrystusa, ze wszelką odwagą i bez przeszkód."
         }
       ]
     },
@@ -21345,6 +21309,10 @@
         {
           "lp": "26",
           "text": "Lecz teraz objawionej i przez Pisma proroków według postanowienia wiecznego Boga oznajmionej wszystkim narodom, by przywieść je do posłuszeństwa wierze;"
+        },
+        {
+          "lp": "27",
+          "text": "Temu, jedynemu mądremu Bogu, niech będzie chwała przez Jezusa Chrystusa na wieki. Amen."
         }
       ]
     },
@@ -23123,6 +23091,10 @@
         {
           "lp": "23",
           "text": "Łaska Pana Jezusa Chrystusa niech będzie z wami."
+        },
+        {
+          "lp": "24",
+          "text": "Miłość moja niech będzie z wami wszystkimi w Chrystusie Jezusie. Amen."
         }
       ]
     },
@@ -24175,6 +24147,10 @@
         {
           "lp": "13",
           "text": "Pozdrawiają was wszyscy święci."
+        },
+        {
+          "lp": "14",
+          "text": "Łaska Pana Jezusa Chrystusa, miłość Boga i wspólnota Ducha Świętego niech będzie z wami wszystkimi. Amen."
         }
       ]
     },
@@ -24781,6 +24757,10 @@
         {
           "lp": "17",
           "text": "Odtąd niech mi nikt nie sprawia przykrości. Ja bowiem na swoim ciele noszę piętna Pana Jezusa."
+        },
+        {
+          "lp": "18",
+          "text": "Łaska naszego Pana Jezusa Chrystusa niech będzie z waszym duchem, bracia. Amen."
         }
       ]
     },
@@ -25411,6 +25391,10 @@
         {
           "lp": "23",
           "text": "Pokój braciom i miłość wraz z wiarą od Boga Ojca i Pana Jezusa Chrystusa."
+        },
+        {
+          "lp": "24",
+          "text": "Łaska niech będzie ze wszystkimi, którzy miłują naszego Pana Jezusa Chrystusa w szczerości. Amen."
         }
       ]
     },
@@ -25805,6 +25789,10 @@
         {
           "lp": "22",
           "text": "Pozdrawiają was wszyscy święci, szczególnie zaś ci z domu cesarskiego."
+        },
+        {
+          "lp": "24",
+          "text": "Łaska naszego Pana Jezusa Chrystusa niech będzie z wami wszystkimi. Amen."
         }
       ]
     },
@@ -26191,6 +26179,10 @@
         {
           "lp": "17",
           "text": "Powiedzcie też Archipowi: Uważaj, abyś wypełnił posługę, którą przyjąłeś w Panu."
+        },
+        {
+          "lp": "18",
+          "text": "Pozdrowienie moją, Pawła, ręką. Pamiętajcie o moich więzach. Łaska niech będzie z wami. Amen."
         }
       ]
     },
@@ -29467,7 +29459,39 @@
         {
           "lp": "12",
           "text": "A przede wszystkim, moi bracia, nie przysięgajcie ani na niebo, ani na ziemię, ani nie składajcie żadnej innej przysięgi. Lecz niech wasze"
-        }
+        },
+        {
+          "lp": "13",
+          "text": "Cierpi ktoś wśród was? Niech się modli. Raduje się ktoś? Niech śpiewa."
+        },
+        {
+          "lp": "14",
+          "text": "Choruje ktoś wśród was? Niech przywoła starszych kościoła i niech się modlą nad nim, namaszczając go olejem w imię Pana."
+        },
+        {
+          "lp": "15",
+          "text": "A modlitwa wiary uzdrowi chorego i Pan go podźwignie. Jeśli zaś popełnił grzechy, będą mu przebaczone."
+        },
+        {
+          "lp": "16",
+          "text": "Wyznawajcie sobie nawzajem upadki i módlcie się jedni za drugich, abyście byli uzdrowieni. Wiele może usilna modlitwa sprawiedliwego."
+        },
+        {
+          "lp": "17",
+          "text": "Eliasza był człowiekiem podlegającym tym samym doznaniom co my i modlił się gorliwie, żeby nie padał deszcz, i nie spadł deszcz na ziemię przez trzy lata i sześć miesięcy."
+        },
+        {
+          "lp": "18",
+          "text": "Potem znowu się modlił i niebo spuściło deszcz, i ziemia wydała swój plon."
+        },
+        {
+          "lp": "19",
+          "text": "Bracia, jeśli ktoś z was zejdzie z drogi prawdy, a ktoś go nawróci;"
+        },
+        {
+          "lp": "20",
+          "text": "Niech wie, że kto nawróci grzesznika z jego błędnej drogi, wybawi duszę od śmierci i zakryje mnóstwo grzechów"
+        }        
       ]
     },
     "1 List Piotra": {
@@ -29895,6 +29919,10 @@
         {
           "lp": "13",
           "text": "Pozdrawia was kościół w Babilonie, razem z wami wybrany, i Marek, mój syn."
+        },
+        {
+          "lp": "14",
+          "text": "Pozdrówcie się nawzajem pocałunkiem miłości. Pokój wam wszystkim, którzy jesteście w Chrystusie Jezusie. Amen."
         }
       ]
     },
@@ -30143,6 +30171,10 @@
         {
           "lp": "17",
           "text": "Wy zatem, umiłowani, wiedząc o tym wcześniej, miejcie się na baczności, abyście nie byli zwiedzeni przez błąd bezbożników i nie wypadli z waszej stałości."
+        },
+        {
+          "lp": "18",
+          "text": "Wzrastajcie zaś w łasce i poznaniu naszego Pana i Zbawiciela, Jezusa Chrystusa. Jemu chwała i teraz, i na wieczne czasy. Amen."
         }
       ]
     },
@@ -30571,6 +30603,10 @@
         {
           "lp": "20",
           "text": "A wiemy, że Syn Boży przyszedł i dał nam rozum, abyśmy poznali prawdziwego Boga, i jesteśmy w tym prawdziwym, to jest w jego Synu, Jezusie Chrystusie. On jest prawdziwym Bogiem i życiem wiecznym."
+        },
+        {
+          "lp": "21",
+          "text": "Dzieci wystrzegajcie się bożków. Amen."
         }
       ]
     },
@@ -30623,6 +30659,10 @@
         {
           "lp": "12",
           "text": "Mam wam wiele do napisania, ale nie chcę posługiwać się papierem i atramentem. Mam jednak nadzieję, że przybędę do was i porozmawiam z wami osobiście, aby nasza radość była pełna."
+        },
+        {
+          "lp": "13",
+          "text": "Pozdrawiają cię dzieci twojej wybranej siostry. Amen."
         }
       ]
     },
@@ -30679,6 +30719,10 @@
         {
           "lp": "13",
           "text": "Wiele miałem do napisania, ale nie chcę posługiwać się atramentem i piórem."
+        },
+        {
+          "lp": "14",
+          "text": "Mam bowiem nadzieję, że zobaczę cię wkrótce, a wtedy porozmawiamy osobiście. Pokój tobie. Pozdrawiają cię przyjaciele. Ty też pozdrów przyjaciół imiennie."
         }
       ]
     },
@@ -30779,6 +30823,10 @@
         {
           "lp": "24",
           "text": "A temu, który może was ustrzec od upadku i z radością przedstawić jako nienagannych przed obliczem swojej chwały;"
+        },
+        {
+          "lp": "25",
+          "text": "Jedynemu mądremu Bogu, naszemu Zbawicielowi, niech będzie chwała i majestat, moc i władza, teraz i po wszystkie wieki. Amen."
         }
       ]
     },
@@ -38997,6 +39045,10 @@
         {
           "lp": "20",
           "text": "Tak mówi ten, który zaświadcza o tym: Zaprawdę, przyjdę wkrótce. Amen! O tak, przyjdź, Panie Jezu!"
+        },
+        {
+          "lp": "21",
+          "text": "Łaska naszego Pana Jezusa Chrystusa niech będzie z wami wszystkimi. Amen."
         }
       ]
     }
