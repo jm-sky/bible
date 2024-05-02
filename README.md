@@ -2,6 +2,10 @@
 
 Bible reader single page application.
 
+- Vue.js
+- Bootstrap v4
+- Font Awesome
+
 ![obraz](https://github.com/jm-sky/bible/assets/17783569/3b5352dd-1acf-4101-ad74-1185397816de)
 
 ## Project setup
