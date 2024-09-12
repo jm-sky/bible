@@ -11,10 +11,13 @@
         <div class="modal-body">
           <p>
             Użytkownik Serwisu może korzystać z treści zawartych w Serwisie wyłącznie w zakresie osobistego użytku.
-            Kopiowanie, wprowadzanie zmian, przesyłanie, publiczne odtwarzanie i wszelkie wykorzystywanie treści Serwisu do celów komercyjnych jest zabronione.
+            Kopiowanie, wprowadzanie zmian, przesyłanie, publiczne odtwarzanie i wszelkie wykorzystywanie treści Serwisu
+            do celów komercyjnych jest zabronione.
           </p>
           <p>
-            Użytkownik zobowiązuje się, iż korzystanie przez niego za pośrednictwem Serwisu z materiałów chronionych prawami autorskimi na rzecz osób trzecich, w tym ich kopiowanie, przesyłanie i publiczne udostępnianie w Internecie odbywa się za zgodą uprawnionych osób.
+            Użytkownik zobowiązuje się, iż korzystanie przez niego za pośrednictwem Serwisu z materiałów chronionych
+            prawami autorskimi na rzecz osób trzecich, w tym ich kopiowanie, przesyłanie i publiczne udostępnianie w
+            Internecie odbywa się za zgodą uprawnionych osób.
           </p>
           <p>
             Cytowane w Serwisie wybrane tłumaczenia Biblii są objęte prawami autorskimi, o których poniżej:
@@ -26,14 +29,14 @@
             <li>Russian Synodal Version - brak danych;</li>
           </ul>
           <div class="text-center py-2 text-muted">
-            <i class="fa fa-fw fa-gavel" style="font-size: 40px;  "></i>
+            <i class="fa-regular fa-fw fa-gavel" style="font-size: 40px;  "></i>
           </div>
         </div>
         <!-- modal-body -->
         <!-- modal-footer -->
         <div class="modal-footer justify-content-start">
-          <button @click="$root.config.showLaw = false" type="button" class="btn btn-secondary">
-            <i class="fa fa-times fa-fw"></i>
+          <button @click="config.options.showLaw = false" type="button" class="btn btn-secondary">
+            <i class="fa-regular fa-times fa-fw"></i>
             Zamknij
           </button>
         </div>
@@ -45,6 +48,8 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script setup lang=ts>
+import { useConfigStore } from '@/stores/config';
+
+const config = useConfigStore()
 </script>

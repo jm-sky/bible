@@ -1,14 +1,16 @@
+<script setup lang="ts">
+import { useBibleStore } from '@/stores/bible';
+
+const bibles = useBibleStore()
+</script>
+
 <template>
-  <div class="position-fixed versions p-1 m-1 shadow-sm border rounded">
-    <select v-model="$root.version" placeholder="Wersja" class="form-control form-control-sm">
-      <option v-for="(version, index) in $root.versions" :key="index">{{ version }}</option>
+  <div class="fixed versions p-1 m-1 shadow-sm border rounded">
+    <select v-model="bibles.version" placeholder="Wersja" class="form-control form-control-sm">
+      <option v-for="(version, index) in bibles.versions" :key="index">{{ version }}</option>
     </select>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style>
 .versions {

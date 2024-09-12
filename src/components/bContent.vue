@@ -1,50 +1,34 @@
 <template>
   <div class="content text-justify pb-4">
     <div class="chapters pb-2" :style="fontSize">
-      <div class="m-1 p-1 border rounded shadow-sm text-muted text-center">
-        <span v-for="(chapter, index) in $root.chapters" :key="index">
-          <a :href="`#chapter_${chapter}`" class="m-1 d-inline-block">{{ chapter }}</a>
-          <span v-if="index+1 < $root.chapters.length">|</span>
-        </span>
-      </div>
+      <BChaptersList />
 
-      <b-book
-        v-for="(book, title, book_no) in books"
-        :key="`book-${book_no}`"
-        :book="book"
-        :title="title"
-        :number="book_no"
-      ></b-book>
+      <BibleBook v-for="(book, title, book_no) in books" :key="`book-${book_no}`" :book="book" :title="title"
+        :number="book_no" />
       <!-- book-wrapper -->
     </div>
     <!-- chapters -->
   </div>
 </template>
 
-<script>
-import bBook from "./bBook";
+<script setup lang="ts">
+import { computed } from 'vue';
+import { useConfigStore } from '@/stores/config';
+import { useBibleStore } from '@/stores/bible';
+import BibleBook from "./bBook.vue";
+import BChaptersList from './bChaptersList.vue';
 
-export default {
-  //===============================
-  components: {
-    bBook
-  },
-  //===============================
-  computed: {
-    //==========
-    books() {
-      if (this.$root.showAll === true) {
-        return this.$root.bible.books;
-      }
-      return { [this.$root.book]: this.$root.bible.books[this.$root.book] };
-    },
-    //==========
-    fontSize() {
-      return "font-size: " + this.$root.config.fontSize + "em";
-    },
-    //==========
-  },
-  //===============================
-};
+const config = useConfigStore()
+const bibleStore = useBibleStore()
+
+const books = computed(() => {
+  if (config.showAll === true) {
+    return bibleStore.bible.books;
+  }
+  return { [bibleStore.book]: bibleStore.bible.books[bibleStore.book] };
+})
+
+const fontSize = computed(() => {
+  return `font-size: ${config.options.fontSize}em`;
+})
 </script>
-

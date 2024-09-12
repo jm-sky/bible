@@ -1,63 +1,61 @@
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import { useConfigStore } from './stores/config'
+import { useBibleStore } from './stores/bible'
+import BibleMenu from './components/bMenu.vue'
+import BibleContent from './components/bContent.vue'
+import BibleLoader from './components/bLoader.vue'
+import BibleSearchModal from './components/bSearchModal.vue'
+import BibleLawModal from './components/bLawModal.vue'
+import BibleOptionsModal from './components/bOptionsModal.vue'
+import BibleResizer from './components/bResizer.vue'
+import BibleScroller from './components/bScroller.vue'
+import BibleSearch from './components/bSearch.vue'
+import BibleVersions from './components/bVersions.vue'
+
+const config = useConfigStore()
+const bibles = useBibleStore()
+const searchModal = ref()
+const lawModal = ref()
+const optionsModal = ref()
+
+onMounted(() => {
+  config.searchModalRef = searchModal;
+  config.lawModalRef = lawModal;
+  config.optionsModalRef = optionsModal;
+
+  // $(searchModal.value).on('hidden.bs.modal', () => config.options.showSearch = false);
+  // $(lawModal.value).on('hidden.bs.modal', () => config.options.showLaw = false);
+  // $(optionsModal.value).on('hidden.bs.modal', () => config.options.showOptions = false);
+})
+</script>
+
 <template>
-  <div id="app" class="p-3" :class="{ 'font-serif': $root.config.fontTypeSerif }">
-    <h1 class="text-center mt-4">{{ $root.title }}</h1>
-    <h4 class="text-center text-muted font-italic">{{ $root.publisher }}</h4>
+  <div id="app" class="p-3" :class="{ 'font-serif': config.options.fontTypeSerif }">
+    <h1 class="text-2xl text-center mt-4">{{ bibles.bible.title ?? 'Biblia' }}</h1>
+    <h4 class="text-xl text-center text-muted italic">{{ bibles.bible.publisher ?? '-' }}</h4>
 
-    <b-menu></b-menu>
+    <BibleMenu />
 
-    <b-content></b-content>
+    <BibleContent />
 
-    <b-loader v-if="$root.loading"></b-loader>
+    <BibleLoader v-if="config.loading" />
 
-    <b-versions></b-versions>
-    <b-search></b-search>
+    <BibleVersions />
+    <BibleSearch />
 
-    <b-resizer></b-resizer>
-    <b-scroller></b-scroller>
+    <BibleResizer />
+    <BibleScroller />
 
-    <b-search-modal ref="searchModal"></b-search-modal>
-    <b-law-modal ref="lawModal"></b-law-modal>
-    <b-options-modal ref="optionsModal"></b-options-modal>
+    <BibleSearchModal ref="searchModal" />
+    <BibleLawModal ref="lawModal" />
+    <BibleOptionsModal ref="optionsModal" />
   </div>
 </template>
 
-<script>
-import * as $ from 'jquery'
-
-import bContent from './components/bContent'
-import bLoader from './components/bLoader'
-import bMenu from './components/bMenu'
-import bSearchModal from './components/bSearchModal'
-import bLawModal from './components/bLawModal'
-import bOptionsModal from './components/bOptionsModal'
-import bResizer from './components/bResizer'
-import bScroller from './components/bScroller'
-import bSearch from './components/bSearch'
-import bVersions from './components/bVersions'
-
-export default {
-  //====================
-  name: 'app',
-  //====================
-  components: {
-    bContent, bLoader, bMenu, bSearchModal, bLawModal, bOptionsModal, bResizer, bScroller, bSearch, bVersions
-  },
-  //====================
-  mounted() {
-    this.$root.$refs.searchModal = this.$refs.searchModal;
-    this.$root.$refs.lawModal = this.$refs.lawModal;
-    this.$root.$refs.optionsModal = this.$refs.optionsModal;
-
-    $(this.$refs.searchModal.$el).on('hidden.bs.modal', () => this.$root.config.showSearch = false);
-    $(this.$refs.lawModal.$el).on('hidden.bs.modal', () => this.$root.config.showLaw = false);
-    $(this.$refs.optionsModal.$el).on('hidden.bs.modal', () => this.$root.config.showOptions = false);
-  }
-  //====================
-}
-</script>
-
 <style lang="scss">
-.high-contrast, .high-contrast:not(i) * {
+.high-contrast,
+.high-contrast:not(i) * {
   background: #000;
   color: #fff;
   font-weight: bold;

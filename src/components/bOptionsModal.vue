@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useConfigStore } from '@/stores/config';
+
+const config = useConfigStore()
+</script>
+
 <template>
   <div id="modal-options" class="modal fade" style="background-color: rgba(0,0,0,0.2)">
     <div class="modal-dialog modal-lg">
@@ -9,21 +15,23 @@
         <!-- modal-header -->
         <!-- modal-body -->
         <div class="modal-body">
-         
+
           <form>
             <!-- form-group row -->
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">Kontrast</label>
               <div class="col-sm-9">
                 <div class="pt-2 form-check form-check-inline d-flex justify-content-around">
-                    <div class="d-inline-block">
-                      <input v-model="$root.config.highContrast" :value="false" type="radio" id="highContrast-FALSE" class="form-check-input">
-                      <label class="form-check-label" for="highContrast-FALSE">Normalny</label>
-                    </div>                  
-                    <div class="d-inline-block">
-                      <input v-model="$root.config.highContrast" :value="true" type="radio" id="highContrast-TRUE" class="form-check-input">
-                      <label class="form-check-label" for="highContrast-TRUE">Wysoki</label>
-                    </div>
+                  <div class="inline-block">
+                    <input v-model="config.options.highContrast" :value="false" type="radio" id="highContrast-FALSE"
+                      class="form-check-input">
+                    <label class="form-check-label" for="highContrast-FALSE">Normalny</label>
+                  </div>
+                  <div class="inline-block">
+                    <input v-model="config.options.highContrast" :value="true" type="radio" id="highContrast-TRUE"
+                      class="form-check-input">
+                    <label class="form-check-label" for="highContrast-TRUE">Wysoki</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -33,11 +41,14 @@
               <div class="col-sm-9">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <a @click="$root.fontSizeDown" class="btn btn-light border"><i class="fa fa-fw fa-minus"></i></a>
+                    <a @click="config.fontSizeDown()" class="btn btn-light border"><i
+                        class="fa-regular fa-fw fa-minus"></i></a>
                   </div>
-                  <input v-model="$root.config.fontSize" type="number" readonly class="form-control text-center" id="fontSize-input" />
+                  <input v-model="config.options.fontSize" type="number" readonly class="form-control text-center"
+                    id="fontSize-input" />
                   <div class="input-group-append">
-                    <a @click="$root.fontSizeUp" class="btn btn-light border"><i class="fa fa-fw fa-plus"></i></a>
+                    <a @click="config.fontSizeUp()" class="btn btn-light border"><i
+                        class="fa-regular fa-fw fa-plus"></i></a>
                   </div>
                 </div>
               </div>
@@ -47,14 +58,16 @@
               <label class="col-sm-3 col-form-label">Typ czcionki</label>
               <div class="col-sm-9">
                 <div class="pt-2 form-check form-check-inline d-flex justify-content-around">
-                    <div class="d-inline-block">
-                      <input v-model="$root.config.fontTypeSerif" :value="false" type="radio" id="fontTypeSerif-FALSE" class="form-check-input">
-                      <label class="form-check-label" for="fontTypeSerif-FALSE">Bezszeryfowa</label>
-                    </div>                  
-                    <div class="d-inline-block">
-                      <input v-model="$root.config.fontTypeSerif" :value="true" type="radio" id="fontTypeSerif-TRUE" class="form-check-input">
-                      <label class="form-check-label" for="fontTypeSerif-TRUE">Szeryfowa</label>
-                    </div>
+                  <div class="inline-block">
+                    <input v-model="config.options.fontTypeSerif" :value="false" type="radio" id="fontTypeSerif-FALSE"
+                      class="form-check-input">
+                    <label class="form-check-label" for="fontTypeSerif-FALSE">Bezszeryfowa</label>
+                  </div>
+                  <div class="inline-block">
+                    <input v-model="config.options.fontTypeSerif" :value="true" type="radio" id="fontTypeSerif-TRUE"
+                      class="form-check-input">
+                    <label class="form-check-label" for="fontTypeSerif-TRUE">Szeryfowa</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -63,14 +76,16 @@
               <label class="col-sm-3 col-form-label">Kopiowana treść</label>
               <div class="col-sm-9">
                 <div class="pt-2 form-check form-check-inline d-flex justify-content-around">
-                    <div class="d-inline-block">
-                      <input v-model="$root.config.copyFormating" :value="false" type="radio" id="copyFormating-FALSE" class="form-check-input">
-                      <label class="form-check-label" for="copyFormating-FALSE">Nie formatuj</label>
-                    </div>                  
-                    <div class="d-inline-block">
-                      <input v-model="$root.config.copyFormating" :value="true" type="radio" id="copyFormating-TRUE" class="form-check-input">
-                      <label class="form-check-label" for="copyFormating-TRUE">Formatuj</label>
-                    </div>
+                  <div class="inline-block">
+                    <input v-model="config.options.copyFormating" :value="false" type="radio" id="copyFormating-FALSE"
+                      class="form-check-input">
+                    <label class="form-check-label" for="copyFormating-FALSE">Nie formatuj</label>
+                  </div>
+                  <div class="inline-block">
+                    <input v-model="config.options.copyFormating" :value="true" type="radio" id="copyFormating-TRUE"
+                      class="form-check-input">
+                    <label class="form-check-label" for="copyFormating-TRUE">Formatuj</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,8 +96,8 @@
         <!-- modal-body -->
         <!-- modal-footer -->
         <div class="modal-footer">
-          <button @click="$root.config.showOptions = false" type="button" class="btn btn-secondary">
-            <i class="fa fa-times fa-fw"></i>
+          <button @click="config.options.showOptions = false" type="button" class="btn btn-secondary">
+            <i class="fa-regular fa-times fa-fw"></i>
             Zamknij
           </button>
         </div>
@@ -93,7 +108,3 @@
     <!-- modal-dialog -->
   </div>
 </template>
-
-<script>
-export default {}
-</script>
