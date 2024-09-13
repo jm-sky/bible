@@ -14,7 +14,7 @@ export const useBibleStore = defineStore('bible', () => {
     books: {},
   })
 
-  const version = useLocalStorage('Bible.version', '')
+  const version = useLocalStorage('Bible.version', 'UBG-NT')
   const versions = ref([
     'UBG-NT',
     'UBG-ST-NT',

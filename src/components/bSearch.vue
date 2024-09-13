@@ -10,15 +10,13 @@ const search = useSearchStore()
       <input
         v-model="search.searchPhrase"
         placeholder="Szukaj"
-        class="form-control rounded-e-none"
+        class="form-control rounded-e-none focus:z-10"
         type="text"
         @keyup.enter="search.search()"
       >
-      <div class="">
-        <button class="btn btn-light -translate-x-px rounded-s-none border" type="button" @click="search.search()">
-          <i class="fa-solid fa-search fa-fw" />
-        </button>
-      </div>
+      <button class="btn btn-light -translate-x-px rounded-s-none border" type="button" @click="search.search()">
+        <i class="fa-solid fa-search fa-fw" />
+      </button>
     </div>
   </div>
 </template>

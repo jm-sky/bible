@@ -6,7 +6,6 @@ import {
   DialogPanel,
   DialogTitle,
 } from '@headlessui/vue'
-import { defineModel } from 'vue'
 
 const { title, withoutCloseButton = false } = defineProps<{
   title?: string
