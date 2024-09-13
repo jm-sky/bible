@@ -15,9 +15,11 @@ export const useSearchStore = defineStore('search', () => {
   const searchPhrase = ref<string>('')
   const searchResults = ref<ISearchResult[]>([])
   const options = ref({
-    highlightColor: '#ffa',
-    highlightTime: 2000,
+    highlightClass: 'bg-yellow-200/85 ring rounded',
+    highlightTime: 3000,
   })
+
+  const closeModal = () => show.value = false
 
   const addSearchResult = (bookTitle: string, chapter: string, verse: IVerse) => {
     const pattern = new RegExp(`(${searchPhrase.value})`, 'i')
@@ -55,6 +57,7 @@ export const useSearchStore = defineStore('search', () => {
 
   return {
     show,
+    closeModal,
     search,
     options,
     searchPhrase,

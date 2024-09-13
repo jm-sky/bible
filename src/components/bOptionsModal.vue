@@ -45,7 +45,7 @@ const options = useOptionsStore()
             leave-from="opacity-100 scale-100"
             leave-to="opacity-0 scale-95"
           >
-            <DialogPanel class="w-full max-w-xl overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+            <DialogPanel class="w-full max-w-2xl overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
               <DialogTitle as="h3" class="border-b p-4 text-xl font-semibold leading-6 text-gray-900">
                 Opcje
               </DialogTitle>

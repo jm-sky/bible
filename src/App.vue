@@ -9,7 +9,6 @@ import BibleResizer from './components/bResizer.vue'
 import BibleSearch from './components/bSearch.vue'
 import BibleSearchModal from './components/bSearchModal.vue'
 import BibleVersions from './components/bVersions.vue'
-import DemoModal from './components/DemoModal.vue'
 import { useBibleStore } from './stores/bible'
 import { useOptionsStore } from './stores/options'
 
