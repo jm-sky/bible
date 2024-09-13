@@ -1,26 +1,12 @@
-import { computed, onBeforeMount, ref, watch } from 'vue'
-import { defineStore } from 'pinia'
-import { useConfigStore } from './config'
+import { useLocalStorage } from '@vueuse/core'
 import axios from 'axios'
-import { parseJson } from '@/helpers/parseJson'
-
-export type TTitle = string
-export type TChapterNo = string
-
-export interface IVerse {
-  lp: string
-  text: string
-}
-
-export type IBook = Record<TChapterNo, IVerse[]>
-
-export interface IBible {
-  title: string
-  publisher: string
-  books: Record<TTitle, IBook>
-}
+import { defineStore } from 'pinia'
+import { computed, ref, watch } from 'vue'
+import type { IBible, IBook } from '@/types/bible.type'
 
 export const useBibleStore = defineStore('bible', () => {
+  const loading = ref<boolean>(false)
+  const showAllBooks = ref<boolean>(false)
   const book = ref<string>('')
   const bible = ref<IBible>({
     title: 'Biblia',
@@ -28,47 +14,41 @@ export const useBibleStore = defineStore('bible', () => {
     books: {},
   })
 
-  const version = ref('')
+  const version = useLocalStorage('Bible.version', '')
   const versions = ref([
-    `UBG-NT`,
-    `UBG-ST-NT`,
-    `EIB-NT`,
-    `BW-NT`,
-    `BW-ST-NT`,
-    `RSV-NT`,
+    'UBG-NT',
+    'UBG-ST-NT',
+    'EIB-NT',
+    'BW-NT',
+    'BW-ST-NT',
+    'RSV-NT',
   ])
 
   const currentBook = computed<IBook>(() => bible.value.books?.[book.value])
   const chapters = computed<string[]>(() => Object.keys(currentBook.value ?? {}))
 
-  watch(version, () => read())
+  const read = async (allBooks: boolean = false) => {
+    loading.value = true
+    showAllBooks.value = allBooks
 
-  const read = (showAll: boolean = false) => {
-    const config = useConfigStore()
-    config.loading = true;
-    config.showAll = showAll;
-
-    axios.get<IBible>(`/${config.options.shelf}/${version.value}.json`)
-      .then(response => {
-        const content = response.data
-        config.loading = false;
-        book.value = Object.keys(content.books)[0];
-        bible.value = content;
-      })
-      .catch(() => config.loading = false);
+    try {
+      const response = await axios.get<IBible>(`/books/${version.value}.json`)
+      const content = response.data
+      loading.value = false
+      book.value = Object.keys(content.books)[0]
+      bible.value = content
+    } catch {
+      console.warn('Could not load Bible JSON file.')
+    } finally {
+      loading.value = false
+    }
   }
 
-  onBeforeMount(() => {
-    let userVersion = parseJson(localStorage.getItem('Bible.version'));
-    userVersion = (userVersion || '').replace('.json', '');
-    if (versions.value.includes(userVersion)) {
-      version.value = userVersion;
-    } else {
-      version.value = versions.value[0];
-    }
-  })
+  watch(version, () => read(), { immediate: true })
 
   return {
+    loading,
+    showAllBooks,
     book,
     bible,
     version,

@@ -1,45 +1,35 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { useConfigStore } from './stores/config'
-import { useBibleStore } from './stores/bible'
-import BibleMenu from './components/bMenu.vue'
 import BibleContent from './components/bContent.vue'
-import BibleLoader from './components/bLoader.vue'
-import BibleSearchModal from './components/bSearchModal.vue'
 import BibleLawModal from './components/bLawModal.vue'
+import BibleLoader from './components/bLoader.vue'
+import BibleMenu from './components/bMenu.vue'
 import BibleOptionsModal from './components/bOptionsModal.vue'
 import BibleResizer from './components/bResizer.vue'
 import BibleScroller from './components/bScroller.vue'
 import BibleSearch from './components/bSearch.vue'
+import BibleSearchModal from './components/bSearchModal.vue'
 import BibleVersions from './components/bVersions.vue'
+import { useBibleStore } from './stores/bible'
+import { useOptionsStore } from './stores/options'
 
-const config = useConfigStore()
 const bibles = useBibleStore()
-const searchModal = ref()
-const lawModal = ref()
-const optionsModal = ref()
-
-onMounted(() => {
-  config.searchModalRef = searchModal;
-  config.lawModalRef = lawModal;
-  config.optionsModalRef = optionsModal;
-
-  // $(searchModal.value).on('hidden.bs.modal', () => config.options.showSearch = false);
-  // $(lawModal.value).on('hidden.bs.modal', () => config.options.showLaw = false);
-  // $(optionsModal.value).on('hidden.bs.modal', () => config.options.showOptions = false);
-})
+const options = useOptionsStore()
 </script>
 
 <template>
-  <div id="app" class="p-3" :class="{ 'font-serif': config.options.fontTypeSerif }">
-    <h1 class="text-2xl text-center mt-4">{{ bibles.bible.title ?? 'Biblia' }}</h1>
-    <h4 class="text-xl text-center text-muted italic">{{ bibles.bible.publisher ?? '-' }}</h4>
+  <div id="app" class="p-3" :class="{ 'font-serif': options.fontTypeSerif }">
+    <h1 class="mt-4 text-center text-2xl">
+      {{ bibles.bible.title ?? 'Biblia' }}
+    </h1>
+    <h4 class="text-center text-xl italic text-muted">
+      {{ bibles.bible.publisher ?? '-' }}
+    </h4>
 
     <BibleMenu />
 
     <BibleContent />
 
-    <BibleLoader v-if="config.loading" />
+    <BibleLoader v-if="bibles.loading" />
 
     <BibleVersions />
     <BibleSearch />
@@ -47,13 +37,13 @@ onMounted(() => {
     <BibleResizer />
     <BibleScroller />
 
-    <BibleSearchModal ref="searchModal" />
-    <BibleLawModal ref="lawModal" />
-    <BibleOptionsModal ref="optionsModal" />
+    <BibleSearchModal />
+    <BibleLawModal />
+    <BibleOptionsModal />
   </div>
 </template>
 
-<style lang="scss">
+<style>
 .high-contrast,
 .high-contrast:not(i) * {
   background: #000;

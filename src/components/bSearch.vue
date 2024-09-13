@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import { useConfigStore } from '@/stores/config';
+import { useSearchStore } from '@/stores/search'
 
-const config = useConfigStore()
+const search = useSearchStore()
 </script>
 
 <template>
-  <div class="fixed search p-1 m-1 shadow-sm border rounded" style="top: 0; right: 0; max-width: 48vw;">
-    <div class="flex flex-row input-group-sm">
-      <input @keyup.enter="config.search()" v-model="config.searchPhrase" placeholder="Szukaj"
-        class="form-control rounded-e-none" type="text" />
-      <div class="input-group-append">
-        <button @click="config.search()" class="btn btn-light border rounded-s-none -translate-x-px" type="button">
-          <i class="fa-solid fa-search fa-fw"></i>
+  <div class="fixed right-0 top-0 m-1 max-w-[48vw] rounded border bg-white/10 p-1 shadow-sm backdrop-blur-xs">
+    <div class="flex flex-row">
+      <input
+        v-model="search.searchPhrase"
+        placeholder="Szukaj"
+        class="form-control rounded-e-none"
+        type="text"
+        @keyup.enter="search.search()"
+      >
+      <div class="">
+        <button class="btn btn-light -translate-x-px rounded-s-none border" type="button" @click="search.search()">
+          <i class="fa-solid fa-search fa-fw" />
         </button>
       </div>
     </div>

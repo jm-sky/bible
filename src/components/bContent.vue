@@ -1,34 +1,36 @@
 <template>
-  <div class="content text-justify pb-4">
-    <div class="chapters pb-2" :style="fontSize">
+  <div class="pb-4 text-justify">
+    <div class="pb-2" :style="fontSize">
       <BChaptersList />
 
-      <BibleBook v-for="(book, title, book_no) in books" :key="`book-${book_no}`" :book="book" :title="title"
-        :number="book_no" />
-      <!-- book-wrapper -->
+      <BibleBook
+        v-for="(book, title, book_no) in books"
+        :key="`book-${book_no}`"
+        :book="book"
+        :title="title"
+        :number="book_no"
+      />
     </div>
-    <!-- chapters -->
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useConfigStore } from '@/stores/config';
-import { useBibleStore } from '@/stores/bible';
-import BibleBook from "./bBook.vue";
-import BChaptersList from './bChaptersList.vue';
+import { computed } from 'vue'
+import { useBibleStore } from '@/stores/bible'
+import { useOptionsStore } from '@/stores/options'
+import type { IBooks } from '@/types/bible.type'
+import BibleBook from './bBook.vue'
+import BChaptersList from './bChaptersList.vue'
 
-const config = useConfigStore()
-const bibleStore = useBibleStore()
+const bibles = useBibleStore()
+const options = useOptionsStore()
 
-const books = computed(() => {
-  if (config.showAll === true) {
-    return bibleStore.bible.books;
-  }
-  return { [bibleStore.book]: bibleStore.bible.books[bibleStore.book] };
+const books = computed<IBooks>(() => {
+  if (bibles.showAllBooks === true) return bibles.bible.books
+  return { [bibles.book]: bibles.bible.books[bibles.book] }
 })
 
 const fontSize = computed(() => {
-  return `font-size: ${config.options.fontSize}em`;
+  return `font-size: ${options.fontSize}em`
 })
 </script>
