@@ -11,9 +11,11 @@ import BibleSearchModal from './components/bSearchModal.vue'
 import BibleVersions from './components/bVersions.vue'
 import { useBibleStore } from './stores/bible'
 import { useOptionsStore } from './stores/options'
+import { useSearchStore } from './stores/search'
 
 const bibles = useBibleStore()
 const options = useOptionsStore()
+const search = useSearchStore()
 </script>
 
 <template>
@@ -37,9 +39,9 @@ const options = useOptionsStore()
     <BibleResizer />
     <BibleOptionsMenu />
 
-    <BibleSearchModal />
-    <BibleLawModal />
-    <BibleOptionsModal />
+    <BibleSearchModal v-model:is-open="search.show" />
+    <BibleLawModal v-model:is-open="options.showLawModal" />
+    <BibleOptionsModal v-model:is-open="options.showOptionsModal" />
   </div>
 </template>
 
