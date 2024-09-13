@@ -18,6 +18,9 @@ export const useOptionsStore = defineStore('options', () => {
     fontSize.value = (fontSize.value || 1) + 0.5
   }
 
+  const closeOptionsModal = () => showOptionsModal.value = false
+  const closeLawModal = () => showLawModal.value = false
+
   return {
     showOptionsModal,
     showLawModal,
@@ -25,6 +28,8 @@ export const useOptionsStore = defineStore('options', () => {
     fontSize,
     fontTypeSerif,
     copyFormating,
+    closeOptionsModal,
+    closeLawModal,
     fontSizeDown,
     fontSizeUp,
   }

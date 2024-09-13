@@ -4,17 +4,26 @@
 
 @layer components {
   .btn {
-    @apply px-3 py-1 rounded border;
+    @apply inline-flex items-center justify-center gap-2;
+    @apply cursor-pointer rounded border font-normal focus:ring-4 focus:outline-none;
     @apply transition-colors;
     height: calc(1.5em + .75rem + 2px);
   }
 
+  .btn:not(.btn-sm) {
+    @apply px-3 py-2;
+  }
+
+  .btn-sm {
+    @apply px-2 py-1;
+  }
+
   .btn-light {
-    @apply bg-slate-50 hover:bg-slate-100;
+    @apply bg-slate-50 hover:bg-slate-200 focus:ring-primary-300;
   }
 
   .btn-primary {
-    @apply text-white bg-primary-500 hover:bg-primary-600;
+    @apply text-white bg-primary-500 hover:bg-primary-600 focus:ring-primary-300;
   }
 
   .form-control {

@@ -5,7 +5,7 @@ const options = useOptionsStore()
 </script>
 
 <template>
-  <div class="fixed bottom-0 left-0 m-1 rounded border bg-white/10 p-1 shadow-sm backdrop-blur-xs" style="bottom: 0; left: 0">
+  <div class="fixed bottom-0 left-0 m-1 rounded border bg-white/10 p-1.5 shadow-sm backdrop-blur-xs" style="bottom: 0; left: 0">
     <a class="btn btn-light" tooltip="Większa czcionka" @click="options.fontSizeUp">
       <i class="fa-solid fa-plus" />
     </a>

@@ -3,12 +3,13 @@ import BibleContent from './components/bContent.vue'
 import BibleLawModal from './components/bLawModal.vue'
 import BibleLoader from './components/bLoader.vue'
 import BibleMenu from './components/bMenu.vue'
+import BibleOptionsMenu from './components/bOptionsMenu.vue'
 import BibleOptionsModal from './components/bOptionsModal.vue'
 import BibleResizer from './components/bResizer.vue'
-import BibleScroller from './components/bScroller.vue'
 import BibleSearch from './components/bSearch.vue'
 import BibleSearchModal from './components/bSearchModal.vue'
 import BibleVersions from './components/bVersions.vue'
+import DemoModal from './components/DemoModal.vue'
 import { useBibleStore } from './stores/bible'
 import { useOptionsStore } from './stores/options'
 
@@ -35,7 +36,7 @@ const options = useOptionsStore()
     <BibleSearch />
 
     <BibleResizer />
-    <BibleScroller />
+    <BibleOptionsMenu />
 
     <BibleSearchModal />
     <BibleLawModal />
