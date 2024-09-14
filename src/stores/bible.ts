@@ -1,7 +1,7 @@
 import { useLocalStorage } from '@vueuse/core'
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import { computed, ref, watch } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import type { IBible, IBook } from '@/types/bible.type'
 
 export const useBibleStore = defineStore('bible', () => {
@@ -44,7 +44,18 @@ export const useBibleStore = defineStore('bible', () => {
     }
   }
 
+  const goToHash = () => {
+    nextTick(() => {
+      const paragraph = document.querySelector(window.location.hash)
+      if (paragraph) paragraph.scrollIntoView()
+    })
+  }
+
   watch(version, () => read(), { immediate: true })
+  watch(book, () => showAllBooks.value = false)
+  watch(loading, () => {
+    if (loading.value === false && window.location.hash) goToHash()
+  }, { immediate: true })
 
   return {
     loading,

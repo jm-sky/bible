@@ -4,11 +4,11 @@
       <BChaptersList />
 
       <BibleBook
-        v-for="(book, title, book_no) in books"
-        :key="`book-${book_no}`"
+        v-for="(book, title, bookNo) in books"
+        :key="`book-${bookNo}`"
         :book="book"
         :title="title"
-        :number="book_no"
+        :number="bookNo"
       />
     </div>
   </div>
@@ -27,7 +27,8 @@ const options = useOptionsStore()
 
 const books = computed<IBooks>(() => {
   if (bibles.showAllBooks === true) return bibles.bible.books
-  return { [bibles.book]: bibles.bible.books[bibles.book] }
+  if (bibles.book) return { [bibles.book]: bibles.bible.books[bibles.book] }
+  return {}
 })
 
 const fontSize = computed(() => {

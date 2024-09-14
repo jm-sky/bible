@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import BibleContent from './components/BibleContent.vue'
 import BibleLoader from './components/BibleLoader.vue'
 import BibleMenu from './components/BibleMenu.vue'
@@ -18,13 +19,6 @@ const bibles = useBibleStore()
 const options = useOptionsStore()
 const search = useSearchStore()
 
-useCopyFormatter()
-
-// watch(loading => {
-//   if (this.loading === false && window.location.hash) {
-//     this.goToHash();
-//   }
-// })
 
 // 'config.showOptions'() {
 //   if (this.config.showOptions) {
@@ -33,22 +27,9 @@ useCopyFormatter()
 //   }
 //   $(this.$refs.optionsModal.$el).modal(this.config.showOptions ? 'show' : 'hide');
 // },
-// book() {
-//   window.DEBUG ? console.log('[Bible][watch][book]:', this.book, ' | showAll:', this.showAll) : false;
-//   this.showAll = false;
-// },
-
-// $(document).on('copy', this.copy);
 
 
-
-
-// const goToHash = () => {
-//   nextTick(() => {
-//     let paragraph = document.querySelector(window.location.hash)
-//     paragraph ? paragraph.scrollIntoView() : false;
-//   })
-// }
+onMounted(() => useCopyFormatter())
 </script>
 
 <template>

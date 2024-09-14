@@ -14,7 +14,7 @@
           v-for="verse in chapter"
           :id="`chapter_${chapter_no}_verse_${verse.lp}`"
           :key="`book-${number}-chapter-${chapter_no}-verse-${verse.lp}`"
-          :data-paragraph="getParagraphData(title, chapter_no, verse)"
+          :data-paragraph="asJson(getParagraphData(title, chapter_no, verse))"
           class="pe-1 transition-all"
         >
           <small class="MsoSubtleReference text-muted">({{ verse.lp }})</small>&nbsp;{{ verse.text }}
@@ -28,18 +28,26 @@
 <script setup lang="ts">
 import type { IBook, IVerse } from '@/types/bible.type'
 
+export interface IParagraphData {
+  book: string
+  chapter: string
+  verse: string
+}
+
 defineProps<{
   book: IBook
   title: string
   number: number
 }>()
 
-const getParagraphData = (title: string, chapter_no: string, verse: IVerse) => {
-  return JSON.stringify({
+const getParagraphData = (title: string, chapter_no: string, verse: IVerse): IParagraphData => {
+  return {
     book: title,
     chapter: chapter_no,
     verse: verse.lp,
-  })
+  }
 }
+
+const asJson = (data: IParagraphData) => JSON.stringify(data)
 </script>
 
