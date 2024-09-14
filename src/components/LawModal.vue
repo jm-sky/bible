@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineModel } from 'vue'
 import BaseModal from './BaseModal.vue'
 
 const isOpen = defineModel<boolean>('isOpen', { required: true })

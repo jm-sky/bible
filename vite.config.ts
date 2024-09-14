@@ -9,7 +9,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       devOptions: {
-        enabled: true,
+        enabled: false,
       },
       includeAssets: ['favicon.ico', '/img/icons/icon-192x192.png'],
       manifest: {

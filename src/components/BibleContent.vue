@@ -19,8 +19,8 @@ import { computed } from 'vue'
 import { useBibleStore } from '@/stores/bible'
 import { useOptionsStore } from '@/stores/options'
 import type { IBooks } from '@/types/bible.type'
-import BibleBook from './bBook.vue'
-import BChaptersList from './bChaptersList.vue'
+import BibleBook from './BibleBook.vue'
+import BChaptersList from './ChaptersList.vue'
 
 const bibles = useBibleStore()
 const options = useOptionsStore()

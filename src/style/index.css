@@ -71,4 +71,23 @@
     margin: .5rem;
     pointer-events: none;
   }
+
+  [tooltip] {
+    @apply relative;
+  }
+  [tooltip]::after {
+    content: attr(tooltip);
+    @apply absolute bg-black/90 text-white px-2 py-1 rounded text-xs top-0 -translate-y-1/2 -my-1;
+    @apply leading-none;
+    @apply transition-all;
+    opacity: 0;
+  }
+  [tooltip]:hover::after {
+    @apply -translate-y-full;
+    opacity: 1;
+  }
+
+  .MsoSubtleReference {
+    @apply text-muted;
+  }
 }

@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import type { IVerse } from '@/types/bible.type'
 import { useBibleStore } from './bible'
+import { useOptionsStore } from './options'
 
 export interface ISearchResult {
   book: string,
@@ -41,6 +42,10 @@ export const useSearchStore = defineStore('search', () => {
     if ((searchPhrase.value ?? '').length < 3) return
 
     const bibles = useBibleStore()
+    const options = useOptionsStore()
+    options.showLawModal = false
+    options.showOptionsModal = false
+    
     searchResults.value = []
 
     Object.keys(bibles.bible.books).forEach(bookTitle => {
