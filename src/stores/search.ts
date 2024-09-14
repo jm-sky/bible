@@ -16,7 +16,7 @@ export const useSearchStore = defineStore('search', () => {
   const searchPhrase = ref<string>('')
   const searchResults = ref<ISearchResult[]>([])
   const options = ref({
-    highlightClass: 'bg-yellow-200/85 ring rounded',
+    highlightClass: 'bg-yellow-200/30 ring rounded',
     highlightTime: 3000,
   })
 

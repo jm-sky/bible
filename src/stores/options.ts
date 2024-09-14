@@ -1,6 +1,6 @@
 import { useLocalStorage } from '@vueuse/core'
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 export const useOptionsStore = defineStore('options', () => {
   const showOptionsModal = ref(false)
@@ -8,7 +8,7 @@ export const useOptionsStore = defineStore('options', () => {
   const highContrast = useLocalStorage<boolean>('Bible.highContrast', false)
   const fontSize = useLocalStorage<number>('Bible.fontSize', 1)
   const fontTypeSerif = useLocalStorage<boolean>('Bible.fontTypeSerif', false)
-  const copyFormating = useLocalStorage<boolean>('Bible.copyFormating', false)
+  const copyFormating = useLocalStorage<boolean>('Bible.copyFormating', true)
 
   const fontSizeDown = () => {
     fontSize.value = (fontSize.value || 1) - 0.5
@@ -20,6 +20,10 @@ export const useOptionsStore = defineStore('options', () => {
 
   const closeOptionsModal = () => showOptionsModal.value = false
   const closeLawModal = () => showLawModal.value = false
+
+  watch(highContrast, () => {
+    document.body.classList.toggle('high-contrast', highContrast.value)
+  })
 
   return {
     showOptionsModal,
