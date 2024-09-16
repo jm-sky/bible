@@ -8,7 +8,7 @@ export const useOptionsStore = defineStore('options', () => {
   const highContrast = useLocalStorage<boolean>('Bible.highContrast', false)
   const fontSize = useLocalStorage<number>('Bible.fontSize', 1)
   const fontTypeSerif = useLocalStorage<boolean>('Bible.fontTypeSerif', false)
-  const copyFormating = useLocalStorage<boolean>('Bible.copyFormating', true)
+  const useCopyFormatting = useLocalStorage<boolean>('Bible.copyFormating', true)
 
   const fontSizeDown = () => {
     fontSize.value = (fontSize.value || 1) - 0.5
@@ -31,7 +31,7 @@ export const useOptionsStore = defineStore('options', () => {
     highContrast,
     fontSize,
     fontTypeSerif,
-    copyFormating,
+    useCopyFormatting,
     closeOptionsModal,
     closeLawModal,
     fontSizeDown,

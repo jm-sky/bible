@@ -95,7 +95,7 @@ const isOpen = defineModel<boolean>('isOpen', { required: true })
             <div class="inline-block">
               <input
                 id="copyFormating-FALSE"
-                v-model="options.copyFormating"
+                v-model="options.useCopyFormatting"
                 :value="false"
                 type="radio"
                 class="form-check-input"
@@ -105,7 +105,7 @@ const isOpen = defineModel<boolean>('isOpen', { required: true })
             <div class="inline-block">
               <input
                 id="copyFormating-TRUE"
-                v-model="options.copyFormating"
+                v-model="options.useCopyFormatting"
                 :value="true"
                 type="radio"
                 class="form-check-input"

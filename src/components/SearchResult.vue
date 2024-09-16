@@ -29,6 +29,7 @@ defineProps<{
 
 <template>
   <div class="m-1 flex flex-row flex-wrap justify-between gap-x-2 gap-y-0.5 rounded border px-2 py-1 hover:shadow">
+    <!-- eslint-disable-next-line vue/no-v-html -->
     <span v-html="result.verse.text" />
     <a :href="`#chapter_${result.chapter}`" class="ml-auto mr-0 text-muted hover:text-primary" @click="gotoFoundVerse(result)">
       {{ result.book }} {{ result.chapter }}:{{ result.verse.lp }}

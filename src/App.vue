@@ -19,6 +19,7 @@ const bibles = useBibleStore()
 const options = useOptionsStore()
 const search = useSearchStore()
 
+const { addListener } = useCopyFormatter(options)
 
 // 'config.showOptions'() {
 //   if (this.config.showOptions) {
@@ -28,8 +29,7 @@ const search = useSearchStore()
 //   $(this.$refs.optionsModal.$el).modal(this.config.showOptions ? 'show' : 'hide');
 // },
 
-
-onMounted(() => useCopyFormatter())
+onMounted(() => addListener())
 </script>
 
 <template>

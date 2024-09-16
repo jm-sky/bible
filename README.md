@@ -2,35 +2,36 @@
 
 Bible reader single page application.
 
-- Vue.js
-- Bootstrap v4
+- Vue.js v3
+- Tailwind CSS
 - Font Awesome
 
 ![obraz](https://github.com/jm-sky/bible/assets/17783569/3b5352dd-1acf-4101-ad74-1185397816de)
 
 ## Project setup
 ```
-npm install
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+pnpm dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+pnpm build
 ```
 
 ### Run your tests
 ```
-npm run test
+pnpm test
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+npm type-check
+npm lint
 ```
 
 ### Customize configuration

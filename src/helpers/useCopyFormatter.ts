@@ -1,10 +1,8 @@
 import { useEventListener } from '@vueuse/core'
 import type { IParagraphData } from '@/components/BibleBook.vue'
-import { useOptionsStore } from '@/stores/options'
 import { parseJson } from './parseJson'
 
-export const useCopyFormatter = () => {
-  const options = useOptionsStore()
+export const useCopyFormatter = ({ useCopyFormatting }: { useCopyFormatting: boolean}) => {
 
   const getNodesParagraph = (node: HTMLElement | null): IParagraphData => {
     return parseJson(node?.dataset.paragraph) ?? {}
@@ -22,48 +20,79 @@ export const useCopyFormatter = () => {
     return start?.book === end?.book
   }
 
+  const getReferenceText = (start: IParagraphData, end: IParagraphData): string => {
+    if (isOneVerseReference(start, end)) {
+      return `${start.book} ${start.chapter}:${start.verse}`
+
+    } else if (isOneChapterReference(start, end)) {
+      return `${start.book} ${start.chapter}:${start.verse}-${end.verse}`
+
+    } else if (isOneBookReference(start, end)) {
+      return `${start.book} ${start.chapter}:${start.verse}-${end.chapter}:${end.verse}`
+    }
+    
+    return `${start.book} ${start.chapter}:${start.verse} - ${end.book} ${end.chapter}:${end.verse}`
+  }
+
+  const createFooterElement = (start: IParagraphData, end: IParagraphData): HTMLElement => {
+    const footerText = getReferenceText(start, end)
+    const footerElement = document.createElement('small')
+    footerElement.classList.add('text-muted')
+    footerElement.innerHTML = `(${footerText})`
+
+    return footerElement
+  }
+
+  const createWrapperElement = (selection: Selection): HTMLElement => {
+    const wrapperElement = document.createElement('div')
+    wrapperElement.style.position = 'absolute'
+    wrapperElement.style.left = '-99999px'
+    wrapperElement.innerHTML = `${selection}`
+
+    return wrapperElement
+  }
+
+  const createWrapperElementWithFooter = (selection: Selection, start: IParagraphData, end: IParagraphData): HTMLElement => {
+    const wrapperElement = createWrapperElement(selection)
+    const footerElement = createFooterElement(start, end)
+    wrapperElement.append('<br />')
+    wrapperElement.append(footerElement)
+    
+    return wrapperElement
+  }
+
   const copyHandler = () => {
-    if (options.copyFormating === false) return
+    if (useCopyFormatting === false) return
   
-    const selection = window.getSelection()
+    const selection: Selection | null = window.getSelection()
 
     if (!selection) return
     if (!selection.anchorNode?.parentElement) return
     if (!selection.focusNode?.parentElement) return
 
-    const starting: IParagraphData = getNodesParagraph(selection.anchorNode.parentElement.closest('[data-paragraph'))
-    const ending: IParagraphData = getNodesParagraph(selection.focusNode.parentElement.closest('[data-paragraph'))
-    let footer
-
+    const starting: IParagraphData = getNodesParagraph(selection.anchorNode.parentElement.closest('[data-paragraph]'))
+    const ending: IParagraphData = getNodesParagraph(selection.focusNode.parentElement.closest('[data-paragraph]'))
+    
     if (!starting.book) return
-
-    if (isOneVerseReference(starting, ending)) {
-      footer = `${starting.book} ${starting.chapter}:${starting.verse}`
-
-    } else if (isOneChapterReference(starting, ending)) {
-      footer = `${starting.book} ${starting.chapter}:${starting.verse}-${ending.verse}`
-
-    } else if (isOneBookReference(starting, ending)) {
-      footer = `${starting.book} ${starting.chapter}:${starting.verse}-${ending.chapter}:${ending.verse}`
-
-    } else {
-      footer = `${starting.book} ${starting.chapter}:${starting.verse} - ${ending.book} ${ending.chapter}:${ending.verse}`
-    }
+    
+    const wrapperElement = createWrapperElementWithFooter(selection, starting, ending)
   
-    const $copyFooter = document.createElement('small')
-    const $copyHolder = document.createElement('div')
-    $copyFooter.classList.add('text-muted')
-    $copyHolder.style.position = 'absolute'
-    $copyHolder.style.left = '-99999px'
-    $copyFooter.innerHTML = `(${footer})`
-    $copyHolder.innerHTML = `${selection}`
-    $copyHolder.append('<br />')
-    $copyHolder.append($copyFooter)
-  
-    document.body.append($copyHolder)
-    selection.selectAllChildren($copyHolder)
-    window.setTimeout(() => $copyHolder.remove(), 0)
+    document.body.append(wrapperElement)
+    selection.selectAllChildren(wrapperElement)
+    window.setTimeout(() => wrapperElement.remove(), 0)
   }
   
-  useEventListener(document, 'copy', copyHandler)
+  const addListener = (target: DocumentOrShadowRoot = document, event: keyof GlobalEventHandlersEventMap = 'copy') => useEventListener(target, event, copyHandler)
+
+  return {
+    addListener,
+    getNodesParagraph,
+    isOneVerseReference,
+    isOneChapterReference,
+    isOneBookReference,
+    getReferenceText,
+    createFooterElement,
+    createWrapperElement,
+    createWrapperElementWithFooter,
+  }
 }
