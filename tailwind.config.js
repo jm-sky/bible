@@ -21,6 +21,9 @@ export default {
       backdropBlur: {
         xs: '1px',
       },
+      fontSize: {
+        '4.5xl': ['2.5rem', '2.75rem'],
+      },
     },
   },
   plugins: [],

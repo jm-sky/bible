@@ -2,36 +2,42 @@
 import { useOptionsStore } from '@/stores/options'
 
 const options = useOptionsStore()
+
+const scrollTop = () =>window.scrollTo(0, 0)
 </script>
 
 <template>
-  <div class="fixed bottom-0 right-0 m-1 flex flex-row gap-1 rounded border bg-white/10 p-1.5 shadow-sm backdrop-blur-xs">
+  <div class="glass-menu fixed bottom-0 right-0 m-1 flex gap-1">
     <a
-      tooltip="Nota prawna"
       class="btn btn-sm aspect-square"
       :class="options.showLawModal ? 'btn-primary text-light' : 'btn-light'"
+      tooltip="Nota prawna"
       @click="options.showLawModal = !options.showLawModal"
     >
-      <i class="fa-solid fa-gavel" />
+      <i class="fa-solid fa-gavel fa-fw" />
     </a>
     <a
-      tooltip="Opcje"
       class="btn btn-sm aspect-square"
       :class="options.showOptionsModal ? 'btn-primary text-light' : 'btn-light'"
+      tooltip="Opcje"
       @click="options.showOptionsModal = !options.showOptionsModal"
     >
-      <i class="fa-solid fa-cog" />
+      <i class="fa-solid fa-cog fa-fw" />
     </a>
     <a
-      tooltip="Kontrast"
       class="btn btn-sm aspect-square"
       :class="options.highContrast ? 'btn-primary text-light' : 'btn-light'"
+      tooltip="Kontrast"
       @click="options.highContrast = !options.highContrast"
     >
-      <i class="fa-solid fa-adjust" />
+      <i class="fa-solid fa-adjust fa-fw" />
     </a>
-    <a href="javascript:window.scrollTo(0, 0)" class="btn btn-sm btn-light aspect-square" tooltip="Do góry">
-      <i class="fa-solid fa-arrow-up" />
+    <a
+      class="btn btn-sm btn-light aspect-square"
+      tooltip="Do góry"
+      @click="scrollTop"
+    >
+      <i class="fa-solid fa-arrow-up fa-fw" />
     </a>
   </div>
 </template>

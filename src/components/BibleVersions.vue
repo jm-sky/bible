@@ -5,8 +5,8 @@ const bibles = useBibleStore()
 </script>
 
 <template>
-  <div class="fixed left-0 top-0 m-1 rounded border bg-white/10 p-1 shadow-sm backdrop-blur-xs">
-    <select v-model="bibles.version" placeholder="Wersja" class="form-control">
+  <div class="glass-menu fixed left-0 top-0 m-1">
+    <select v-model="bibles.version" placeholder="Wersja" class="form-control form-control-sm">
       <option v-for="(version, index) in bibles.versions" :key="index">
         {{ version }}
       </option>

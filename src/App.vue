@@ -33,11 +33,11 @@ onMounted(() => useCopyFormatter())
 </script>
 
 <template>
-  <div id="app" class="p-3" :class="{ 'font-serif': options.fontTypeSerif }">
-    <h1 class="mt-4 text-center text-2xl">
+  <div class="p-3" :class="{ 'font-serif': options.fontTypeSerif }">
+    <h1 class="mb-2 mt-6 text-center text-4.5xl">
       {{ bibles.bible.title ?? 'Biblia' }}
     </h1>
-    <h4 class="text-center text-xl italic text-muted">
+    <h4 class="mb-2 text-center text-2xl italic text-muted">
       {{ bibles.bible.publisher ?? '-' }}
     </h4>
 

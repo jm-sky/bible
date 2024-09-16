@@ -1,12 +1,12 @@
 <template>
   <div data-type="book-wrapper">
-    <h2 :id="`book_${number}`" class="mt-3 text-center text-xl font-bold">
+    <h2 :id="`book_${number}`" class="mt-4 text-center text-3xl ">
       {{ title }}
     </h2>
 
     <div data-type="book-content">
       <div v-for="(chapter, chapter_no) in book" :key="`book-${number}-chapter-${chapter_no}`" data-type="chapter-content">
-        <h3 :id="`chapter_${chapter_no}`" class="mt-2 text-lg font-semibold">
+        <h3 :id="`chapter_${chapter_no}`" class="my-2 text-2xl ">
           Rozdział {{ chapter_no }}
         </h3>
 
