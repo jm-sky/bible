@@ -13,7 +13,23 @@ const search = useSearchStore()
       type="text"
       @keyup.enter="search.search()"
     >
-    <button class="btn btn-sm btn-light -translate-x-px rounded-s-none border" type="button" @click="search.search()">
+    <button
+      class="btn btn-sm btn-light -translate-x-px rounded-none"
+      type="button"
+      tooltip="Wyszukiwanie zaawansowane"
+      tooltip-at-bottom
+      @click="search.showAdvancedSearchModal = true"
+    >
+      <i class="fa-solid fa-ellipsis-vertical fa-fw scale-75" />
+    </button>
+    <button
+      class="btn btn-sm btn-light -translate-x-px rounded-s-none disabled:cursor-not-allowed disabled:opacity-50"
+      type="button"
+      :disabled="!search.canSearch"
+      tooltip="Szukaj"
+      tooltip-at-bottom
+      @click="search.search()"
+    >
       <i class="fa-solid fa-search fa-fw scale-75" />
     </button>
   </div>

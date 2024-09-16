@@ -1,0 +1,32 @@
+@layer components {
+
+  [tooltip] {
+    @apply relative;
+
+    &::after {
+      content: attr(tooltip);
+      @apply absolute bg-black/90 text-white px-2 py-1 rounded text-xs -my-1;
+      @apply leading-tight;
+      @apply transition-all delay-75;
+      @apply opacity-0;
+    }
+
+    &:not([tooltip-at-bottom])::after {
+      @apply top-0 -translate-y-1/2;
+    }
+
+    &[tooltip-at-bottom]::after {
+      @apply bottom-0 translate-y-1/2;
+    }
+
+    &:hover::after {
+      @apply -translate-y-full;
+      @apply transition-all delay-200;
+      @apply opacity-100;
+    }
+
+    &[tooltip-at-bottom]:hover::after {
+      @apply translate-y-full;
+    }
+  }
+}

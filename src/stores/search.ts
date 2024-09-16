@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import type { IVerse } from '@/types/bible.type'
 import { useBibleStore } from './bible'
 import { useOptionsStore } from './options'
@@ -12,7 +12,11 @@ export interface ISearchResult {
 }
 
 export const useSearchStore = defineStore('search', () => {
-  const show = ref(false)
+  const biblesStore = useBibleStore()
+  const optionsStore = useOptionsStore()
+
+  const showResultsModal = ref<boolean>(false)
+  const showAdvancedSearchModal = ref<boolean>(false)
   const searchPhrase = ref<string>('')
   const searchResults = ref<ISearchResult[]>([])
   const options = ref({
@@ -20,8 +24,8 @@ export const useSearchStore = defineStore('search', () => {
     highlightTime: 3000,
   })
 
-  const closeModal = () => show.value = false
-
+  const canSearch = computed<boolean>(() => (searchPhrase.value ?? '').length >= 3)
+  
   const addSearchResult = (bookTitle: string, chapter: string, verse: IVerse) => {
     const pattern = new RegExp(`(${searchPhrase.value})`, 'i')
     const verseClone = Object.assign({}, verse)
@@ -35,24 +39,33 @@ export const useSearchStore = defineStore('search', () => {
       needle: searchPhrase.value,
     })
 
-    show.value = true
+    showResultsModal.value = true
   }
 
-  const search = () => {
-    if ((searchPhrase.value ?? '').length < 3) return
+  const hideOtherModals = () => {
+    showAdvancedSearchModal.value = false
+    optionsStore.showLawModal = false
+    optionsStore.showOptionsModal = false
+  }
 
-    const bibles = useBibleStore()
-    const options = useOptionsStore()
-    options.showLawModal = false
-    options.showOptionsModal = false
+  const isSearchMatch = (verse: IVerse): boolean => {
+    return verse.text.toLowerCase().includes(searchPhrase.value.toLowerCase())
+  }
+
+  const search = (selectedBooks?: string[]) => {
+    if (!canSearch.value) return
+
+    hideOtherModals()
     
     searchResults.value = []
 
-    Object.keys(bibles.bible.books).forEach(bookTitle => {
-      Object.keys(bibles.bible.books[bookTitle]).forEach(chapterNo => {
-        const chapter = bibles.bible.books[bookTitle][chapterNo]
+    Object.keys(biblesStore.bible.books)
+    .filter((bookTitle: string) => !selectedBooks?.length || selectedBooks.includes(bookTitle))
+    .forEach(bookTitle => {
+      Object.keys(biblesStore.bible.books[bookTitle]).forEach(chapterNo => {
+        const chapter = biblesStore.bible.books[bookTitle][chapterNo]
         chapter.forEach(verse => {
-          if (verse.text.toLowerCase().includes(searchPhrase.value.toLowerCase())) {
+          if (isSearchMatch(verse)) {
             addSearchResult(bookTitle, chapterNo, verse)
           }
         })
@@ -61,10 +74,11 @@ export const useSearchStore = defineStore('search', () => {
   }
 
   return {
-    show,
-    closeModal,
+    showResultsModal,
+    showAdvancedSearchModal,
     search,
     options,
+    canSearch,
     searchPhrase,
     searchResults,
   }

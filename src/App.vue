@@ -8,8 +8,9 @@ import FontResizer from './components/FontResizer.vue'
 import LawModal from './components/LawModal.vue'
 import OptionsMenu from './components/OptionsMenu.vue'
 import OptionsModal from './components/OptionsModal.vue'
+import SearchAdvancedModal from './components/SearchAdvancedModal.vue'
 import SearchField from './components/SearchField.vue'
-import SearchModal from './components/SearchModal.vue'
+import SearchResultsModal from './components/SearchResultsModal.vue'
 import { useCopyFormatter } from './helpers/useCopyFormatter'
 import { useBibleStore } from './stores/bible'
 import { useOptionsStore } from './stores/options'
@@ -53,7 +54,8 @@ onMounted(() => addListener())
     <FontResizer />
     <OptionsMenu />
 
-    <SearchModal v-model:is-open="search.show" />
+    <SearchResultsModal v-model:is-open="search.showResultsModal" />
+    <SearchAdvancedModal v-model:is-open="search.showAdvancedSearchModal" />
     <LawModal v-model:is-open="options.showLawModal" />
     <OptionsModal v-model:is-open="options.showOptionsModal" />
   </div>

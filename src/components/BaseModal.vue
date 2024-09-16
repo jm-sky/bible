@@ -54,7 +54,8 @@ const closeModal = () => isOpen.value = false
 
               <slot />
 
-              <div v-if="!withoutCloseButton" class="p-5">
+              <div v-if="!withoutCloseButton" class="p-5 flex flex-col gap-2">
+                <slot name="footer-buttons"></slot>
                 <button
                   type="button"
                   class="btn btn-light w-full"
